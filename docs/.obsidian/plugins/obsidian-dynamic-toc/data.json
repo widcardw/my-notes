@@ -1,0 +1,7 @@
+{
+  "style": "bullet",
+  "min_depth": 1,
+  "max_depth": 3,
+  "externalStyle": "TOC",
+  "supportAllMatchers": false
+}

@@ -1,0 +1,12 @@
+{
+  "canvasSize": 8000,
+  "headLevel": 2,
+  "fontSize": 16,
+  "background": "transparent",
+  "layout": "mindmap",
+  "layoutDirect": "mindmap",
+  "protocol": "jump-to-pdf",
+  "registerPdfEvent": true,
+  "viewerTheme": 2,
+  "uid": "00p01000r00s00o00r01300r00r01300q011010"
+}

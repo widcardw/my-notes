@@ -1,0 +1,10 @@
+img, svg {
+  display: block;
+  margin: 0 auto;
+}
+table {
+  margin: 0 auto;
+}
+.nav-folder-collapse-indicator svg {
+    display: none !important;
+}

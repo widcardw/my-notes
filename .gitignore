@@ -1,3 +1,8 @@
+**/.cache
+**/.temp
+
+.DS_STORE
+
 # Logs
 logs
 *.log
