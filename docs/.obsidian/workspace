@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "编译原理/s01_引论.md",
-            "mode": "source",
+            "file": "密码学/s01_引言.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "编译原理/s01_引论.md",
+                "file": "密码学/s01_引言.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +89,7 @@
   },
   "active": "6d38c89f115f8b8f",
   "lastOpenFiles": [
+    "密码学/s01_引言.md",
     "编译原理/s01_引论.md",
     "index.md",
     "kanban.md",
@@ -97,7 +98,6 @@
     "大物下/第10章_波动.md",
     "大物下/第12章_气体动理论.md",
     "大物下/第11章_光.md",
-    "大物下/第13章_热力学.md",
-    "编译原理/s02_文法与语言.md"
+    "大物下/第13章_热力学.md"
   ]
 }

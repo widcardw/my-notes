@@ -3,6 +3,7 @@ const sidebar = require("./themes/sidebar.js")
 
 module.exports = {
     title: "widcardw",
+    base: "/my-notes/",
     themeConfig: {
         sidebar
     },
