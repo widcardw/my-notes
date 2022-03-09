@@ -43,8 +43,9 @@ const CONFIG = {
     },
 }
 
-function admonitionTranslator (md) {
+function admonitionTranslator(md) {
     const fence = md.renderer.rules.fence
+    // const render = md.render
     md.renderer.rules.fence = (...args) => {
         const [tokens, idx] = args
         const token = tokens[idx]
@@ -69,7 +70,7 @@ function admonitionTranslator (md) {
             // 拼接元素
             return `<${adElement} class="custom-container ${adClass}">` +
                 `<${titleElement} class="custom-container-title">${adLabel}</${titleElement}>` +
-                `${md.render(token.content)}` +
+                `${md.render(token.content).toString()}` +
                 `</${adElement}>`
         }
         // 其他类别的处理
