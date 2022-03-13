@@ -6,8 +6,7 @@
 > version 1.2\
 > 更新：2021-10-06
 
-
-![[manim/manimgl常见问题-markdown/logo.png]]
+![[logo.png]]
 
 ## 一切之前
 
@@ -305,9 +304,7 @@ text = Text(
 
 如果有以上之外的问题, 可以在群里提出, 也可以在 GitHub 上提出 issue，或者按照下图操作
 
-
-![[manim/manimgl常见问题-markdown/turn_to_grant.jpg]]
-
+![[turn_to_grant.jpg]]
 
 也请注意群规第 3,4 条
 

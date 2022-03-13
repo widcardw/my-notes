@@ -3,23 +3,27 @@ const sidebar = require("./themes/sidebar.js")
 
 module.exports = {
     title: "widcardw",
-    base: "/my-notes/",
+    base: "./",
     themeConfig: {
-        sidebar
+        sidebar,
     },
     plugins: [
         mdEnhance({
             tex: true,
             mermaid: true,
             mark: true,
+            container: true,
+            tasklist: true,
         }),
     ],
     extendsMarkdown: md => {
-        md.use(require("./plugin/double-bracket-media"));
+        // console.log(md.utils)
+        md.use(require("./plugin/double-bracket-media.js"));
         md.use(require("./plugin/admonition-translator.js"));
+        // md.use(require("markdown-it-container"), "markdown-it-container", {marker: "```ad-"})
     },
     markdown: {
-        code :{
+        code: {
             lineNumbers: true
         }
     }

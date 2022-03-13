@@ -107,7 +107,7 @@ const sidebar = [
     {
         text: "manim",
         collapsible: true,
-        children: ["/manim/从贝塞尔曲线到概率模型/doc.md", "/manim/manimgl常见问题-markdown/manimgl.md"]
+        children: ["/manim/从贝塞尔曲线到概率模型/doc.md", "/manim/manimgl_markdown/manimgl.md"]
     },
     {
         text: "utils",

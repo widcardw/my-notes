@@ -1444,7 +1444,7 @@ protected void run() {
 
 参考下图
 
-<img src="img/0032.png"  />
+![](./img/0032.png)
 
 
 
