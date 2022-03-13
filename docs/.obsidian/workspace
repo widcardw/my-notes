@@ -7,11 +7,9 @@
         "id": "7e4fd5002323d5e3",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "算法/图的数据结构.md",
-            "mode": "source",
-            "source": false
+            "file": "计算机网络/src/jw3-11.png"
           }
         }
       }
@@ -69,7 +67,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "算法/图的数据结构.md",
+                "file": "计算机网络/src/jw3-11.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +87,15 @@
   },
   "active": "7e4fd5002323d5e3",
   "lastOpenFiles": [
-    "算法/图的数据结构.md",
-    "算法/src/linked_graph.svg",
-    "算法/src/linked_graph.svg.md",
-    "微机原理/第1章_概述.md",
-    "微机原理/第2章_IA-32结构微处理器与8086.md",
-    "微机原理/第3章_8086指令系统.md",
-    "实训/实验报告1.md",
-    "微机原理/第7章_输入输出.md",
-    "微机原理/第8章_8251串行传输接口.md",
-    "微机原理/第8章_数模转换与模数转换接口.md"
+    "计算机网络/src/jw3-11.png",
+    "计算机网络/src/jw3-08.png",
+    "计算机网络/src/jw3-05.png",
+    "计算机网络/src/jw3-02.png",
+    "计算机网络/src/jw3-01.png",
+    "计算机网络/src/jw2-06.png",
+    "计算机网络/src/jw2-04.png",
+    "计算机网络/src/jw2-02.png",
+    "计算机网络/src/jw-ip.jpg",
+    "计算机网络/第7章_应用层.md"
   ]
 }
