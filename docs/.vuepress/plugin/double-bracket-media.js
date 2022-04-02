@@ -8,13 +8,13 @@ module.exports = function (md) {
         if (ch !== 0x21 || pos >= max) { return false; }
 
         let text = state.src.substring(pos, max);
-        let rg = /^!\[\[(.*?)\]\]/
+        let rg = /^!\[\[public\/(.*?)\]\]/
         let match = text.match(rg);
 
         if (match && match.length) {
             let media = match[1];
             if (!media.match(/(.+?)\.(.+?)/)) { return false; }
-            let result = `![${media}](./${media})`;
+            let result = `![${media}](/${media})`;  // here
             // console.log(result);
 
             token = state.push('paragraph_open', 'p', 1);

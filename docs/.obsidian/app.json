@@ -10,7 +10,7 @@
   },
   "vimMode": false,
   "attachmentFolderPath": "./",
-  "newLinkFormat": "relative",
+  "newLinkFormat": "absolute",
   "foldIndent": false,
   "foldHeading": true,
   "newFileLocation": "current",

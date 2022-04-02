@@ -48,7 +48,7 @@ ok_load:
     jmpi    0,8     ! jmp offset 0 of segment 8 (cs)
 ```
 
-![[src/memory.png]]
+![[public/os/memory.png]]
 
 在其间，会将 IDT，GDT 加载。GDT 中，第一段不用，规定代码段和数据段。
 
@@ -281,7 +281,7 @@ timer_interrupt:        # 时钟中断 (TODO)
 
 显存的起始地址为 0xb8000，而显示器为 $80\times 25$ 共 2000 个字，每个字的高字节 放 ASCII 码，低字节放显示的颜色。
 
-![[src/codecolor.svg]]
+![[public/os/codecolor.svg]]
 
 此处，主要修改 write_char 子程序的代码，思路如下：
 
@@ -340,7 +340,7 @@ roll_screen:
 - 全局变量 `scr_loc` 代表光标的偏移位置，这个变量为所有进程共享
 - 在进程调度时，有可能发生下面的情况：进程 A 还未执行结束，进程 B 就已经抢占了 `scr_loc` 这个共享资源，导致进程 A 没有执行结束（即字符未打印完），而 `scr_loc` 的值已经被修改
 
-![[src/result_1.png]]
+![[public/os/result_1.png]]
 
 由于在该系统中还没有涉及到 **互斥信号量** 的概念，因此只能采用屏蔽中断的方法来进行改善。具体实现方法为：在系统中断调用 write_char 方法的前后分别使用 `cli` 和 `sti` 指令关中断和开中断。
 
@@ -474,17 +474,17 @@ set_cl:
 
 4 个进程轮流调度及滚屏。
 
-![[src/result_2.png]]
+![[public/os/result_2.png]]
 
 按下键盘的 ABDE 键，分别切换到进程 0123.
 
-![[src/result_3.png]]
+![[public/os/result_3.png]]
 
-![[src/result_a.png]]
+![[public/os/result_a.png]]
 
 按下键盘的 C 键，恢复到时钟中断轮流调度。
 
-![[src/result.png]]
+![[public/os/result.png]]
 
 ## 6. 附录：程序代码
 

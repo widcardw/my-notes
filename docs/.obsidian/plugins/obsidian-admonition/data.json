@@ -2,11 +2,25 @@
   "userAdmonitions": {},
   "syntaxHighlight": false,
   "copyButton": false,
-  "version": "6.7.2",
+  "version": "7.0.4",
   "autoCollapse": true,
   "defaultCollapseType": "open",
   "syncLinks": true,
-  "enableMarkdownProcessor": false,
   "injectColor": true,
-  "parseTitles": true
+  "parseTitles": true,
+  "allowMSSyntax": true,
+  "msSyntaxIndented": true,
+  "livePreviewMS": true,
+  "dropShadow": true,
+  "hideEmpty": false,
+  "open": {
+    "admonitions": true,
+    "icons": true,
+    "other": true,
+    "advanced": false
+  },
+  "icons": [],
+  "useFontAwesome": true,
+  "rpgDownloadedOnce": false,
+  "enableMarkdownProcessor": false
 }

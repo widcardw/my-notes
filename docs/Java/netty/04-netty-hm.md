@@ -2,7 +2,7 @@
 
 ## Hello World
 
-![[src/Snipaste_2022-02-16_15-11-10.png]]
+![[public/netty/Snipaste_2022-02-16_15-11-10.png]]
 
 - 把 channel 理解为数据的通道
 - 把 msg 理解为流动的数据，最开始输入是 ByteBuf，但经过 pipeline 加工，会编程其他类型对象，最后输入又变成 ByteBuf

@@ -1,12 +1,15 @@
 const { mdEnhance } = require("vuepress-plugin-md-enhance");
 const sidebar = require("./themes/sidebar.js")
+const navbar = require("./themes/navbar.js")
 
 module.exports = {
     title: "widcardw",
-    base: "./",
+    base: "/",
     themeConfig: {
         sidebar,
+        navbar,
     },
+    public: './docs/public',
     plugins: [
         mdEnhance({
             tex: true,

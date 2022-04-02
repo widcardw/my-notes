@@ -70,7 +70,7 @@ function admonitionTranslator(md) {
             // 拼接元素
             return `<${adElement} class="custom-container ${adClass}">` +
                 `<${titleElement} class="custom-container-title">${adLabel}</${titleElement}>` +
-                // `${md.parse(token.content).toString()}` +
+                // `${md.render(token.content)}` +
                 `</${adElement}>`
         }
         // 其他类别的处理
