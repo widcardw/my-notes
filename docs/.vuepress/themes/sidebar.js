@@ -5,6 +5,7 @@ const sidebar = [
         children: [
             "/编译原理/s01_引论.md",
             "/编译原理/s02_文法与语言.md",
+            "/编译原理/s03_词法分析与有限自动机.md"
         ]
     },
     {
@@ -112,7 +113,7 @@ const sidebar = [
     {
         text: "utils",
         collapsible: true,
-        children: ["/utils/换源.md"]
+        children: ["/utils/换源.md", "/utils/curl.md"]
     },
     {
         text: "Web",

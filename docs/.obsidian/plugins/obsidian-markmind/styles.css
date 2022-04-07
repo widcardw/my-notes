@@ -1,3 +1,10 @@
+@font-face{
+  font-family: 'myFont'; 
+  src:url('http://cdn.ghost-jack.top/chinese.ttf');
+}
+.mm-handdraw-theme{
+  font-family:'myFont';
+}
 .mm-app-container{
   position: absolute;
   left:0;
@@ -46,6 +53,7 @@
   font-size: 16px;
   width: 8000px;
   height: 8000px;
+
 }
 
 .theme-dark .mm-node {
@@ -1189,6 +1197,19 @@
 .block-language-mindmap{
   
   height: 600px;
+}
+
+/* theme hand drawn */
+.theme-light .mm-mindmap.mm-handdraw-theme {
+   color:#333;
+}
+
+.mm-mindmap.mm-handdraw-theme .mm-node-bar{
+  display: none;
+}
+
+.mm-mindmap.mm-handdraw-theme .mm-node.mm-root>.mm-node-content{
+  background: transparent;
 }
 
 

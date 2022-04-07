@@ -4,14 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "93444158310ed725",
+        "id": "6e42c35a833e8186",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "index.md",
-            "mode": "source",
-            "source": true
+            "file": "编译原理/s04_自顶向下的语法分析.md",
+            "mode": "preview",
+            "source": false
           }
         }
       }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "编译原理/s04_自顶向下的语法分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,17 +87,17 @@
     "width": 184,
     "collapsed": true
   },
-  "active": "93444158310ed725",
+  "active": "6e42c35a833e8186",
   "lastOpenFiles": [
-    "index.md",
-    "编译原理/s02_文法与语言.md",
-    "编译原理/s01_引论.md",
-    "Java/Netty教程源码资料/Netty03-进阶.md",
-    "Java/Netty教程源码资料/Netty04-优化与源码.md",
-    "Java/Netty教程源码资料/Netty02-入门.md",
-    "Java/Netty教程源码资料/Netty01-nio.md",
-    "实训/实验报告1.md",
-    "大物下/第09章_振动.md",
-    "utils/curl.md"
+    "编译原理/s04_自顶向下的语法分析.md",
+    "Java/netty/04-netty.md",
+    "Java/netty/04-netty-hm.md",
+    "Java/netty/03-零拷贝.md",
+    "Java/netty/02-NIO.md",
+    "Java/netty/02_5-异步IO.md",
+    "Java/netty/01-BIO.md",
+    "操作系统/1-1_操作系统的概念.md",
+    "编译原理/s03_词法分析与有限自动机.md",
+    "public/compile/compile0314.svg"
   ]
 }
