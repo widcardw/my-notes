@@ -15,6 +15,7 @@
 ### 课外内容
 
 - manim 进阶部分笔记
+    - 更新 manim 中文文档 <https://docs.manim.org.cn>
 	- updater 样例
 	- 自定义物件
 	- 交互场景的用法

@@ -74,8 +74,8 @@ var fromTag = document.getElementsByTagName.bind(document);
 然而，通过 query 获得的节点可以是单个或多个节点，而我们不能直接用 `map` 和 `foreach` 来操作 NodeList，正确的操作姿势应该是：
 
 ```javascript
-Array.prototype.map.call(document.querySelectorAll('button'),function(element,index){
-    element.onclick = function(){
+Array.prototype.map.call(document.querySelectorAll('button'), function (element,index) {
+    element.onclick = function () {
         // ...
     }
 })

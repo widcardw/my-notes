@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "6e42c35a833e8186",
+        "id": "2b272d7403943519",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
             "file": "编译原理/s04_自顶向下的语法分析.md",
-            "mode": "preview",
+            "mode": "source",
             "source": false
           }
         }
@@ -79,25 +79,34 @@
                 "unlinkedCollapsed": true
               }
             }
+          },
+          {
+            "id": "83b6c9cfa26cd745",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
     "width": 184,
     "collapsed": true
   },
-  "active": "6e42c35a833e8186",
+  "active": "2b272d7403943519",
   "lastOpenFiles": [
     "编译原理/s04_自顶向下的语法分析.md",
-    "Java/netty/04-netty.md",
-    "Java/netty/04-netty-hm.md",
-    "Java/netty/03-零拷贝.md",
-    "Java/netty/02-NIO.md",
-    "Java/netty/02_5-异步IO.md",
-    "Java/netty/01-BIO.md",
-    "操作系统/1-1_操作系统的概念.md",
-    "编译原理/s03_词法分析与有限自动机.md",
-    "public/compile/compile0314.svg"
+    "public/compile/compile040502.svg",
+    "public/compile/compile040501.svg",
+    "utils/curl.md",
+    "utils/换源.md",
+    "web/HTML的奇淫巧计.md",
+    "manim/manimgl_markdown/manimgl.md",
+    "manim/manimgl-kanban.md",
+    "manim/svgs/quadratic_bezier_fill.svg",
+    "manim/svgs/image.svg"
   ]
 }

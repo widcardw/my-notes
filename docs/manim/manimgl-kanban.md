@@ -6,8 +6,8 @@ kanban-plugin: basic
 
 ## todo
 
-- [ ] 切割
+- [x] 切割
 - [ ] 发光
-- [ ] 多边形布尔
+- [x] 多边形布尔
 
 
