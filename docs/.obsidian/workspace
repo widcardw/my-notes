@@ -9,9 +9,9 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "编译原理/s04_自顶向下的语法分析.md",
-            "mode": "preview",
-            "source": true
+            "file": "编译原理/s05_自底向上的语法分析.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "编译原理/s04_自顶向下的语法分析.md",
+                "file": "编译原理/s05_自底向上的语法分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,6 +98,7 @@
   },
   "active": "96b70a227954699a",
   "lastOpenFiles": [
+    "编译原理/s05_自底向上的语法分析.md",
     "编译原理/s04_自顶向下的语法分析.md",
     "manim/svgs/image.svg",
     "manim/svgs/quadratic_bezier_fill.svg",
@@ -106,7 +107,6 @@
     "public/compile/compile040501.svg",
     "utils/curl.md",
     "utils/换源.md",
-    "web/HTML的奇淫巧计.md",
-    "manim/manimgl_markdown/manimgl.md"
+    "web/HTML的奇淫巧计.md"
   ]
 }
