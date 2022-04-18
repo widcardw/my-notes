@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "编译原理/s05_自底向上的语法分析.md",
-            "mode": "source",
+            "mode": "preview",
             "source": false
           }
         }
@@ -99,14 +99,14 @@
   "active": "96b70a227954699a",
   "lastOpenFiles": [
     "编译原理/s05_自底向上的语法分析.md",
+    "操作系统/操作系统-Linux_0.00-内核实验.md",
+    "public/compile/compile050306.svg",
+    "编译原理/s02_文法与语言.md",
+    "编译原理/s03_词法分析与有限自动机.md",
+    "编译原理/s04_自顶向下的语法分析.md",
     "public/compile/compile050304.svg",
     "public/compile/compile050302.svg",
     "public/compile/compile050303.svg",
-    "public/compile/compile050301.svg",
-    "public/compile/compile050201.svg",
-    "编译原理/s04_自顶向下的语法分析.md",
-    "manim/svgs/image.svg",
-    "manim/svgs/quadratic_bezier_fill.svg",
-    "manim/svgs/OpenGL-sequence.svg"
+    "public/compile/compile050301.svg"
   ]
 }
