@@ -20,10 +20,8 @@ module.exports = {
         }),
     ],
     extendsMarkdown: md => {
-        // console.log(md.utils)
         md.use(require("./plugin/double-bracket-media.js"));
-        md.use(require("./plugin/admonition-translator.js"));
-        // md.use(require("markdown-it-container"), "markdown-it-container", {marker: "```ad-"})
+        md.use(require("./plugin/admonition-translator.js"), 'ad');
     },
     markdown: {
         code: {

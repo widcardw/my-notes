@@ -14,7 +14,14 @@ module.exports = function (md) {
         if (match && match.length) {
             let media = match[1];
             if (!media.match(/(.+?)\.(.+?)/)) { return false; }
-            let result = `![${media}](/${media})`;  // here
+            let result = "";
+            if (media.endsWith('.mp4')) {
+                result = `<video controls="controls" src="/${media}" style="width: 100%; height: 100%;"></video>`
+            } else if (media.endsWith('.mp3')) {
+                result = `<audio controls="controls" src="/${media}"></audio>`
+            } else {
+                result = `![${media}](/${media})`;  // here
+            }
             // console.log(result);
 
             token = state.push('paragraph_open', 'p', 1);

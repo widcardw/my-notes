@@ -42,186 +42,197 @@ const CONFIG = {
         titleEl: 'summary'
     },
 }
+// Process block-level custom containers
+//
+'use strict';
 
-function admonitionTranslator(md) {
-    const fence = md.renderer.rules.fence
-    // const render = md.render
-    md.renderer.rules.fence = (...args) => {
-        const [tokens, idx] = args
-        const token = tokens[idx]
-        const rawCode = fence(...args)
-        if (token.info.includes('ad')) {
-            // 获取 admonition 类别
-            let adType = token.info.split('-')[1].trim()
-            // 根据字典获取样式类
-            let adClass = CONFIG[adType].className;
-            // 根据字典获取标签
-            let adLabel = CONFIG[adType].label;
-            // 根据字典获取元素
-            let adElement = CONFIG[adType].element ? CONFIG[adType].element : 'div';
-            let titleElement = CONFIG[adType].titleEl ? CONFIG[adType].titleEl : 'p';
-            // 获取第一行，判断是否为标题
-            let firstLine = token.content.split('\n')[0]
-            if (firstLine.includes("title:")) {
-                let trueTitle = firstLine.split('title:')[1].trim()
-                adLabel = trueTitle === '' ? adLabel : trueTitle
-                token.content = token.content.replace(firstLine, '')
-            }
-            // 拼接元素
-            return `<${adElement} class="custom-container ${adClass}">` +
-                `<${titleElement} class="custom-container-title">${adLabel}</${titleElement}>` +
-                // `${md.render(token.content)}` +
-                `</${adElement}>`
-        }
-        // 其他类别的处理
-        return `${rawCode}`
+
+module.exports = function (md, name, options) {
+
+    // Second param may be useful if you decide
+    // to increase minimal allowed marker length
+    function validateDefault(params/*, markup*/) {
+        return params.trim().split('-', 2)[0] === name;
     }
-}
 
-module.exports = admonitionTranslator
+    // params = 'ad-name', markup = '```'
+    function validateCustom(params/*, markup*/) {
+        // 提取 ad 和 name
+        let [preTag, containerType] = params.trim().split('-');
+        // 判断是否为 admonition 块
+        let flag = preTag === name;
+        if (flag) {
+            // 是则返回 true 以及块类型
+            return [flag, containerType];
+        } else {
+            return [flag];
+        }
+    }
 
-// // Process block-level custom containers
-// //
-// 'use strict';
+    function renderDefault(tokens, idx, _options, env, slf) {
 
+        // add a class to the opening tag
+        if (tokens[idx].nesting === 1) {
+            tokens[idx].attrJoin('class', name);
+        }
 
-// module.exports = function container_plugin(md, name, options) {
+        return slf.renderToken(tokens, idx, _options, env, slf);
+    }
 
-//     // Second param may be useful if you decide
-//     // to increase minimal allowed marker length
-//     function validateDefault(params/*, markup*/) {
-//         return params.trim().split(' ', 2)[0] === name;
-//     }
+    options = options || {};
 
-//     function renderDefault(tokens, idx, _options, env, slf) {
+    var min_markers = 3,
+        marker_str = options.marker || '`',  // marker 为反引号
+        marker_char = marker_str.charCodeAt(0),
+        marker_len = marker_str.length,
+        validate = options.validate || validateCustom,
+        render = options.render || renderDefault,
+        containerType = options.containerType || 'tip';  // 默认为 tip
 
-//         // add a class to the opening tag
-//         if (tokens[idx].nesting === 1) {
-//             tokens[idx].attrJoin('class', name);
-//         }
+    function container(state, startLine, endLine, silent) {
+        var pos, nextLine, marker_count, markup, params, token,
+            old_parent, old_line_max,
+            auto_closed = false,
+            start = state.bMarks[startLine] + state.tShift[startLine],
+            max = state.eMarks[startLine];
 
-//         return slf.renderToken(tokens, idx, _options, env, slf);
-//     }
+        // Check out the first character quickly,
+        // this should filter out most of non-containers
+        //
+        if (marker_char !== state.src.charCodeAt(start)) {
+            return false;
+        }
 
-//     options = options || {};
+        // Check out the rest of the marker string
+        //
+        for (pos = start + 1; pos <= max; pos++) {
+            if (marker_str[(pos - start) % marker_len] !== state.src[pos]) {
+                break;
+            }
+        }
 
-//     var min_markers = 3,
-//         marker_str = options.marker || '`',
-//         marker_char = marker_str.charCodeAt(0),
-//         marker_len = marker_str.length,
-//         validate = options.validate || validateDefault,
-//         render = options.render || renderDefault;
+        marker_count = Math.floor((pos - start) / marker_len);
+        if (marker_count < min_markers) {
+            return false;
+        }
+        pos -= (pos - start) % marker_len;
 
-//     function container(state, startLine, endLine, silent) {
-//         var pos, nextLine, marker_count, markup, params, token,
-//             old_parent, old_line_max,
-//             auto_closed = false,
-//             start = state.bMarks[startLine] + state.tShift[startLine],
-//             max = state.eMarks[startLine];
+        markup = state.src.slice(start, pos);
+        params = state.src.slice(pos, max);
 
-//         // Check out the first character quickly,
-//         // this should filter out most of non-containers
-//         //
-//         if (marker_char !== state.src.charCodeAt(start)) { return false; }
+        let [flag, containerType] = validate(params, markup);  // flag 为 true 时，说明是 admonition 块
+        if (!flag) {
+            return false;
+        }
 
-//         // Check out the rest of the marker string
-//         //
-//         for (pos = start + 1; pos <= max; pos++) {
-//             if (marker_str[(pos - start) % marker_len] !== state.src[pos]) {
-//                 break;
-//             }
-//         }
+        // Since start is found, we can report success here in validation mode
+        //
+        if (silent) { return true; }
 
-//         marker_count = Math.floor((pos - start) / marker_len);
-//         if (marker_count < min_markers) { return false; }
-//         pos -= (pos - start) % marker_len;
+        // Search for the end of the block
+        //
+        nextLine = startLine;
 
-//         markup = state.src.slice(start, pos);
-//         params = state.src.slice(pos, max);
-//         if (!validate(params, markup)) { return false; }
+        let atFirst = true, hasTitle = false;
 
-//         // Since start is found, we can report success here in validation mode
-//         //
-//         if (silent) { return true; }
+        for (; ;) {
+            nextLine++;
+            if (nextLine >= endLine) {
+                // unclosed block should be autoclosed by end of document.
+                // also block seems to be autoclosed by end of parent
+                break;
+            }
 
-//         // Search for the end of the block
-//         //
-//         nextLine = startLine;
+            start = state.bMarks[nextLine] + state.tShift[nextLine];
+            max = state.eMarks[nextLine];
 
-//         for (; ;) {
-//             nextLine++;
-//             if (nextLine >= endLine) {
-//                 // unclosed block should be autoclosed by end of document.
-//                 // also block seems to be autoclosed by end of parent
-//                 break;
-//             }
+            // 在第一行进行判断，是否为自定义标题
+            if (atFirst) {
+                atFirst = false;
+                // 提取出第一行
+                let firstLine = state.src.slice(start, max);
+                // 提取出第一行中的标题
+                let admonitionTitle = firstLine.split('title:')[1];
+                // 判断是否存在标题
+                if (admonitionTitle) {
+                    // 存在标题，则格式化标题
+                    params = ` ${CONFIG[containerType].className} ${admonitionTitle.trim()}`;
+                    hasTitle = true;
+                } else {
+                    params = ` ${CONFIG[containerType].className} ${CONFIG[containerType].label}`;
+                }
+            }
 
-//             start = state.bMarks[nextLine] + state.tShift[nextLine];
-//             max = state.eMarks[nextLine];
+            if (start < max && state.sCount[nextLine] < state.blkIndent) {
+                // non-empty line with negative indent should stop the list:
+                // - ```
+                //  test
+                break;
+            }
 
-//             if (start < max && state.sCount[nextLine] < state.blkIndent) {
-//                 // non-empty line with negative indent should stop the list:
-//                 // - ```
-//                 //  test
-//                 break;
-//             }
+            if (marker_char !== state.src.charCodeAt(start)) { continue; }
 
-//             if (marker_char !== state.src.charCodeAt(start)) { continue; }
+            if (state.sCount[nextLine] - state.blkIndent >= 4) {
+                // closing fence should be indented less than 4 spaces
+                continue;
+            }
 
-//             if (state.sCount[nextLine] - state.blkIndent >= 4) {
-//                 // closing fence should be indented less than 4 spaces
-//                 continue;
-//             }
+            for (pos = start + 1; pos <= max; pos++) {
+                if (marker_str[(pos - start) % marker_len] !== state.src[pos]) {
+                    break;
+                }
+            }
 
-//             for (pos = start + 1; pos <= max; pos++) {
-//                 if (marker_str[(pos - start) % marker_len] !== state.src[pos]) {
-//                     break;
-//                 }
-//             }
+            // closing code fence must be at least as long as the opening one
+            if (Math.floor((pos - start) / marker_len) < marker_count) { continue; }
 
-//             // closing code fence must be at least as long as the opening one
-//             if (Math.floor((pos - start) / marker_len) < marker_count) { continue; }
+            // make sure tail has spaces only
+            pos -= (pos - start) % marker_len;
+            pos = state.skipSpaces(pos);
 
-//             // make sure tail has spaces only
-//             pos -= (pos - start) % marker_len;
-//             pos = state.skipSpaces(pos);
+            if (pos < max) { continue; }
 
-//             if (pos < max) { continue; }
+            // found!
+            auto_closed = true;
+            break;
+        }
 
-//             // found!
-//             auto_closed = true;
-//             break;
-//         }
+        old_parent = state.parentType;
+        old_line_max = state.lineMax;
+        state.parentType = 'container';
 
-//         old_parent = state.parentType;
-//         old_line_max = state.lineMax;
-//         state.parentType = 'container';
+        // this will prevent lazy continuations from ever going past our end marker
+        state.lineMax = nextLine;
 
-//         // this will prevent lazy continuations from ever going past our end marker
-//         state.lineMax = nextLine;
+        // 对于有标题的 admonition 块，需要从去除标题的那一行开始渲染
+        if (hasTitle) {
+            startLine++;
+        }
 
-//         token = state.push('container_' + name + '_open', 'div', 1);
-//         token.markup = markup;
-//         token.block = true;
-//         token.info = params;
-//         token.map = [startLine, nextLine];
+        token = state.push('container_' + CONFIG[containerType].className + '_open', 'div', 1);
+        token.markup = markup;
+        token.block = true;
+        token.info = params;               // 与原版 container 格式一致
+        token.map = [startLine, nextLine];
 
-//         state.md.block.tokenize(state, startLine + 1, nextLine);
+        // console.log("admonition", token)
 
-//         token = state.push('container_' + name + '_close', 'div', -1);
-//         token.markup = state.src.slice(start, pos);
-//         token.block = true;
+        state.md.block.tokenize(state, startLine + 1, nextLine);
 
-//         state.parentType = old_parent;
-//         state.lineMax = old_line_max;
-//         state.line = nextLine + (auto_closed ? 1 : 0);
+        token = state.push('container_' + CONFIG[containerType].className + '_close', 'div', -1);
+        token.markup = state.src.slice(start, pos);
+        token.block = true;
 
-//         return true;
-//     }
+        state.parentType = old_parent;
+        state.lineMax = old_line_max;
+        state.line = nextLine + (auto_closed ? 1 : 0);
 
-//     md.block.ruler.before('fence', 'container_' + name, container, {
-//         alt: ['paragraph', 'reference', 'blockquote', 'list']
-//     });
-//     md.renderer.rules['container_' + name + '_open'] = render;
-//     md.renderer.rules['container_' + name + '_close'] = render;
-// };
+        return true;
+    }
+
+    md.block.ruler.before('fence', 'container_' + CONFIG[containerType].className, container, {
+        alt: ['paragraph', 'reference', 'blockquote', 'list']
+    });
+    md.renderer.rules['container_' + CONFIG[containerType].className + '_open'] = render;
+    md.renderer.rules['container_' + CONFIG[containerType].className + '_close'] = render;
+};

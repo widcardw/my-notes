@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "编译原理/s05_自底向上的语法分析.md",
+            "file": "编译原理/s03_词法分析与有限自动机.md",
             "mode": "preview",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "编译原理/s05_自底向上的语法分析.md",
+                "file": "编译原理/s03_词法分析与有限自动机.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,15 +98,15 @@
   },
   "active": "96b70a227954699a",
   "lastOpenFiles": [
+    "编译原理/s03_词法分析与有限自动机.md",
+    "编译原理/s04_自顶向下的语法分析.md",
     "编译原理/s05_自底向上的语法分析.md",
+    "index.md",
     "操作系统/操作系统-Linux_0.00-内核实验.md",
     "public/compile/compile050306.svg",
     "编译原理/s02_文法与语言.md",
-    "编译原理/s03_词法分析与有限自动机.md",
-    "编译原理/s04_自顶向下的语法分析.md",
     "public/compile/compile050304.svg",
     "public/compile/compile050302.svg",
-    "public/compile/compile050303.svg",
-    "public/compile/compile050301.svg"
+    "public/compile/compile050303.svg"
   ]
 }

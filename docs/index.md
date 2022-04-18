@@ -5,7 +5,6 @@
 ### 插件
 
 - wavedrom 波形渲染
-- admonition 插件
 
 ### 笔记
 
@@ -35,3 +34,22 @@
 
 由于将图片都放在了 `public` 目录下，而 obsidian 采用 **相对于工程的绝对路径** 来取到图片，因此需要将链接中的 `public` 前缀去掉，此处使用了正则匹配，详情可参照[源码](https://github.com/widcardw/my-notes/blob/main/docs/.vuepress/plugin/double-bracket-media.js)
 
+#### admonition 插件转义
+
+在 obsidian 中，admonition 插件的用法为：使用连续的反引号将块包住，头部使用 `ad-name` 来进行修饰，同时能够自定义标题，例如
+
+~~~
+```ad-note
+title: 提示
+这是一个 admonition 块
+```
+~~~
+
+输出结果为
+
+```ad-note
+title: 提示
+这是一个 admonition 块
+```
+
+为了这个插件转义，还特意去学了很多 markdown-it 的知识，好累哦……总之各个插件它们的适配规则不一样，就真的好烦……
