@@ -8,6 +8,10 @@ module.exports = {
     themeConfig: {
         sidebar,
         navbar,
+        repo: "widcardw/my-notes",
+        repoLabel: "GitHub",
+        // 是否在导航栏内显示仓库链接，默认为 `true`
+        repoDisplay: true,
     },
     public: './docs/public',
     plugins: [

@@ -52,4 +52,4 @@ title: 提示
 这是一个 admonition 块
 ```
 
-为了这个插件转义，还特意去学了很多 markdown-it 的知识，好累哦……总之各个插件它们的适配规则不一样，就真的好烦……
+为了这个插件转义，还特意去学了很多 markdown-it 的知识，好累哦……总之各个插件它们的适配规则不一样，就真的好烦……详情可参考[源码](https://github.com/widcardw/my-notes/blob/main/docs/.vuepress/plugin/admonition-translator.js)

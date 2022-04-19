@@ -1,5 +1,3 @@
-const navbar = [
-    { text: 'Github', link: 'https://github.com/widcardw' },
-]
+const navbar = []
 
 module.exports = navbar

@@ -38,8 +38,6 @@ const CONFIG = {
     example: {
         label: '示例',
         className: 'details',
-        element: 'details',
-        titleEl: 'summary'
     },
 }
 // Process block-level custom containers
