@@ -1,8 +1,0 @@
-{
-  "pinned": [
-    "obsidian-mind-map:app:markmap-preview",
-    "workspace:export-pdf",
-    "workspace:split-vertical",
-    "obsidian-pandoc:pandoc-export-docx"
-  ]
-}
