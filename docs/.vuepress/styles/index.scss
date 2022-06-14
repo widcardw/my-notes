@@ -5,3 +5,11 @@
     --font-family: KaTeX_Main, Times, 'Noto Serif SC', serif !important;
     --font-family-code: 'JetBrains Mono', monospace !important;
 }
+
+mark {
+    color: var(--c-fg);
+    background: rgba(58, 166, 117, 0.3);
+    padding: 0.1rem 0.15rem;
+    border-radius: 0.15rem;
+    margin: 0 0.1rem;
+}
