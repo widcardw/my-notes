@@ -130,7 +130,7 @@ ImportError: ('Unable to load OpenGL library', 'dlopen(OpenGL, 10): image not fo
 
 将其中的 `tex:` 部分改为
 
-```yml
+```yaml
 tex: 
   text_to_replace: "[tex_expression]"
   executable: "xelatex -no-pdf"

@@ -130,7 +130,7 @@ public abstract class Config {
 
 配置文件
 
-```properties
+```yaml
 serializer.algorithm=Json
 ```
 
@@ -422,7 +422,7 @@ Tue Apr 21 20:30:28 CST 2020 connected...
 
 第 4 个客户端连接时
 
-```
+```text
 Tue Apr 21 20:53:58 CST 2020 connecting...
 Tue Apr 21 20:53:59 CST 2020 connecting timeout...
 java.net.SocketTimeoutException: connect timed out
