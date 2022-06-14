@@ -1,22 +1,25 @@
-const { mdEnhance } = require("vuepress-plugin-md-enhance");
+const { mdEnhancePlugin } = require("vuepress-plugin-md-enhance");
 const sidebar = require("./themes/sidebar.js")
 const navbar = require("./themes/navbar.js")
+const { defaultTheme } = require('@vuepress/theme-default')
 
 
 module.exports = {
-    title: "widcardw",
+    title: "widcardw 的笔记",
     base: "/",
-    themeConfig: {
+    theme: defaultTheme({
         sidebar,
         navbar,
         repo: "widcardw/my-notes",
         repoLabel: "GitHub",
         // 是否在导航栏内显示仓库链接，默认为 `true`
         repoDisplay: true,
-    },
+        editLink: true,
+        editLinkText: "Edit this page on GitHub",
+    }),
     public: './docs/public',
     plugins: [
-        mdEnhance({
+        mdEnhancePlugin({
             tex: true,
             mermaid: true,
             mark: true,
