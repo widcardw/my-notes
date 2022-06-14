@@ -1,10 +1,6 @@
-# widcardw 的笔记
+# 这里是开发日志捏
 
 ## TODO
-
-### 插件
-
-- wavedrom 波形渲染
 
 ### 笔记
 
@@ -32,7 +28,7 @@
 
 将所有图片都放在 `public` 目录下，然后通过自己编写的 `double-bracket-media` 插件来将图片链接修改为 vuepress 所能够识别到的路径，在此工作之后再进行渲染
 
-由于将图片都放在了 `public` 目录下，而 obsidian 采用 **相对于工程的绝对路径** 来取到图片，因此需要将链接中的 `public` 前缀去掉，此处使用了正则匹配，详情可参照[源码](https://github.com/widcardw/my-notes/blob/main/docs/.vuepress/plugin/double-bracket-media.js)
+由于将图片都放在了 `public` 目录下，而 obsidian 采用 **相对于工程的绝对路径** 来取到图片，因此需要将链接中的 `public` 前缀去掉，此处使用了正则匹配
 
 #### admonition 插件转义
 
@@ -52,4 +48,22 @@ title: 提示
 这是一个 admonition 块
 ```
 
-为了这个插件转义，还特意去学了很多 markdown-it 的知识，好累哦……总之各个插件它们的适配规则不一样，就真的好烦……详情可参考[源码](https://github.com/widcardw/my-notes/blob/main/docs/.vuepress/plugin/admonition-translator.js)
+为了这个插件转义，还特意去学了很多 markdown-it 的知识，好累哦……总之各个插件它们的适配规则不一样，就真的好烦……
+
+#### wavedrom
+
+在 vitepress 好像是能用了，但是还不太清楚怎么在 vuepress 引入，而且实装的话感觉极有可能导致 vite 编译内存爆炸，所以暂时不用了
+
+总之应该就是烂摊子很多，首先不知道怎么引入
+
+> 我该用哪个！用两种方法导入都会炸
+
+```ts
+import * as WaveDrom from 'wavedrom'
+import WaveDrom from 'wavedrom'
+```
+
+还是挺麻烦的，毕竟没有去读人家的源码，不知道哪些包是直接用 `default` 导出的，哪些是 `module.exports` 直接赋值的。
+
+直接看打包过的 js 文件很乱，本来还想写一个 `vitepress-plugin-wavedrom` 插件，但是没有想到怎么引入，所以就直接摆烂了 `¯\_(ツ)_/¯` 。
+
