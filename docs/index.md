@@ -19,6 +19,9 @@
     - 计划大概是破产了
 - ==学习 Vue 3 框架内核==
     - 尝试用 Vue 3 + TypeScript 的方式去写一些项目，而不是用 Vue 2 + JavaScript 的方法
+	- 没想到啊，这个也鸽了
+- 学习 wasm
+	- vite 搭建 wasm 环境已经成功了，详见 [Vite-rsw](https://widcardw.github.io/article/notes/vite-rsw.html)
 
 ## DONE
 
@@ -67,3 +70,6 @@ import WaveDrom from 'wavedrom'
 
 直接看打包过的 js 文件很乱，本来还想写一个 `vitepress-plugin-wavedrom` 插件，但是没有想到怎么引入，所以就直接摆烂了 `¯\_(ツ)_/¯` 。
 
+#### 评论系统
+
+使用了 vuepress-plugin-comment2 插件，终于能在这里评论了。

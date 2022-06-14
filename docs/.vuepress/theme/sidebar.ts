@@ -137,4 +137,4 @@ const sidebar = [
     }
 ]
 
-module.exports = sidebar
+export default sidebar
