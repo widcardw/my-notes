@@ -63,7 +63,7 @@ title: 提示
 
 总之应该就是烂摊子很多，首先不知道怎么引入
 
-> 我该用哪个！用两种方法导入都会炸
+> 我该用哪个！用两种方法导入都会炸！
 
 ```ts
 import * as WaveDrom from 'wavedrom'
@@ -76,4 +76,4 @@ import WaveDrom from 'wavedrom'
 
 #### 评论系统
 
-使用了 vuepress-plugin-comment2 插件，终于能在这里评论了。
+使用了 vuepress-plugin-comment2 插件，终于能在这里评论了。大家评论的时候注意 ==不要泄露个人信息== ！
