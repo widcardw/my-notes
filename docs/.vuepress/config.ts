@@ -1,8 +1,8 @@
 import { mdEnhancePlugin } from 'vuepress-plugin-md-enhance'
 import sidebar from './theme/sidebar'
 import navbar from './theme/navbar'
-import doubleBracketMedia from './plugin/double-bracket-media'
-import admonitionTranslator from './plugin/admonition-translator'
+import doubleBracketMedia from './plugins/double-bracket-media'
+import admonitionTranslator from './plugins/admonition-translator'
 import { commentPlugin } from "vuepress-plugin-comment2";
 import { localTheme } from './theme/index'
 

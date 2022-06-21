@@ -31,7 +31,7 @@ comment: false
 
 ### 插件
 
-#### 图片显示问题
+#### 1. 图片显示问题
 
 将所有图片都放在 `public` 目录下，然后通过自己编写的 `double-bracket-media` 插件来将图片链接修改为 vuepress 所能够识别到的路径，在此工作之后再进行渲染
 
@@ -39,10 +39,10 @@ comment: false
 
 ##### 使用说明
 
-下载 `docs/.vuepress/plugin/double-bracket-media.js` ，然后在 `docs/.vuepress/config.js` 中引入
+下载 `docs/.vuepress/plugins/double-bracket-media.js` ，然后在 `docs/.vuepress/config.js` 中引入
 
 ```js
-import doubleBracketMedia from './plugin/double-bracket-media'
+import doubleBracketMedia from './plugins/double-bracket-media'
 
 export default {
 	extendsMarkdown: md => {
@@ -51,7 +51,42 @@ export default {
 }
 ```
 
-#### admonition 插件转义
+于是就可以这样安排工程文件
+
+```text
+my-notes
+├── docs
+│   ├── .obsidian
+│   ├── .vuepress
+│   │   ├── config.js
+│   │   └── plugins
+│   │       └── double-bracket-media.js
+│   ├── notes1
+│   │   ├── some-note1.md
+│   │   └── some-note2.md
+│   ├── notes2
+│   │   ├── some-note3.md
+│   │   └── some-note4.md
+│   ├── public
+│   │   ├── img
+│   │   │   ├── 1.jpg
+│   │   │   └── 2.jpg
+│   │   └── other.jpg
+│   └── index.md
+├── .gitignore
+└── package.json
+```
+
+而在 markdown 文件中，这样引入图片、音频或视频
+
+```md
+![[public/img/1.jpg]]
+![[public/other.jpg]]
+```
+
+~~终于把 plugin 的单数改成复数了~~
+
+#### 2. admonition 插件转义
 
 在 obsidian 中，admonition 插件的用法为：使用连续的反引号将块包住，头部使用 `ad-name` 来进行修饰，同时能够自定义标题，例如
 
@@ -73,10 +108,10 @@ title: 提示
 
 ##### 使用说明
 
-下载 `docs/.vuepress/plugin/admonition-translator.js` ，然后在 `docs/.vuepress/config.js` 中引入
+下载 `docs/.vuepress/plugins/admonition-translator.js` ，然后在 `docs/.vuepress/config.js` 中引入
 
 ```js
-import admonitionTranslator from './plugin/admonition-translator'
+import admonitionTranslator from './plugins/admonition-translator'
 
 export default {
 	extendsMarkdown: md => {
@@ -86,7 +121,7 @@ export default {
 }
 ```
 
-#### wavedrom
+#### 3. wavedrom
 
 在 vitepress 好像是能用了，但是还不太清楚怎么在 vuepress 引入，而且实装的话感觉极有可能导致 vite 编译内存爆炸，所以暂时不用了
 
@@ -103,6 +138,6 @@ import WaveDrom from 'wavedrom'
 
 直接看打包过的 js 文件很乱，本来还想写一个 `vitepress-plugin-wavedrom` 插件，但是没有想到怎么引入，所以就直接摆烂了 `¯\_(ツ)_/¯` 。
 
-#### 评论系统
+#### 4. 评论系统
 
 使用了 vuepress-plugin-comment2 插件，终于能在这里评论了。大家评论的时候注意 ==不要泄露个人信息== ！
