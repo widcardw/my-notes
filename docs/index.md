@@ -37,6 +37,20 @@ comment: false
 
 由于将图片都放在了 `public` 目录下，而 obsidian 采用 **相对于工程的绝对路径** 来取到图片，因此需要将链接中的 `public` 前缀去掉，此处使用了正则匹配
 
+##### 使用说明
+
+下载 `docs/.vuepress/plugin/double-bracket-media.js` ，然后在 `docs/.vuepress/config.js` 中引入
+
+```js
+import doubleBracketMedia from './plugin/double-bracket-media'
+
+export default {
+	extendsMarkdown: md => {
+		md.use(doubleBracketMedia)
+	}
+}
+```
+
 #### admonition 插件转义
 
 在 obsidian 中，admonition 插件的用法为：使用连续的反引号将块包住，头部使用 `ad-name` 来进行修饰，同时能够自定义标题，例如
@@ -56,6 +70,21 @@ title: 提示
 ```
 
 为了这个插件转义，还特意去学了很多 markdown-it 的知识，好累哦……总之各个插件它们的适配规则不一样，就真的好烦……
+
+##### 使用说明
+
+下载 `docs/.vuepress/plugin/admonition-translator.js` ，然后在 `docs/.vuepress/config.js` 中引入
+
+```js
+import admonitionTranslator from './plugin/admonition-translator'
+
+export default {
+	extendsMarkdown: md => {
+		// 'ad' 与你的 admonition 的前缀一致，例如上面我的就是 `ad` 为前缀
+ 		md.use(admonitionTranslator, 'ad')
+	}
+}
+```
 
 #### wavedrom
 
