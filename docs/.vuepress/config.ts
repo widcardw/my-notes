@@ -5,9 +5,11 @@ import doubleBracketMedia from './plugins/double-bracket-media'
 import admonitionTranslator from './plugins/admonition-translator'
 import { commentPlugin } from "vuepress-plugin-comment2";
 import { localTheme } from './theme/index'
+import doubleBracketLink from './plugins/double-bracket-link'
+import { defineUserConfig } from 'vuepress'
 
 
-export default {
+export default defineUserConfig({
     title: "widcardw 的笔记",
     base: "/",
     theme: localTheme({
@@ -40,6 +42,7 @@ export default {
     ],
     extendsMarkdown: md => {
         md.use(doubleBracketMedia);
+        md.use(doubleBracketLink)
         md.use(admonitionTranslator, 'ad');
     },
     markdown: {
@@ -47,4 +50,4 @@ export default {
             lineNumbers: true
         }
     }
-}
+})
