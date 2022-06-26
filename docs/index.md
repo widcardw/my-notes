@@ -8,24 +8,29 @@ comment: false
 
 ### 笔记
 
-- 编译原理
-- 密码学
+- markdown it
+- 计组
+- 计算机网络
+- 数据结构（大概率不会记）
 
 ### 课外内容
 
+- 在线文档相关（需要参考 VuePress-Theme-Hope 的组件）
+	- [ ] VuePress 和 VitePress 更加完善的 admonition 插件
+	- [ ] 阅读 markdown it 源码（大概率会咕）
+	- [ ] 编写 Blue Topaz 标签转 Badge 的插件
+	- [ ] wavedrom 插件再稍微尝试一下，如果编译还爆内存就不去搞它的
 - manim 进阶部分笔记
-    - 更新 manim 中文文档 <https://docs.manim.org.cn>
-	- updater 样例
-	- 自定义物件
-	- 交互场景的用法
-	- ==Shaders 的用法==
-- ~~学习 CSAPP，包括计算机组成原理和操作系统的结合知识~~
-    - 计划大概是破产了
+    - [ ] 更新 manim 中文文档 <https://docs.manim.org.cn>
+	- [ ] updater 样例
+	- [ ] 自定义物件
+	- [ ] 交互场景的用法
+	- [x] ==Shaders 的用法==
 - ==学习 Vue 3 框架内核==
     - 尝试用 Vue 3 + TypeScript 的方式去写一些项目，而不是用 Vue 2 + JavaScript 的方法
 	- 没想到啊，这个也鸽了
 - 学习 wasm
-	- vite 搭建 wasm 环境已经成功了，详见 [Vite-rsw](https://widcardw.github.io/article/notes/vite-rsw.html)
+	- [x] vite 搭建 wasm 环境已经成功了，详见 [Vite-rsw](https://widcardw.github.io/article/notes/vite-rsw.html)
 
 ## DONE
 
