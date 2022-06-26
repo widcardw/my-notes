@@ -2,11 +2,12 @@ import { mdEnhancePlugin } from 'vuepress-plugin-md-enhance'
 import sidebar from './theme/sidebar'
 import navbar from './theme/navbar'
 import doubleBracketMedia from './plugins/double-bracket-media'
-import admonitionTranslator from './plugins/admonition-translator'
+// import admonitionTranslator from './plugins/admonition-translator'
 import { commentPlugin } from "vuepress-plugin-comment2";
 import { localTheme } from './theme/index'
 import doubleBracketLink from './plugins/double-bracket-link'
 import { defineUserConfig } from 'vuepress'
+import callout from './plugins/callout'
 
 
 export default defineUserConfig({
@@ -43,7 +44,8 @@ export default defineUserConfig({
     extendsMarkdown: md => {
         md.use(doubleBracketMedia);
         md.use(doubleBracketLink)
-        md.use(admonitionTranslator, 'ad');
+        // md.use(admonitionTranslator, 'ad');
+        md.use(callout)
     },
     markdown: {
         code: {

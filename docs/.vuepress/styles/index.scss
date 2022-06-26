@@ -6,7 +6,7 @@
     --font-family-code: 'JetBrains Mono', Monaco, monospace !important;
 }
 
-.custom-container.details{
+.custom-container.details {
     background: transparent !important;
     border: 1px solid var(--detail-bg-color);
     box-shadow: 0 2px 2px 0 var(--detail-bg-color);
@@ -23,4 +23,176 @@ mark {
 .theme-default-content img {
     display: block;
     margin: 1rem auto;
+}
+
+:root {
+    --callout-note: 68, 138, 255;
+    --callout-abstract: 0, 176, 255;
+    --callout-info: 0, 184, 212;
+    --callout-tip: 0, 191, 165;
+    --callout-success: 0, 200, 83;
+    --callout-question: 100, 221, 23;
+    --callout-warning: 255, 145, 0;
+    --callout-failure: 255, 82, 82;
+    --callout-danger: 255, 23, 68;
+    --callout-bug: 245, 0, 87;
+    --callout-example: 124, 77, 255;
+    --callout-quote: 158, 158, 158;
+}
+
+.custom-callout {
+    box-shadow: 0 .2rem .5rem var(--box-shadow);
+
+    border-left-style: solid;
+    border-left-width: 0.25rem;
+    border-top-left-radius: 0.125rem;
+    border-bottom-left-radius: 0.125rem;
+
+    &[open] {
+        summary::after {
+            transform: rotate(0deg);
+        }
+    }
+
+    summary {
+        padding: 1rem;
+        margin: 0;
+
+        &::marker {
+            content: '';
+        }
+
+        display: flex;
+        justify-content: space-between;
+
+        &::after {
+            color: var(--c-text);
+            align-self: center;
+            transform: rotate(-90deg);
+            transition: cubic-bezier(0.075, 0.82, 0.165, 1) 500ms;
+            content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+        }
+
+        cursor: pointer;
+    }
+
+    blockquote {
+        position: relative;
+        color: var(--c-text);
+        border-left: none;
+        margin: 0;
+        padding: 1rem;
+    }
+
+    &.note,
+    &.seealso {
+        border-left-color: rgb(var(--callout-note));
+
+        summary {
+            background-color: rgba(var(--callout-note), 0.1);
+        }
+    }
+
+    &.abstract,
+    &.summary,
+    &.tldr {
+        border-left-color: rgb(var(--callout-abstract));
+
+        summary {
+            background-color: rgba(var(--callout-abstract), 0.1);
+        }
+    }
+
+    &.info,
+    &.todo {
+        border-left-color: rgb(var(--callout-info));
+
+        summary {
+            background-color: rgba(var(--callout-info), 0.1);
+        }
+    }
+
+    &.tip,
+    &.hint,
+    &.important {
+        border-left-color: rgb(var(--callout-tip));
+
+        summary {
+            background-color: rgba(var(--callout-tip), 0.1);
+        }
+    }
+
+    &.success,
+    &.check,
+    &.done {
+        border-left-color: rgb(var(--callout-success));
+
+        summary {
+            background-color: rgba(var(--callout-success), 0.1);
+        }
+    }
+
+    &.question,
+    &.help,
+    &.faq {
+        border-left-color: rgb(var(--callout-question));
+
+        summary {
+            background-color: rgba(var(--callout-question), 0.1);
+        }
+    }
+
+    &.warning,
+    &.caution,
+    &.attention {
+        border-left-color: rgb(var(--callout-warning));
+
+        summary {
+            background-color: rgba(var(--callout-warning), 0.1);
+        }
+    }
+
+    &.failure,
+    &.fail,
+    &.missing {
+        border-left-color: rgb(var(--callout-failure));
+
+        summary {
+            background-color: rgba(var(--callout-failure), 0.1);
+        }
+    }
+
+    &.danger,
+    &.error {
+        border-left-color: rgb(var(--callout-danger));
+
+        summary {
+            background-color: rgba(var(--callout-danger), 0.1);
+        }
+    }
+
+    &.bug {
+        border-left-color: rgb(var(--callout-bug));
+
+        summary {
+            background-color: rgba(var(--callout-bug), 0.1);
+        }
+    }
+
+    &.example {
+        border-left-color: rgb(var(--callout-example));
+
+        summary {
+            background-color: rgba(var(--callout-example), 0.1);
+        }
+    }
+
+    &.quote,
+    &.cite {
+        border-left-color: rgb(var(--callout-quote));
+
+        summary {
+            background-color: rgba(var(--callout-quote), 0.1);
+        }
+    }
 }

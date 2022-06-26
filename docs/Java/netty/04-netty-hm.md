@@ -118,13 +118,12 @@ public class EventLoopClient {
 ```
 ### Future & Promise
 
-```ad-caution
-Netty 中的 Future 接口和 JDK 中的 Future 同名，但 Netty 的继承于 JDK
-Netty 的 Promise 对 Netty 的 Future 进行了扩展
-- JDK Future 只能同步等待任务结束（成功或失败）才能得到结果
-- Netty Future 可以同步等待任务执行得到的结果，也可以异步方式得到结果，但是需要等任务结束
-- Netty Promise 不仅有 Netty Future 的功能，而且脱离任务独立存在，只作为两个线程之间传递结果的容器
-```
+> [!caution]
+> Netty 中的 Future 接口和 JDK 中的 Future 同名，但 Netty 的继承于 JDK
+> Netty 的 Promise 对 Netty 的 Future 进行了扩展
+> - JDK Future 只能同步等待任务结束（成功或失败）才能得到结果
+> - Netty Future 可以同步等待任务执行得到的结果，也可以异步方式得到结果，但是需要等任务结束
+> - Netty Promise 不仅有 Netty Future 的功能，而且脱离任务独立存在，只作为两个线程之间传递结果的容器
 
 ```java
 public class TestNettyPromise {

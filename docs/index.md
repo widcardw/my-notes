@@ -91,40 +91,36 @@ my-notes
 
 ~~终于把 plugin 的单数改成复数了~~
 
-#### 2. admonition 插件转义
+#### 2. admonition 插件
 
-在 obsidian 中，admonition 插件的用法为：使用连续的反引号将块包住，头部使用 `ad-name` 来进行修饰，同时能够自定义标题，例如
+Obsidian 在 0.14 版本之后提供了 Callout 插件，使用格式如下
 
-~~~
-```ad-note
-title: 提示
-这是一个 admonition 块
-```
-~~~
-
-输出结果为
-
-```ad-note
-title: 提示
-这是一个 admonition 块
+```md
+> [!note] 这是一条笔记
+> 下面是笔记内容
 ```
 
-为了这个插件转义，还特意去学了很多 markdown-it 的知识，好累哦……总之各个插件它们的适配规则不一样，就真的好烦……
+他会渲染成下面的样子
+
+> [!note] 这是一条笔记
+> 下面是笔记内容
+
+花了点时间，把它做出来了。之前还是采用了 Markdown It Container 来进行转义的，这次就直接用它的本体吧。
 
 ##### 使用说明
 
-下载 `docs/.vuepress/plugins/admonition-translator.js` ，然后在 `docs/.vuepress/config.js` 中引入
+下载 `docs/.vuepress/plugins/callout.ts` 并放入 `plugins` 目录中。在 `config.ts` 中引入
 
-```js
-import admonitionTranslator from './plugins/admonition-translator'
-
-export default {
+```ts
+import callout from './plugins/callout'
+export default defineUserConfig({
 	extendsMarkdown: md => {
-		// 'ad' 与你的 admonition 的前缀一致，例如上面我的就是 `ad` 为前缀
- 		md.use(admonitionTranslator, 'ad')
+		md.use(callout)
 	}
-}
+})
 ```
+
+以及，还需要引入 css （因为我还不会把 css 直接引入进去😅）。将 `styles/index.scss` 中与 callout 有关的都复制进去。
 
 #### 3. wavedrom
 
