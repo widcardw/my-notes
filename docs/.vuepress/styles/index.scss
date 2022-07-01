@@ -38,15 +38,23 @@ mark {
     --callout-bug: 245, 0, 87;
     --callout-example: 124, 77, 255;
     --callout-quote: 158, 158, 158;
+    --callout-radius: 0.5rem;
+    --callout-border-opacity: 0.5;
+    --callout-title-bg-opacity: 0.1;
 }
 
 .custom-callout {
-    box-shadow: 0 .2rem .5rem var(--box-shadow);
+    // box-shadow: 0 .2rem .5rem var(--box-shadow);
 
-    border-left-style: solid;
-    border-left-width: 0.25rem;
-    border-top-left-radius: 0.125rem;
-    border-bottom-left-radius: 0.125rem;
+    // border-left-style: solid;
+    // border-left-width: 0.25rem;
+    // border-top-left-radius: 0.125rem;
+    // border-bottom-left-radius: 0.125rem;
+
+    border-width: 1px;
+    border-style: solid;
+    border-radius: var(--callout-radius);
+    margin: 1rem 0;
 
     &[open] {
         summary::after {
@@ -57,9 +65,14 @@ mark {
     summary {
         padding: 1rem;
         margin: 0;
+        border-top-left-radius: var(--callout-radius);
+        border-top-right-radius: var(--callout-radius);
 
-        &::marker {
+        &::marker, &::-webkit-details-marker {
             content: '';
+        }
+        &::before {
+            margin-right: 0.5rem;
         }
 
         display: flex;
@@ -74,6 +87,11 @@ mark {
         }
 
         cursor: pointer;
+
+        .callout-title {
+            font-weight: 700;
+            flex: 1;
+        }
     }
 
     blockquote {
@@ -81,118 +99,121 @@ mark {
         color: var(--c-text);
         border-left: none;
         margin: 0;
-        padding: 1rem;
+
+        p {
+            margin: 1rem 0;
+        }
     }
 
     &.note,
     &.seealso {
-        border-left-color: rgb(var(--callout-note));
+        border-color: rgba(var(--callout-note), var(--callout-border-opacity));
 
         summary {
-            background-color: rgba(var(--callout-note), 0.1);
+            background-color: rgba(var(--callout-note), var(--callout-title-bg-opacity));
         }
     }
 
     &.abstract,
     &.summary,
     &.tldr {
-        border-left-color: rgb(var(--callout-abstract));
+        border-color: rgba(var(--callout-abstract), var(--callout-border-opacity));
 
         summary {
-            background-color: rgba(var(--callout-abstract), 0.1);
+            background-color: rgba(var(--callout-abstract), var(--callout-title-bg-opacity));
         }
     }
 
     &.info,
     &.todo {
-        border-left-color: rgb(var(--callout-info));
+        border-color: rgba(var(--callout-info), var(--callout-border-opacity));
 
         summary {
-            background-color: rgba(var(--callout-info), 0.1);
+            background-color: rgba(var(--callout-info), var(--callout-title-bg-opacity));
         }
     }
 
     &.tip,
     &.hint,
     &.important {
-        border-left-color: rgb(var(--callout-tip));
+        border-color: rgba(var(--callout-tip), var(--callout-border-opacity));
 
         summary {
-            background-color: rgba(var(--callout-tip), 0.1);
+            background-color: rgba(var(--callout-tip), var(--callout-title-bg-opacity));
         }
     }
 
     &.success,
     &.check,
     &.done {
-        border-left-color: rgb(var(--callout-success));
+        border-color: rgba(var(--callout-success), var(--callout-border-opacity));
 
         summary {
-            background-color: rgba(var(--callout-success), 0.1);
+            background-color: rgba(var(--callout-success), var(--callout-title-bg-opacity));
         }
     }
 
     &.question,
     &.help,
     &.faq {
-        border-left-color: rgb(var(--callout-question));
+        border-color: rgba(var(--callout-question), var(--callout-border-opacity));
 
         summary {
-            background-color: rgba(var(--callout-question), 0.1);
+            background-color: rgba(var(--callout-question), var(--callout-title-bg-opacity));
         }
     }
 
     &.warning,
     &.caution,
     &.attention {
-        border-left-color: rgb(var(--callout-warning));
+        border-color: rgba(var(--callout-warning), var(--callout-border-opacity));
 
         summary {
-            background-color: rgba(var(--callout-warning), 0.1);
+            background-color: rgba(var(--callout-warning), var(--callout-title-bg-opacity));
         }
     }
 
     &.failure,
     &.fail,
     &.missing {
-        border-left-color: rgb(var(--callout-failure));
+        border-color: rgba(var(--callout-failure), var(--callout-border-opacity));
 
         summary {
-            background-color: rgba(var(--callout-failure), 0.1);
+            background-color: rgba(var(--callout-failure), var(--callout-title-bg-opacity));
         }
     }
 
     &.danger,
     &.error {
-        border-left-color: rgb(var(--callout-danger));
+        border-color: rgba(var(--callout-danger), var(--callout-border-opacity));
 
         summary {
-            background-color: rgba(var(--callout-danger), 0.1);
+            background-color: rgba(var(--callout-danger), var(--callout-title-bg-opacity));
         }
     }
 
     &.bug {
-        border-left-color: rgb(var(--callout-bug));
+        border-color: rgba(var(--callout-bug), var(--callout-border-opacity));
 
         summary {
-            background-color: rgba(var(--callout-bug), 0.1);
+            background-color: rgba(var(--callout-bug), var(--callout-title-bg-opacity));
         }
     }
 
     &.example {
-        border-left-color: rgb(var(--callout-example));
+        border-color: rgba(var(--callout-example), var(--callout-border-opacity));
 
         summary {
-            background-color: rgba(var(--callout-example), 0.1);
+            background-color: rgba(var(--callout-example), var(--callout-title-bg-opacity));
         }
     }
 
     &.quote,
     &.cite {
-        border-left-color: rgb(var(--callout-quote));
+        border-color: rgba(var(--callout-quote), var(--callout-border-opacity));
 
         summary {
-            background-color: rgba(var(--callout-quote), 0.1);
+            background-color: rgba(var(--callout-quote), var(--callout-title-bg-opacity));
         }
     }
 }
