@@ -36,6 +36,14 @@ const sidebar = [
         ]
     },
     {
+        text: "计算机网络",
+        collapsible: true,
+        children: [
+            "/计算机网络/sec1_structure.md",
+            "/计算机网络/sec2_physical_layer.md",
+        ]
+    },
+    {
         text: "大物",
         collapsible: true,
         children: [
