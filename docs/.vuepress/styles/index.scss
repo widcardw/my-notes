@@ -40,16 +40,26 @@ mark {
     --callout-quote: 158, 158, 158;
     --callout-radius: 0.5rem;
     --callout-border-opacity: 0.5;
-    --callout-title-bg-opacity: 0.1;
+    --callout-title-bg-opacity: 0.08;
+}
+
+.callout-fold {
+    transform: rotate(-90deg);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 500ms;
+    display: flex;
+
+    &::before {
+        align-self: center;
+        content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+    }
+}
+
+.callout-title {
+    display: flex;
+    justify-content: space-between;
 }
 
 .custom-callout {
-    // box-shadow: 0 .2rem .5rem var(--box-shadow);
-
-    // border-left-style: solid;
-    // border-left-width: 0.25rem;
-    // border-top-left-radius: 0.125rem;
-    // border-bottom-left-radius: 0.125rem;
 
     border-width: 1px;
     border-style: solid;
@@ -57,8 +67,10 @@ mark {
     margin: 1rem 0;
 
     &[open] {
-        summary::after {
-            transform: rotate(0deg);
+        summary {
+            .callout-fold {
+                transform: rotate(0deg);
+            }
         }
     }
 
@@ -68,30 +80,19 @@ mark {
         border-top-left-radius: var(--callout-radius);
         border-top-right-radius: var(--callout-radius);
 
-        &::marker, &::-webkit-details-marker {
+        &::marker {
             content: '';
         }
+
         &::before {
             margin-right: 0.5rem;
         }
 
-        display: flex;
-        justify-content: space-between;
-
-        &::after {
-            color: var(--c-text);
-            align-self: center;
-            transform: rotate(-90deg);
-            transition: cubic-bezier(0.075, 0.82, 0.165, 1) 500ms;
-            content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+        &::-webkit-details-marker {
+            display: none;
         }
 
         cursor: pointer;
-
-        .callout-title {
-            font-weight: 700;
-            flex: 1;
-        }
     }
 
     blockquote {
@@ -102,7 +103,7 @@ mark {
         padding: 0.25rem 1rem;
 
         p {
-            margin: 1rem 0;
+            margin: 0.5rem 0;
         }
     }
 
