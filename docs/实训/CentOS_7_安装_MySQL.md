@@ -2,7 +2,6 @@
 date created: 2021-12-02 16:22
 ---
 
-[toc]
 
 # CentOS 安装 MySQL
 

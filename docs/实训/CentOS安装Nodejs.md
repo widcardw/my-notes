@@ -2,7 +2,6 @@
 date-created: 2022-01-24
 ---
 
-[toc]
 
 # CentOS 安装 Nodejs
 

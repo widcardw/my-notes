@@ -41,6 +41,10 @@ const sidebar = [
         children: [
             "/计算机网络/sec1_structure.md",
             "/计算机网络/sec2_physical_layer.md",
+            "/计算机网络/sec3_data_link_layer.md",
+            "/计算机网络/sec4_network_layer.md",
+            "/计算机网络/sec5_transmition_layer.md",
+            "/计算机网络/sec6_app_layer.md",
         ]
     },
     {
@@ -132,7 +136,7 @@ const sidebar = [
     {
         text: "manim",
         collapsible: true,
-        children: ["/manim/从贝塞尔曲线到概率模型/doc.md", "/manim/manimgl_markdown/manimgl.md"]
+        children: ["/manim/从贝塞尔曲线到概率模型/doc.md"]
     },
     {
         text: "utils",
