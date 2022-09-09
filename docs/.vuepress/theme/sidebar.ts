@@ -108,6 +108,29 @@ const sidebar = [
         ]
     },
     {
+        text: "数据结构",
+        collapsible: true,
+        children: [
+            "/data-structure/section07-search.md",
+            "/data-structure/section08-sort.md",
+        ]
+    },
+    {
+        text: "English",
+        collapsible: true,
+        children: [
+            '/Eng/01-composition.md'
+        ]
+    },
+    {
+        text: 'Math',
+        collapsible: true,
+        children: [
+            '/Math/differential-equation.md',
+            '/Math/Fourier-Series.md'
+        ]
+    },
+    {
         text: "微机原理",
         collapsible: true,
         children: [
@@ -156,7 +179,7 @@ const sidebar = [
         text: "Web",
         collapsible: true,
         children: ["/web/HTML的奇淫巧计.md"]
-    }
+    },
 ]
 
 export default sidebar
