@@ -108,6 +108,82 @@ You have just come back from the U.S. as a member of a Sino-American(中美) cul
 1. express your thanks for his/her warm reception
 2. welcome him/her to visit China in due course(在适当的时候).
 
+#### Answer
+
+Dear Tim,
+
+I am quite delighted to recall the past months when I studied in America as a member of the Sino-American culture exchange program. Today, I am writing for the purpose of expressing/conveying/extending my thanks/gratitude/apprecation and inviting you to visit China.
+
+ It was your warm/enthusiasm reception that enabled me to enjoy a comfortable and fruitful trip of learning in your country. Thus, I am particularly grateful to you. In addition, compared with America, China possesses/owns/has a longer history, diverse/various cultures, customs and tasty foods. I heard that you are exceedingly interested in China. So, I sincerely hope that you can visit China in due course so that I can repay your reception. 
+
+I deem that your visit will bring you more oppotunities to know China, arouse your passion for China's cultures and help you enjoy various delicious foods.
+
+I am looking forward to your favorable reply at your earlist convenience.
+
+<p style="text-align:right">Yours truly,</p>
+
+<p style="text-align:right">Zhang Wei</p>
+
+## Complaint
+
+### Example 
+
+#### Directions
+
+Suppose you have just found something wrong with the electronic dictionary that you bought form an online store the other day. Write a letter to 
+
+1. make a complaint and
+2. demand a prompt solution
+
+#### Answer
+
+Dear Sir or Madam,
+
+As a customer who purchased an electronic dictionary from your online store the other day, I am writing for the purpose of complaining since I have just found something wrong with its keyboard/screen. 
+
+It was its frequent problems that caused me not to make full/adequate/sufficient preparation for the upcoming GRE. Thus, I am rather disappointed with the terrible/inferior quality of your product. In addition, compared with customers' demands, your after-sales service is not satisfactory. To be specific, I called for several times, but nobody answered/responded. Accordingly/Therefore/So/Hence, I deem that it is advisable for you to change it for another new one or repay my money immediately. 
+
+If/Provided that you cannot offer a prompt solution, I will call 12315 for a further complaint. 
+
+<p style="text-align:right">Yours sincerely,</p>
+
+<p style="text-align:right">Li Ming</p>
+
+## Congratulation & Suggestion
+
+### Example
+
+#### Directions
+
+Suppose your cousin Li Ming has just been admitted to university. Write him/her a letter to
+
+1. congratulate him/her, and
+2. give him/her suggestions on how to get prepared for university life.
+
+
+## Invitation
+
+### Example
+
+#### Directions
+
+Write an E-mail of about 100 words to a foreign teacher in your college, inviting him/her to be a judge for the upcoming English speech contest. You should include the details you think necessary. 
+
+#### Answer
+
+Dear Professor Sky,
+
+As the chairman of the Student Union in this university who is in charge of organizing the upcoming English speech contest, I am writing for the purpose of inviting you to be one of the major judges.
+
+To begin with, this contest is scheduled to start at 19:00 on June 26 in the Center of Students' Activities and last for approximately 2 hours. In addition, on behalf of all students, I am deeply greateful for your excellent teaching in English speech and it is your efforts that enable a host of youngsters, including me, to enhance our English proficiency. Thus, compared with the past years, more students become confident this year and they have signed up for the contest. 
+
+Finally, all of us hope that you can be one of the main hudge for/of the contest and give professional comments. 
+
+(I am convinced that with your support, this contest will be successful and we are looking forward to your favorable reply at your earliest convenience. 
+
+<p style="text-align:right">Yours sincerely,</p>
+
+<p style="text-align:right">Li Ming</p>
 
 
 

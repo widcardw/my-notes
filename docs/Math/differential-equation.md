@@ -473,4 +473,263 @@ $y^{\ast}$ 即为 ${1 \over F({\rm D})}$ 作用于 $f(x)$ 的结果
 > 
 > 将 $e$ 的指数直接代入 $\rm D$
 
+> [!example] $y''+2y'+3y=e^{-3x}$
+> 
+> $$
+> \begin{aligned}
+> F(D) & = D^{2}+2D-3 \\
+> y^{\ast} &={\color{blue} {1 \over D^{2}+2D-3 } } e^{ {\color{red}-3}x}
+> \end{aligned}
+> $$
+> 
+> 此时，将 $D=-3$ 代入，发现分母上为 0，我们选择放弃代入，前面乘 $x$，对算子求一阶导数
+> 
+> $$
+> \begin{aligned}
+> y^{\ast} &={\color{blue} {1 \over D^{2}+2D-3 } } e^{ {\color{red}-3}x} \\
+> & = x {\color{blue} {1 \over 2 D+2 } }  e^{ {\color{red}-3}x} \\
+> & = - {1 \over 4} x e^{-3x}
+> \end{aligned}
+> $$
+
+> [!example] $y'''+3y''+3y'+y=e^{-x}$
+> 
+> $$
+> \begin{aligned}
+> F(D) & = D^{3}+3D^{2}+3D+1 \\
+> y^{\ast} & = {\color{blue} {1 \over D^{3}+3D^{2}+3D+1} }e^{ {\color{red} -}x} \\
+> & = x {\color{blue} {1 \over 3D^{2} + 6D + 3} } e^{ {\color{red} -}x} \\
+> & = x^{2} {\color{blue} {1 \over 6D+6} } e^{ {\color{red} -}x} \\
+> & = {1 \over 6} x^{3}e^{-x}
+> \end{aligned}
+> $$
+
+> [!example] $5y''-3y'+4y=5$
+> 
+> $$
+> \begin{aligned}
+> F(D) & = 5D^{2}-3D+4 \\
+> y^{\ast} & = {\color{blue} {1 \over 5D^{2}-3D+4} } 5 {\color{red} e^{0x} } \\
+> & = {1 \over 4}
+> \end{aligned}
+> $$
+
+> [!tip] 小结
+> 1. $F(D)$ 取倒数，$y^{\ast}={1 \over F(D)} f(x)$
+> 2. 令 $D=k$，求出 $y^{\ast}$
+> 3. 若 $D=k$ 时 $F(D)=0$，则前乘 $x$，算子求导
+
+### $f(x)$ 形如 $\sin \alpha x$ 或 $\cos \alpha x$
+
+根据欧拉公式
+
+$$
+e^{ {\rm i} x } = \cos x + \sin {\rm i} x
+$$
+
+将三角函数翻译为 $e$  为底的指数函数，即 $\sin \alpha x \Rightarrow e^{ {\rm i} \alpha x}$，则 $k={\rm i} \alpha$
+
+> [!example] $2y''-3y=\sin 3x$
+> 
+> $$
+> \begin{aligned}
+> F(D) & = 2D^{2} - 3 \\
+> y^{\ast} & = {\color{blue} {1 \over 2D^{2} - 3 } } \sin 3x \\
+> & = {\color{blue} {1 \over 2({\rm 3 i})^{2} - 3 } } \sin 3x \\
+> & = - {1 \over 21} \sin 3x
+> \end{aligned}
+> $$
+
+> [!example] $y''+4y=\cos 2x$
+> 
+> $$
+> \begin{aligned}
+> F(D) & = D^{2}+ 4 \\
+> y^{\ast} & = {\color{blue} { 1 \over D^{2}+ 4 } } \cos 2x \\
+> & = {\color{red} { 1 \over ({\rm 2 i})^{2}+ 4 } } \cos 2x
+> \end{aligned}
+> $$
+> 
+> 此时，分母为 0，不能继续运算。根据上一节中，前乘 $x$，算子求导的法则，有
+> 
+> $$
+> \begin{aligned}
+> y^{\ast} & = {\color{blue} { 1 \over D^{2}+ 4 } } \cos 2x \\
+> & = x {\color{blue} { 1 \over 2 D } } \cos 2x \\
+> & = x {\color{red} { 1 \over 4 {\rm i} } } \cos 2x
+> \end{aligned}
+> $$
+> 
+> 但此时直接将 $\rm i$ 代入会得到分母为复数，不符合实际情况。回想起，$1 \over D$ 的含义是 **积分**，因此直接将 $1 \over D$ 作用于 $\cos 2x$
+> 
+> $$
+> \begin{aligned}
+> y^{\ast} & = {\color{blue} { 1 \over D^{2}+ 4 } } \cos 2x \\
+> & = x {\color{blue} { 1 \over 2 D } } \cos 2x \\
+> & = { x \over 2} {\color{blue} { 1 \over D } } \cos 2x \\
+> & = {1 \over 4} \sin 2x
+> \end{aligned}
+> $$
+
+> [!example] $y''+3y'-2y=\sin 3x$
+> 
+> $$
+> \begin{aligned}
+> F(D) & = D^{2} + 3D - 2 \\
+> y^{\ast} & = { \color{blue} {1 \over D^{2} + 3D - 2} } \sin 3x \\
+> \end{aligned}
+> $$
+> 
+> 首先，能代则代，即将 $k=3 {\rm i}$ 代入 $D^{2}$
+> 
+> $$
+> \begin{aligned}
+> y^{\ast} & = { \color{blue} {1 \over D^{2} + 3D - 2} } \sin 3x \\
+> & = { \color{blue} {1 \over  3D - 11} } \sin 3x \\
+> \end{aligned}
+> $$
+> 
+> 接着，对分母进行 “有理化”
+> 
+> $$
+> \begin{aligned}
+> y^{\ast}  & = { \color{blue} {1 \over  3D - 11} } \sin 3x \\
+> & = {\color{blue} { 3 D + 11 \over 9D^{2}- 121} } \sin 3x \\
+> & = - {1 \over 202} {\color{blue}(3 D + 11) } \sin 3x \\
+> & = - {1 \over 202} ( {\color{blue} 3D} \sin 3x + 11 \sin 3x ) \\
+> & = - {1 \over 202} ( 9 \cos 3x + 11 \sin 3x )
+> \end{aligned}
+> $$
+
+> [!tip] 小结
+> 
+> 1. 将 $\sin \alpha x$ 和 $\cos \alpha x$ 翻译为 $e^{ {\rm i} \alpha x}$，之后用上一讲的方法
+> 2. 若 $F(D)=0$，同样采用前乘 $x$，算子求导的方法
+> 3. 分母上有 $D$ 的一次项，凑出平方项后代入
+
+### $f(x)$形如 $P_{n}(x)$
+
+> [!example] $y''-3y'+2y = 2x^{2}-3x + 1$
+
+$$
+\begin{aligned}
+F(D) & = D^{2} - 3D + 2 \\
+y^{\ast} & = {\color{blue} {1 \over D^{2} - 3D + 2 } } (2x^2-3x+1)
+\end{aligned}
+$$
+
+1. 把 $F(D)$ 按照升幂排列 $2 - 3D + D^{2}$
+2. 以 1 为被除数，$F(D)$ 为除数，作竖式除法
+	- 基本原则：消去首项，商到商式中出现 $f(x)$ 最高次幂为止
+
+```text
+               1/2 + 3/4 D + 7/8 D^2
+             -------------------------
+2 - 3D + D^2 ) 1
+               1   - 3/2 D + 1/2 D^2
+             -------------------------
+                     3/2 D - 1/2 D^2
+                     3/2 D - 9/4 D^2 + 3/4 D^3
+                   ----------------------------
+                             7/4 D^2 - 3/4 D^3
+```
+
+将 $D$ 作为求导运算
+
+$$
+\begin{aligned}
+y^{\ast} & = { \color{blue} \left(  {1 \over 2} + {3 \over 4} D + {7 \over 8 } D^{2} \right) } (2x^{2} - 3x + 1) \\
+& = x^{2} + {3 \over 2} x + {7 \over 4}
+\end{aligned}
+$$
+
+> [!example] $y'' - 3y' = x^{2}- 3$
+> 
+> $$
+> \begin{aligned}
+> F(D) & = D^{2} - 3D
+> \end{aligned}
+> $$
+> 
+> 若 $F(D)$ 中有公因式，则必须提出 $D$ 的公因式，再进行计算
+> 
+> $$
+> \begin{aligned}
+> y^{\ast} & = {\color{blue} {1 \over D } {1 \over D - 3} } (x^{2} - 3) \\
+> & = {\color{blue} {1 \over D } \left(- {1 \over 3} - {1 \over 9} D - {1 \over 27} D^{2} \right) } (x^{2} - 3) \\
+> & = {\color{blue} {1 \over D } } \left(- {1 \over 3} x^{2} - {2 \over 9}  x + {25 \over 27}  \right) \\
+> & = - {1 \over 9} x^{3} - {1 \over 9} x^{2} + {25 \over 27 } x
+> \end{aligned}
+> $$
+
+> [!tip] 小结
+> 
+> 1. 多项式除法算 $1 \over F(D)$
+> 2. $F(D)$ 中有 $D$ 的因式，必须先提取，再运算
+
+### 三种符合形式的求法
+
+#### $f(x)$ 形如 $e^{kx}\sin \alpha x$
+
+逆算子移位公式
+
+$$
+{1 \over F(D)} e^{kx} v(x) = { \color{red} e^{kx} } {1 \over F({\color{blue} D+k})} v(x)
+$$
+
+> [!example] $y'' + 3y' - 2y = e^{-x} \sin 2x$
+> 
+> $$
+> \begin{aligned}
+> y^{\ast} & = { \color{blue} {1 \over D^{2}+ 3D - 2 } } e^{ {\color{red}-x} } \sin 2x \\
+> & = {\color{red} e^{-x} } { \color{blue} {1 \over (D - 1)^{2}+ 3(D - 1) - 2 } } \sin 2x \\
+> & = {\color{red} e^{-x} } { \color{blue} {1 \over D^{2} + D - 4 } } \sin 2x \\
+> & = e^{-x} { \color{blue} {1 \over D - 8 } } \sin 2x \\
+> & = e^{-x} { \color{blue} {D+8 \over D^2 - 64 } } \sin 2x \\
+> & = - {1 \over 68} e^{-x} { \color{blue} (D+4)} \sin 2x \\
+> & = - {1 \over 34} (\cos 2x + 4 \sin 2x) e^{-x}
+> \end{aligned}
+> $$
+
+> [!example] $y'' + 2y' + y = xe^{x}$
+> 
+> $$
+> \begin{aligned}
+> y^{\ast} & = { \color{blue} {1 \over D^{2} + 2D + 1} } xe^{x} \\
+> & = {\color{red} e^{x} } { \color{blue} {1 \over D^{2} + 4D + 4} } x \\
+> & = e^{x} {\color{blue} \left( {1 \over 4} - {1 \over 4} D  \right)}x \\
+> & = {1 \over 4} (x - 1) e^{x}
+> \end{aligned}
+> $$
+
+> [!example] $y'' - 4y' + 4y = 3xe^{2x}$
+> 
+> $$
+> \begin{aligned}
+> y^{\ast} & = { \color{blue} {1 \over D^{2} + 4D + 4} }3xe^{2x} \\
+> & = {\color{red} e^{2x} } {\color{blue} {1 \over D^{2} } } 3x \\
+> & = {1\over 2} x^{3}e^{2x}
+> \end{aligned}
+> $$
+
+#### $f(x)$ 形如 $P_{n}(x) \sin \alpha x$
+
+一般只需掌握 $P_{n}(x)=x$ 的情况，有
+
+$$
+{1 \over F(D)} x v(x) = \left(x - {F'(D) \over F(D)} \right) {1 \over F(D)} v(x)
+$$
+
+> [!example] $y''+y=x \cos 2x$
+> 
+> $$
+> \begin{aligned}
+> y^{\ast} & =  { \color{blue} {1 \over D^{2} + 1 } } x \cos 2x \\
+> & = {\color{red} \left(x - {2D \over D^{2} + 1}  \right) } { \color{blue} {1 \over D^{2} + 1 } } \cos 2x \\
+> & = - {1 \over 3} {\color{red} \left(x - {2D \over D^{2} + 1}  \right) } \cos 2x \\
+> & = - {1 \over 3}x \cos 2x + {1 \over 3} { \color{red} {2D \over D^{2} + 1} }\cos 2x \\
+> & = - {1 \over 3}x \cos 2x - {2 \over 9} D \cos 2x \\
+> & = - {1 \over 3}x \cos 2x + {4 \over 9} D \sin 2x \\
+> \end{aligned}
+> $$
 
