@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 
 :root {
-    --font-family: KaTeX_Main, Times, 'Noto Serif SC', serif !important;
+    --font-family: KaTeX_Main, Times, serif, 'Noto Serif SC' !important;
     --font-family-code: 'JetBrains Mono', Monaco, monospace !important;
 }
 
@@ -15,8 +15,8 @@
 mark {
     color: var(--c-fg);
     background: rgba(89, 218, 160, 0.3);
-    padding: 0.25rem 0.25rem;
-    border-radius: 0.25rem;
+    padding: 0.1rem 0.1rem;
+    border-radius: 0.1rem;
     margin: 0 0.05rem;
 }
 
@@ -25,7 +25,14 @@ mark {
     margin: 1rem auto;
 }
 
+h1, h2, h3, h4, h5, h6, strong, th {
+    font-weight: var(--bold-weight);
+}
+
+
+
 :root {
+    --bold-weight: 800;
     --callout-note: 68, 138, 255;
     --callout-abstract: 0, 176, 255;
     --callout-info: 0, 184, 212;

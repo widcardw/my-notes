@@ -1,5 +1,52 @@
 # Composition
 
+## Resignation & Apology
+
+### Example 1
+
+#### Directions
+
+Two months ago, you got a job as an editor for the magazine Design & Fashion. But now you find that the work is not what you expected. You decided to quit. Write a letter to your boss, Mr. Wang, telling him your decision, stating your reasons, and making apologies. You should write about 100 words. Do not sign your own name at the end of the letter.
+
+#### Answer
+
+Dear Mr. Wang,
+
+I am very/quite/particularly delighted to recall the past two months when I worked as an editor for your magazine. However, I am writing for the purpose of quitting since this work is not what I expected. 
+
+It was your help and other colleagues' tremendous help that enabled me to accumulate certain ability and experience. Thus, I am quite grateful to you for your help. Anyway, my competence, compared with the demands of this job, is not adequate and I cannot do it well. In addition, I am keen on computer science rather than editing. To conclude, it is not advisable for me to continue this work. 
+
+Finally, I truely hope that you can stand in my shoes and accept my apologies.
+
+<p style="text-align: right">Yours sincerely</p>
+
+<p style="text-align: right">Li Ming</p>
+
+### Example 2
+
+#### Directions
+
+You have just come back from Canada and found a music CD in your luggage that you forgot to return to Bob, your landlord there. Write him a letter to
+
+1. make an apology
+2. suggest a solution
+
+#### Answer
+
+Dear Bob,
+
+I am quite delighted to recall the past months when I studied in Canada and stayed in your house. However, I am writing for the purpose of making an apology since I forgot to return your CD to you. 
+
+It was your tremendous help that enabled me to enjoy a confortable and fruitful trip. Thus, I am quite grateful to you for your help. Anyway, compared with you, I am more careless and find your CD in my luggage until I arrived in China. Thus, I deem that it is advisable for me to send or deliver it back to you immediately by EMS. Of course, if you can think of any better solution, please feel free to inform me. 
+
+I am looking forward to your favorable relpy at your earliest convenience. (Once again, I am sorry for any inconvenience caused.)
+
+
+<p style="text-align: right">Yours sincerely</p>
+
+<p style="text-align: right">Li Ming</p>
+
+
 ## Notice
 
 ### Example 1
@@ -118,7 +165,7 @@ I am quite delighted to recall the past months when I studied in America as a me
 
 I deem that your visit will bring you more oppotunities to know China, arouse your passion for China's cultures and help you enjoy various delicious foods.
 
-I am looking forward to your favorable reply at your earlist convenience.
+I am looking forward to your favorable reply at your earliest convenience.
 
 <p style="text-align:right">Yours truly,</p>
 
@@ -185,5 +232,26 @@ Finally, all of us hope that you can be one of the main hudge for/of the contest
 
 <p style="text-align:right">Li Ming</p>
 
+## Description & Suggestion
+
+### Example
+
+#### Directions
+
+Writer a letter of about 100 words to the president of your university, suggesting how to improve students' physical condition. You should include the details you think necessary. 
+
+#### Answer
+
+Dear President Sky,
+
+As a senior in this university who majors in Physical Education, I am writing for the purpose of suggesting how to enhance students' physical quality/health. 
+
+To begin with, a host of youngsters in college, compared with the past years, spend more time on the Internet to watch short videos, play games or chat with others. As a result/Consequently, their time for physical exercises gets less, and their physical condition becomes worse/terrible. Thus, it is advisable for the Student Union to organize more activities to attract and encourage more students to take part in sports. In addition, our university is supposed to upgrade or purchase athletic facilities/equipment, which will be convenient/beneficial for students to do sports. 
+
+Finally, I am convinced that with our shared efforts, students' physical condition in our university will be improved a lot. 
+
+<p style="text-align:right">Yours sincerely,</p>
+
+<p style="text-align:right">Li Ming</p>
 
 
