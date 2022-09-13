@@ -46,6 +46,42 @@ I am looking forward to your favorable relpy at your earliest convenience. (Once
 
 <p style="text-align: right">Li Ming</p>
 
+## Help
+
+### Example 
+
+#### Directions
+
+You want to contribute to Project Hope by offering financial aid to a child in a remote area. Write a letter to the department concerned, asking them to help find a candidate. you should specify what kind of child you want to help and how you will carry out your plan. 
+
+#### Answer
+
+Dear Sir or Madam,
+
+As a seinor in Peking University who pays great attention to Project Hop, I am writing for the purpose of finding a candidate since I intend to offer financial help to him/her. 
+
+Project Hope is characterized by people's warm help, which enables a host of poor children to gain the oppotunity of education. Accordingly, to my understanding, it is advisable for everyone to contribute to Project Hope and I want to help a child from a remote area, whose family is so impoverished that they cannot afford tuition. Compared with others, I am not richer but I am willing to _do my ulmost_ to help him/her finish education form high-school to college. 
+
+Finally, I want to say that I am quite greateful for your hard work and I am looking forward to your favorable reply at your earliest convenience. 
+
+
+<p style="text-align: right">Yours sincerely</p>
+
+<p style="text-align: right">Li Ming</p>
+
+### Example
+
+#### Directions
+
+Write a letter to your university library, making suggestions for improving its service. 
+
+#### Answer
+
+Dear Sir or Madam, 
+
+As a senior in our university who prefers reading in the library in spare time, I am writing for the purpose of making suggestions for enhancing the service here. 
+
+To begin with, compared with students' demands in learning, the vareity and quality of book in the library are not adequate and frequently, I annot find the books I want. Accordingly, it is advisable for you to purchase more latest books. In addition, because a host of seniors, incluing me, 
 
 ## Notice
 
