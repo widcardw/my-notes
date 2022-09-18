@@ -291,3 +291,38 @@ Finally, I am convinced that with our shared efforts, students' physical conditi
 <p style="text-align:right">Li Ming</p>
 
 
+## Chart
+
+### 全球手机市场
+
+#### Directions
+
+In this section, you are asked to write an essay based on the following chart. In your writing, you should
+
+1. Interpret the chart and
+2. Give your comments
+
+#### Answer
+
+Given is a column chart, clearly illustrating the remarkable contrasts in mobile-phone subscription between developing and developed nations from 2000 to 2008. During this period, the subscription in developed countries showed a slight grown, from 600 milloin to 900 million. Then it remained stable at 1 billion in 2007 and 2008. By contrast, the number of mobile phones sold in developing countries was merely 500 million, but it surged sharply, reaching the peak at 4 billion in 2008. 
+
+Such statistics can be associaated with the rapid advance in the global mobile phone industry, but what resulted in the differences above? To my understanding, at least two fundamental causes can account for this phenomenon. For one thing, in recent years, developing countries were characterized by their economic boom, which enabled residents there to possess additional money to purchase and utilize mobile phones. A case in points is China. For another, compared with developing countries, developed nations enjoyed a smaller market, due to thier smaller population. So, it displayed the trend of saturation. 
+
+Accordingly, mobile phone manufactures are supposed to pay more attention to the market in developing nations, because of its huge potential. In addition, it is advisable for them to work out comprehensive strategies to consolidate themarket in developed countries. If they do their utmost, the future of mobile-phone industry will be promising. 
+
+### 中国汽车市场
+
+This is a column chart the clearly illustrates the dramatic changes in China's market shares among Chinese, American and Japanese car brands from 2008 to 2009. During the period, the share of Chinese brands ascended remarkably, reaching approximately 33%. By contrast, Japanese brands displayed a sharp decline, from 35% to 25%. Meanwhile, the percentage of American brands remained stable at 15%. 
+
+Such statistics can be associated with the fierce competition in China's car market, but what resulted in the changes above? For one thing, in recent years, Chinese automobiles were characterized by the lower prices and improved quality, which attracted more Chinese customers to choose their national brands. For another, compared with the past, the Sino-Japanese relation got worse and a larget proportion of residents in China did not purchase Japanese products, in cluding cars. 
+
+As a result, Chinese manufactures are supposed to pay more attention to the domestic market, due to its great potential. Meanwhile, it is essential for them to work out comprehensive strategies to strengthen their quality and after-sales service. After all, onlu superior products and service can bring firms the competitive edge and help them to win the market. 
+
+
+### 城镇人口
+
+Given is a column chart, clearly illustrating the striking contrasts in populations between rural and urban areas in China from 1990 to 2010. In/During these two decades, the population in the countryside descended sharply, from over 800 million to approximately 670 million. However, the number of residents in cities displayed a remarkable growth, from 300 million to less than 670 million. 
+
+Such statistics can be associated with the speedy process of urbanization in China, but what resulted in the above phenomenon? For one thing, in the past decades, China was characterized by the economic prosperity and boom, which enabled a host of families in rural areas to possess addition/extra financial power to purchase houses in cities and reside there. For another, compared with the past years, a larger precentage/proportion of college graduates chose to work and live in cities. Thus, the city population became larger. 
+
+Accordingly, the authorities are supposed to pay more attention to a variety of problems caused by the population explosion in cities, such as traffic jams, the environmental pollution and the lack of education resources. Meanwhile, it is essential for them to work out comprehensive strategies to narrow the gap between urban and rural areas. 
