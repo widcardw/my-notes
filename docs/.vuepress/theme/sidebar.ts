@@ -129,7 +129,7 @@ const sidebar = [
             '/Math/differential-equation.md',
             '/Math/Fourier-Series.md',
             '/Math/Linear-algebra-done-wrong.md',
-            '/Math/Probability-theory-done-wrong.md'
+            '/Math/Probability-theory-done-wrong.md',
             '/Math/estimation.md'
         ]
     },
