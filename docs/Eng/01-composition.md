@@ -81,7 +81,14 @@ Dear Sir or Madam,
 
 As a senior in our university who prefers reading in the library in spare time, I am writing for the purpose of making suggestions for enhancing the service here. 
 
-To begin with, compared with students' demands in learning, the vareity and quality of book in the library are not adequate and frequently, I annot find the books I want. Accordingly, it is advisable for you to purchase more latest books. In addition, because a host of seniors, incluing me, 
+To begin with, compared with students' demands in learning, the vareity and quality of book in the library are not adequate and frequently, I annot find the books I want. Accordingly, it is advisable for you to purchase more latest books. In addition, because a host of seniors, incluing me, are preparing for the national entrance examination for postgraduates, it is exceedingly necessary for you to prolong/extend the opening hours of reading rooms where we study. 
+
+Finally, I, on behalf of all students, am quite grateful for your hard work and it is youe help that enables us to enjoy the positive atmosphere of learning here. 
+
+
+<p style="text-align: right">Yours sincerely</p>
+
+<p style="text-align: right">Li Ming</p>
 
 ## Notice
 
@@ -310,13 +317,27 @@ Such statistics can be associaated with the rapid advance in the global mobile p
 
 Accordingly, mobile phone manufactures are supposed to pay more attention to the market in developing nations, because of its huge potential. In addition, it is advisable for them to work out comprehensive strategies to consolidate themarket in developed countries. If they do their utmost, the future of mobile-phone industry will be promising. 
 
+### 兼职工作
+
+This is a column chart, clearly illustrating the striking contrasts in part-time jobs by college students in certain university. Overall, seniors have the largest proportion of part-time jobs, with 88.24%. Then the next are juniors and sophomores, at 71.93% and 71.13% respectively. Finally come freshmen, with 67.77%. It is also noticeable that over half of students in four grades take part-time jobs. 
+
+Such statistics can be associated with the popularity of leisure-time jobs among youngsters in college, but what result in this phenomenon? For one thing, college life is characterized by two long vacations, which enable students in college to have adequate spare time to broaden thier horizons and gain additional income by doing part-time jobs. For another, compared with students in lower grades, seniors possess richer professional knowledge, greater demand for working experience and less courses. So, a larger percentage of them take part-time positions. 
+
+As an adult student, I deem that it is nessary for us to do part-time jobs, which may bring us an oppotunity to know the society, arouse our passion for life and help us ease our financial burden. 
+
+### 春节花销比例
+
+Given is a pie chart, clearly illustrating the striking contrasts in (the proportions of) the spending by citizens/residents in a certain city of China during the Spring Festival. Overall, the expense on new year gifts is the largest percentage, with 40%. Then, the next are the expenditure on transportation and gatherings for the dinner, at the same 20%. 
+
+The statistics above, apparently, can be associated with a variety of ways in which Chinese celebrate the String Festival, but what result in this phenomenon? For one thing, the Spring Festival vacattion is characterized by the fact that during this period, Chinese usually visit thier relatives and friends to express their wishes to each other and give presents. This definitely enables the New-Year gifts to be the largest part of spending. For another, compared with the past years, more youngsters pursue their academic achievement and work in other cities, but they choose to go back home to celebrate the new year by having dinners together with their family members, relatives or friends. Thus, part of the mony is spent on transportation and gatherings for dinners. 
+
 ### 中国汽车市场
 
 This is a column chart the clearly illustrates the dramatic changes in China's market shares among Chinese, American and Japanese car brands from 2008 to 2009. During the period, the share of Chinese brands ascended remarkably, reaching approximately 33%. By contrast, Japanese brands displayed a sharp decline, from 35% to 25%. Meanwhile, the percentage of American brands remained stable at 15%. 
 
-Such statistics can be associated with the fierce competition in China's car market, but what resulted in the changes above? For one thing, in recent years, Chinese automobiles were characterized by the lower prices and improved quality, which attracted more Chinese customers to choose their national brands. For another, compared with the past, the Sino-Japanese relation got worse and a larget proportion of residents in China did not purchase Japanese products, in cluding cars. 
+Such statistics can be associated with the fierce competition in China's car market, but what resulted in the changes above? For one thing, in recent years, Chinese automobiles were characterized by the lower prices and improved quality, which attracted more Chinese customers to choose their national brands. For another, compared with the past, the Sino-Japanese relation got worse and a larger proportion of residents in China did not purchase Japanese products, in cluding cars. 
 
-As a result, Chinese manufactures are supposed to pay more attention to the domestic market, due to its great potential. Meanwhile, it is essential for them to work out comprehensive strategies to strengthen their quality and after-sales service. After all, onlu superior products and service can bring firms the competitive edge and help them to win the market. 
+As a result, Chinese manufactures are supposed to pay more attention to the domestic (国内) market, due to its great potential. Meanwhile, it is essential for them to work out comprehensive strategies to strengthen their quality and after-sales service. After all, only superior products and service can bring firms the competitive edge and help them to win the market. 
 
 
 ### 城镇人口
@@ -326,3 +347,39 @@ Given is a column chart, clearly illustrating the striking contrasts in populati
 Such statistics can be associated with the speedy process of urbanization in China, but what resulted in the above phenomenon? For one thing, in the past decades, China was characterized by the economic prosperity and boom, which enabled a host of families in rural areas to possess addition/extra financial power to purchase houses in cities and reside there. For another, compared with the past years, a larger precentage/proportion of college graduates chose to work and live in cities. Thus, the city population became larger. 
 
 Accordingly, the authorities are supposed to pay more attention to a variety of problems caused by the population explosion in cities, such as traffic jams, the environmental pollution and the lack of education resources. Meanwhile, it is essential for them to work out comprehensive strategies to narrow the gap between urban and rural areas. 
+
+### 旅行的目的
+
+#### Directions
+
+Write an essay based on the following chart. in your essay, you should
+
+1. interpret the chart, and
+2. give your comments
+
+#### Answer
+
+This is a pie chart, clearly illustrating the various purposes of students' traveling in a certain university. Apprecating/Enjoying the landscape ranks the first, accounting for (taking up) 37%. Then, the second/next is reducing/relieving/releasing/easing the pressure, with 33%. Finally come making friends and cultivating/fostering/developing independence, at 9% and 6% respectively. 
+
+This chart, apparently, can be associated with the significance of traveling. To begin with, youngsters in university are characterized by their curiosity/passion/enthusiasm for the natural beauty, which enables a majority of them to choose to see the world in trips. In additon, compared with others, college students suffer/endure/bear more mental stress due to their more academic assignments. Thus, a host of them relieve the pressure by traveling. Of course, traveling can also bring students opportunities of fostering independence, arouse their passion for life and help them make more friends. 
+
+As a senior who is preparing for the national entrance examination for postgraduates, I have no time for traveling and I am fond of studying in the library in spare time. It is mu efforts that will ensure me to accumulate knowledge, skills and confidence to conquer the test. Anyway, I intend to travel after the exam. 
+
+### 博物馆与访客
+
+#### Directions
+
+Write an essay based on the following chart. In your writing, you should
+
+- interpret the chart, and
+- give your comment
+
+#### Answer
+
+This is a line chart, clearly illustrating remarkable changes in the numbers of museums and the visitors from 2013 to 2015 in China. During this period, the quantity of museums ascended/increased steadily, from 4165 to 4192. Meanwhile, in the number of the visitors, there was a sharp/rapid/dramatic increase from 637.8 million to 781.1 million. 
+
+The/Such statistics above, apparently, can be associated with the great popularity of museums in citizens' daily life, but what resulted in the phenomenon? For one thing, in recent years, China is characterized by its economic boom and prosperity, which enabled the authorities to possess more/additional financial power/capacity to build/construct a host of infrastructures/public service facilities, including museums. For another, compared with the past years, more youngsters may visit museums, which can bring them various knowledge, arouse their passion for learning and help them broaden their horizons. 
+
+Accordingly, it is exceedingly necessary for the government to support and build more museums concerning history, arts, science, customs, military and the like. In addition, museums are supposed to work out comprehensive strategies to enhance the related/relevant services. 
+
+

@@ -130,7 +130,7 @@ $$
 
 设总体 $X \sim N(\mu, \sigma^{2})$，$X_{i}$ 是来自 $X$ 的样本，$\overline{X}$ 是样本均值，$S^2$ 为样本方差
 
-|  未知参数  |      ----       |                                                          $1-\alpha$ 置信区间                                                           |
+|  未知参数  |      条件       |                                                          $1-\alpha$ 置信区间                                                           |
 |:----------:|:---------------:|:--------------------------------------------------------------------------------------------------------------------------------------:|
 |   $\mu$    | $\sigma^2$ 已知 |      $\displaystyle\left(\overline{X}-u_{\alpha/2}{\sigma\over\sqrt{n} },\overline{X}+u_{\alpha/2}{\sigma\over\sqrt{n} }\right)$       |
 |   $\mu$    | $\sigma^2$ 未知 | $\displaystyle\left( \overline{X} - t_{\alpha/2}(n-1){S \over \sqrt{n} } , \overline{X}+t_{\alpha/2}(n-1){S \over \sqrt{n} }  \right)$ |
@@ -144,11 +144,11 @@ $$
 S_{w}=\sqrt {(n_{1}-1)S_{1}^{2} + (n_{2}-1)S_{2}^{2} \over n_{1}+n_{2}-2}
 $$
 
-|     未知参数      |                         ---                         |                                                                                                                         $1-\alpha$ 置信区间                                                                                                                          |
+|     未知参数      |                         条件                         |                                                                                                                         $1-\alpha$ 置信区间                                                                                                                          |
 |:-----------------:|:---------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | $\mu_{1}-\mu_{2}$ |        $\sigma_{1}^{2},\sigma_{2}^{2}$ 已知         | $\displaystyle\left( \overline{X} - \overline{Y} -u_{\alpha/2} \sqrt{ {\sigma_{1}^{2} \over n_{1} } +  {\sigma_{2}^{2} \over n_{1} }  } ,\overline{X} - \overline{Y} +u_{\alpha/2} \sqrt{ {\sigma_{1}^{2} \over n_{1} } +  {\sigma_{2}^{2} \over n_{1} }  } \right)$ |
-| $\mu_{1}-\mu_{2}$ | $\sigma^{2}$ 未知但 $\sigma_{1}^{2}=\sigma_{2}^{2}$ |         $$\begin{aligned}\left(\overline{X} - \overline{Y}-t_{\alpha/2} (n_{1}+n_{2}-2)S_{w}\sqrt{ {1\over n_{1} } +{1\over n_{2} } } ,\right.\\ \left.\overline{X} - \overline{Y}+t_{\alpha/2} (n_{1}+n_{2}-2)S_{w}\sqrt{ {1\over n_{1} } +{1\over n_{2} } } \right)\end{aligned}$$         |
-|           $\sigma_{1}^{2} / \sigma_{2}^{2}$        |                                                     |   $$\left( {S_{1}^{2}\over S_{2}^{2} } F_{1-\alpha/2} (n_{1}-1,n_{2}-1), {S_{1}^{2}\over S_{2}^{2} } F_{\alpha/2} (n_{1}-1,n_{2}-1)  \right)$$                                                                                                                                                                                                                                                                   |
+| $\mu_{1}-\mu_{2}$ | $\sigma^{2}$ 未知但 $\sigma_{1}^{2}=\sigma_{2}^{2}$ |         $\begin{aligned}\left(\overline{X} - \overline{Y}-t_{\alpha/2} (n_{1}+n_{2}-2)S_{w}\sqrt{ {1\over n_{1} } +{1\over n_{2} } } ,\right.\\ \left.\overline{X} - \overline{Y}+t_{\alpha/2} (n_{1}+n_{2}-2)S_{w}\sqrt{ {1\over n_{1} } +{1\over n_{2} } } \right)\end{aligned}$         |
+|           $\sigma_{1}^{2} / \sigma_{2}^{2}$        |                                                     |   $\left( {S_{1}^{2}\over S_{2}^{2} } F_{1-\alpha/2} (n_{1}-1,n_{2}-1), {S_{1}^{2}\over S_{2}^{2} } F_{\alpha/2} (n_{1}-1,n_{2}-1)  \right)$                                                                                                                                                                                                                                                                  |
 
 ## 假设检验
 
