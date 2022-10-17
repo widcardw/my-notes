@@ -30,6 +30,15 @@
 - $\mathbf{A}$ 可逆，则 $r(\mathbf{AB}) = r(\mathbf{B}), r(\mathbf{BA}) = r(\mathbf{B})$
 - 若 $\mathbf{A}_{m \times n},\mathbf{B}_{n \times s}, \mathbf{AB}=\mathbf{O}$，则 $r(\mathbf{A} \times \mathbf{B}) \leqslant n$
 
+$$
+r(A^{*})=
+\begin{cases}
+n, & r(A)=n \\
+1, & r(A)=n-1 \\
+0, & r(A)<n-1
+\end{cases}
+$$
+
 ### 正交规范化 正交矩阵
 
 #### 内积

@@ -22,7 +22,7 @@ comment: false
 	- [ ] wavedrom 插件再稍微尝试一下，如果编译还爆内存就不去搞它的
 - manim 进阶部分笔记
     - [ ] 更新 manim 中文文档 <https://docs.manim.org.cn>
-	- [ ] updater 样例
+	- [x] updater 样例
 	- [ ] 自定义物件
 	- [ ] 交互场景的用法
 	- [x] ==Shaders 的用法==

@@ -6,7 +6,7 @@
 
 - 含有未知数、位置函数的导函数与自变量之间的关系的方程，称为 **微分方程**
 - 未知函数导函数的最高阶数称为 **该微分方程的阶**
-- 未知函数是医院函数的微分方程称为 **常微分方程**
+- 未知函数是一元函数的微分方程称为 **常微分方程**
 
 $$
 y^{(n)} = f\left(x,y,y',\cdots,y^{(n-1)}\right)
@@ -706,7 +706,7 @@ $$
 > 
 > $$
 > \begin{aligned}
-> y^{\ast} & = { \color{blue} {1 \over D^{2} + 4D + 4} }3xe^{2x} \\
+> y^{\ast} & = { \color{blue} {1 \over D^{2} - 4D + 4} }3xe^{2x} \\
 > & = {\color{red} e^{2x} } {\color{blue} {1 \over D^{2} } } 3x \\
 > & = {1\over 2} x^{3}e^{2x}
 > \end{aligned}
@@ -729,7 +729,7 @@ $$
 > & = - {1 \over 3} {\color{red} \left(x - {2D \over D^{2} + 1}  \right) } \cos 2x \\
 > & = - {1 \over 3}x \cos 2x + {1 \over 3} { \color{red} {2D \over D^{2} + 1} }\cos 2x \\
 > & = - {1 \over 3}x \cos 2x - {2 \over 9} D \cos 2x \\
-> & = - {1 \over 3}x \cos 2x + {4 \over 9} D \sin 2x \\
+> & = - {1 \over 3}x \cos 2x + {4 \over 9} \sin 2x \\
 > \end{aligned}
 > $$
 

@@ -111,6 +111,11 @@ const sidebar = [
         text: "数据结构",
         collapsible: true,
         children: [
+            "/data-structure/section02-linear-list.md",
+            "/data-structure/section03-stack-queue.md",
+            "/data-structure/section04-string.md",
+            "/data-structure/section05-tree.md",
+            "/data-structure/section06-graph.md",
             "/data-structure/section07-search.md",
             "/data-structure/section08-sort.md",
         ]
