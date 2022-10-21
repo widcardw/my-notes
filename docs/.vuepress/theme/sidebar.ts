@@ -135,7 +135,8 @@ const sidebar = [
             '/Math/Fourier-Series.md',
             '/Math/Linear-algebra-done-wrong.md',
             '/Math/Probability-theory-done-wrong.md',
-            '/Math/estimation.md'
+            '/Math/estimation.md',
+            '/Math/div-rot.md'
         ]
     },
     {
@@ -181,7 +182,11 @@ const sidebar = [
     {
         text: "utils",
         collapsible: true,
-        children: ["/utils/换源.md", "/utils/curl.md"]
+        children: [
+            "/utils/换源.md",
+            "/utils/curl.md",
+            "/utils/清缓存.md",
+        ]
     },
     {
         text: "Web",

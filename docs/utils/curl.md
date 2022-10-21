@@ -15,13 +15,18 @@ curl https://www.baidu.com -v
 - `-H` 声明请求头
 
 ```shell
-curl http://www.baidu.com -X POST -d "title=comewords&content=articleContent"
+curl http://www.baidu.com \
+    -X POST \
+    -d "title=comewords&content=articleContent"
 ```
 
 通常，我们的请求是 JSON 格式的，可以用**单引号**将 JSON 字符串括起来
 
 ```shell
-curl http://www.baidu.com -X POST -H "Content-Type:application/json" -d '"title":"comewords","content":"articleContent"'
+curl http://www.baidu.com \
+    -X POST \
+    -H "Content-Type:application/json" \
+    -d '"title":"comewords","content":"articleContent"'
 ```
 
 ## POST 上传文件
@@ -29,5 +34,8 @@ curl http://www.baidu.com -X POST -H "Content-Type:application/json" -d '"title"
 - 通过 `-F "file=@_FILE_PATH__"` 来指定要上传的文件
 
 ```shell
-curl http://www.baidu.com/upimg -F "file=@/Users/fungleo/Downloads/401.png" -H "token: 222" -v
+curl http://www.baidu.com/upimg 
+    -F "file=@/Users/fungleo/Downloads/401.png" \
+    -H "token: 222" \
+    -v
 ```
