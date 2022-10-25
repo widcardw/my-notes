@@ -1,4 +1,4 @@
-# 概率论-参数估计-假设检验
+# 概率论-参数估计
 
 ## 参数估计
 
@@ -150,6 +150,7 @@ $$
 | $\mu_{1}-\mu_{2}$ | $\sigma^{2}$ 未知但 $\sigma_{1}^{2}=\sigma_{2}^{2}$ |         $\begin{aligned}\left(\overline{X} - \overline{Y}-t_{\alpha/2} (n_{1}+n_{2}-2)S_{w}\sqrt{ {1\over n_{1} } +{1\over n_{2} } } ,\right.\\ \left.\overline{X} - \overline{Y}+t_{\alpha/2} (n_{1}+n_{2}-2)S_{w}\sqrt{ {1\over n_{1} } +{1\over n_{2} } } \right)\end{aligned}$         |
 |           $\sigma_{1}^{2} / \sigma_{2}^{2}$        |                                                     |   $\left( {S_{1}^{2}\over S_{2}^{2} } F_{1-\alpha/2} (n_{1}-1,n_{2}-1), {S_{1}^{2}\over S_{2}^{2} } F_{\alpha/2} (n_{1}-1,n_{2}-1)  \right)$                                                                                                                                                                                                                                                                  |
 
+
 ## 假设检验
 
 假设分为原假设和备择假设
@@ -233,4 +234,5 @@ F={S_{1}^{2}\over S_{2}^{2} }
 $$
 
 $H_0$ 为真时检验统计量的分布 $F(n_{1}-1,n_{2}-1)$
+
 

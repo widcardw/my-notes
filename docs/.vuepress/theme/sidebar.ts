@@ -131,12 +131,33 @@ const sidebar = [
         text: 'Math',
         collapsible: true,
         children: [
-            '/Math/differential-equation.md',
-            '/Math/Fourier-Series.md',
-            '/Math/Linear-algebra-done-wrong.md',
-            '/Math/Probability-theory-done-wrong.md',
-            '/Math/estimation.md',
-            '/Math/div-rot.md'
+            {
+                text: '概率论',
+                collapsible: true,
+                children: [
+                    '/Math/probability/c1.md',
+                    '/Math/probability/c2-multi-variable.md',
+                    '/Math/probability/c3-shuzitezhen.md',
+                    '/Math/probability/c4-tongji.md',
+                    '/Math/probability/c5-estimation.md',
+                ]
+            },
+            {
+                text: '高数',
+                collapsible: true,
+                children: [
+                    '/Math/gaoshu/differential-equation.md',
+                    '/Math/gaoshu/div-rot.md',
+                    '/Math/gaoshu/Fourier-Series.md',
+                ],
+            },
+            {
+                text: '线代',
+                collapsible: true,
+                children: [
+                    '/Math/linear/Linear-algebra-done-wrong.md',
+                ]
+            },
         ]
     },
     {

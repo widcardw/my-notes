@@ -16,9 +16,8 @@ comment: false
 ### 课外内容
 
 - 在线文档相关（需要参考 VuePress-Theme-Hope 的组件）
-	- [ ] VuePress 和 VitePress 更加完善的 admonition 插件
+	- [x] VuePress 和 VitePress 更加完善的 admonition 插件
 	- [ ] 阅读 markdown it 源码（大概率会咕）
-	- [ ] 编写 Blue Topaz 标签转 Badge 的插件
 	- [ ] wavedrom 插件再稍微尝试一下，如果编译还爆内存就不去搞它的
 - manim 进阶部分笔记
     - [ ] 更新 manim 中文文档 <https://docs.manim.org.cn>
@@ -37,6 +36,8 @@ comment: false
 ### 插件
 
 #### 1. 图片显示问题
+
+> 现在已经抽离成单独的插件啦，详情见 [mdit-plg-double-bracket-media](https://github.com/widcardw/mdit-plg-double-bracket-media) 和 [mdit-plg-double-bracket-link](https://github.com/widcardw/mdit-plg-double-bracket-link)
 
 将所有图片都放在 `public` 目录下，然后通过自己编写的 `double-bracket-media` 插件来将图片链接修改为 vuepress 所能够识别到的路径，在此工作之后再进行渲染
 
@@ -93,6 +94,8 @@ my-notes
 
 #### 2. admonition 插件
 
+> 这个也抽离成插件啦，见 [mdit-plugin-callouts](https://github.com/widcardw/mdit-plugin-callouts)
+
 Obsidian 在 0.14 版本之后提供了 Callout 插件，使用格式如下
 
 ```md
@@ -123,6 +126,8 @@ export default defineUserConfig({
 以及，还需要引入 css （因为我还不会把 css 直接引入进去😅）。将 `styles/index.scss` 中与 callout 有关的都复制进去。
 
 #### 3. wavedrom
+
+> 2022-10-23 关于它的插件其实写起来应该不会很困难，但是主要问题就是在：它是一个一个一个 module，我需要在 client 端渲染，而不是 SSG 的时候就把它渲染好。同样地，mermaid-js 也是相同的道理，只不过 VuePress-Theme-Hope 的作者是把它封装成组件来渲染的。
 
 在 vitepress 好像是能用了，但是还不太清楚怎么在 vuepress 引入，而且实装的话感觉极有可能导致 vite 编译内存爆炸，所以暂时不用了
 
