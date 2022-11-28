@@ -6,18 +6,11 @@ comment: false
 
 ## TODO
 
-### 笔记
-
-- markdown it
-- 计组
-- 计算机网络
-- 数据结构（大概率不会记）
-
 ### 课外内容
 
 - 在线文档相关（需要参考 VuePress-Theme-Hope 的组件）
 	- [x] VuePress 和 VitePress 更加完善的 admonition 插件
-	- [ ] 阅读 markdown it 源码（大概率会咕）
+	- [x] 阅读 markdown it 源码（大概率会咕）
 	- [ ] wavedrom 插件再稍微尝试一下，如果编译还爆内存就不去搞它的
 - manim 进阶部分笔记
     - [ ] 更新 manim 中文文档 <https://docs.manim.org.cn>
@@ -30,6 +23,7 @@ comment: false
 	- 没想到啊，这个也鸽了
 - 学习 wasm
 	- [x] vite 搭建 wasm 环境已经成功了，详见 [Vite-rsw](https://widcardw.github.io/article/notes/vite-rsw.html)
+- markdown-it
 
 ## DONE
 
@@ -45,14 +39,20 @@ comment: false
 
 ##### 使用说明
 
-下载 `docs/.vuepress/plugins/double-bracket-media.js` ，然后在 `docs/.vuepress/config.js` 中引入
+使用命令安装插件
+
+```sh
+pnpm i -D mdit-plg-double-bracket-media
+```
+
+然后在 `docs/.vuepress/config.js` 中引入
 
 ```js
-import doubleBracketMedia from './plugins/double-bracket-media'
+import doubleBracketMedia from 'mdit-plg-double-bracket-media'
 
 export default {
 	extendsMarkdown: md => {
-		md.use(doubleBracketMedia)
+		md.use(doubleBracketMedia, { removePrefix: 'public/' })
 	}
 }
 ```
@@ -112,10 +112,16 @@ Obsidian 在 0.14 版本之后提供了 Callout 插件，使用格式如下
 
 ##### 使用说明
 
-下载 `docs/.vuepress/plugins/callout.ts` 并放入 `plugins` 目录中。在 `config.ts` 中引入
+使用命令行安装插件
+
+```sh
+pnpm i -D mdit-plugin-callouts
+```
+
+在 `config.ts` 中引入
 
 ```ts
-import callout from './plugins/callout'
+import callout from 'mdit-plugin-callouts'
 export default defineUserConfig({
 	extendsMarkdown: md => {
 		md.use(callout)
@@ -123,7 +129,11 @@ export default defineUserConfig({
 })
 ```
 
-以及，还需要引入 css （因为我还不会把 css 直接引入进去😅）。将 `styles/index.scss` 中与 callout 有关的都复制进去。
+引入 CSS 样式（我不太清楚 VuePress 怎么引入，跟 VitePress 好像还不太一样，需要在 main entry 处引入）
+
+```ts
+import 'mdit-plugin-callouts/index.css'
+```
 
 #### 3. wavedrom
 

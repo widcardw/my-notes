@@ -169,6 +169,8 @@ $$
 
 > [!note] **合同**
 > 设 $\mathbf{A},\mathbf{B}$ 是两个 $n$ 阶方阵，若存在可逆阵 $\mathbf{C}$ 使得 $\mathbf{C}^{\mathrm{T} } \mathbf{A} \mathbf{C} = \mathbf{B}$，则称 $\mathbf{A} \simeq \mathbf{B}$
+> 
+> 充要条件：秩和正负惯性指数相同
 
 对于三元二次型 $f(x_{1},x_{2},x_{3})=\vec x^{\mathrm{T} } \mathbf{A} \vec x$，如果
 
@@ -193,6 +195,16 @@ $$
 > 
 > $\mathbf{A}$ 必相似又合同于对角阵 $\mathbf{\Lambda}$
 
+> [!summary] 等价、合同、相似的关系
+> 从左到右，矩阵的关系越发亲密
+> 
+> ```mermaid
+> graph LR
+> a["等价<br>秩相等"] --> b["合同<br>秩和正负惯性指数相等"] 
+> b --> c["相似<br>秩、正负惯性指数<br>和特征值均相等"]
+> ```
+
+
 ### 正定二次型
 
 > [!note] 正定
@@ -216,5 +228,4 @@ $$
 > [!caution] $f=\vec x^{\mathrm{T} } \mathbf{A} \vec x$ 正定的必要条件
 > - $\mathbf{A}$ 的主对角线元素 $a_{ii}>0$
 > - $|\mathbf{A}|>0$
-
 

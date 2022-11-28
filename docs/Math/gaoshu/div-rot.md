@@ -84,6 +84,20 @@ $$
 \end{aligned}
 $$
 
+```am
+grad xx grad psi & = |
+vec(e_x),vec(e_y),vec(e_z);
+del/(del x),del/(del y),del/(del z);
+(del psi)/(del x),(del psi)/(del y),(del psi)/(del z)
+|
+
+& = vec(e_x)((del^2 psi)/(del y del z)-(del^2 psi)/(del z dely))
+- vec(e_y)((del^2 psi)/(del x del z)-(del^2 psi)/(del z delx))
++ vec(e_z)((del^2 psi)/(del x del y)-(del^2 psi)/(del y delx))
+
+& = bb 0
+```
+
 梯度的旋度恒为 0
 
 ## 7. 对旋度求散度
@@ -108,4 +122,27 @@ $$
 $$
 
 旋度的散度恒为 0
+
+## 8. 方向导数
+
+定义
+
+$$
+{ \partial f \over \partial \boldsymbol{l} } = \lim_{\rho \to 0} { f(x+\Delta x , y + \Delta y, z + \Delta z) - f(x,y,z) \over \rho }
+$$
+
+其中，$\rho = \sqrt{(\Delta x)^{2} + (\Delta y)^{2} + (\Delta z)^{2} }$ 且 $P'(x+ \Delta x, y + \Delta y, z + \Delta z)$ 为 $\boldsymbol l$ 上的点
+
+$f(x,y,z)$ 在 $P(x_{0},y_{0},z_{0})$ 可微，与方向 $\vec l$ 同方向的单位向量 $\vec{e_{l} } = \{\cos \alpha, \cos \beta, \cos \gamma\}$，则
+
+$$
+\begin{aligned}
+{ \partial f \over \partial \boldsymbol l } & = f'_{x} \cdot \cos \alpha + f'_{y} \cdot \cos \beta + f'_{z} \cdot \cos \gamma \\
+& = \nabla f \cdot \vec {e_{l} } \\
+& = |\nabla f| \cdot | \vec {e_{l} } | \cdot \cos \theta \\
+& = \sqrt { \left({\partial f \over \partial x}\right)^{2} + \left({\partial f \over \partial y}\right)^{2} + \left({\partial f \over \partial z}\right)^{2} } \cdot \cos \theta \\
+& \leqslant \sqrt { \left({\partial f \over \partial x}\right)^{2} + \left({\partial f \over \partial y}\right)^{2} + \left({\partial f \over \partial z}\right)^{2} } 
+\end{aligned}
+$$
+
 

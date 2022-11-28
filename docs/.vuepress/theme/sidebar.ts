@@ -124,7 +124,8 @@ const sidebar = [
         text: "English",
         collapsible: true,
         children: [
-            '/Eng/01-composition.md'
+            '/Eng/01-composition.md',
+            '/Eng/xiaozuowen.md',
         ]
     },
     {
@@ -149,6 +150,10 @@ const sidebar = [
                     '/Math/gaoshu/differential-equation.md',
                     '/Math/gaoshu/div-rot.md',
                     '/Math/gaoshu/Fourier-Series.md',
+                    '/Math/gaoshu/formula.md',
+                    '/Math/gaoshu/space.md',
+                    '/Math/gaoshu/taylor.md',
+                    '/Math/gaoshu/Auxiliary_function.md'
                 ],
             },
             {
