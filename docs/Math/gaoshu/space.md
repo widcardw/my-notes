@@ -76,53 +76,53 @@ $$
 
 光滑参数曲线 $C$ 由参数方程
 
-```am
-{ x = x(t); y = y(t) :}
-```
+$$
+\displaystyle {\left\lbrace\begin{matrix*}[l] x= x{\left( t\right)}\\ y= y{\left( t\right)}\\\end{matrix*}\right.}
+$$
 
-其中，`$t in [alpha, beta]$`，且 `$y(t) >= 0$`. 则曲线 $C$ 绕 $x$ 轴旋转所得的旋转曲面表面积为
+其中，$\displaystyle  t\in{\left[\alpha,\beta\right]}$，且 $\displaystyle  y{\left( t\right)}\ge 0$. 则曲线 $C$ 绕 $x$ 轴旋转所得的旋转曲面表面积为
 
-```am
-S = 2 pi int _alpha ^beta y(t) sqrt({:x':}^2 (t) + {:y':}^2 (t) ) "d" t
-```
+$$
+\displaystyle  S= 2\pi\int_{\alpha}^{\beta} y{\left( t\right)}\sqrt{ {\left. x^\prime\right.}^{2}{\left( t\right)}+{\left. y^\prime\right.}^{2}{\left( t\right)} }\text{d} t
+$$
 
 ### 直角坐标形式
 
-```am
-{x = x; y = y(x) :}
-```
+$$
+\displaystyle {\left\lbrace\begin{matrix*}[l] x= x\\ y= y{\left( x\right)}\\\end{matrix*}\right.}
+$$
 
 曲线 $C$ 绕 $x$ 轴旋转所得旋转曲面的表面积为
 
-```am
-S =2 pi int_alpha^beta y(x) "d"S = 2 pi int_alpha^beta y(x) sqrt(1 + {:y':}^2(x)) dx
-```
+$$
+\displaystyle  S= 2\pi\int_{\alpha}^{\beta} y{\left( x\right)}\text{d} S= 2\pi\int_{\alpha}^{\beta} y{\left( x\right)}\sqrt{1+{\left. y^\prime\right.}^{2}{\left( x\right)} }{\left.\text{d} x\right.}
+$$
 
 绕 $y$ 轴旋转所得旋转曲面的表面积为
 
-```am
-S = 2 pi int _alpha ^beta x(y) "d"S = 2 pi int _alpha ^beta x(y) sqrt(1 + {:x':}^2 (y)) dx
-```
+$$
+\displaystyle  S= 2\pi\int_{\alpha}^{\beta} x{\left( y\right)}\text{d} S= 2\pi\int_{\alpha}^{\beta} x{\left( y\right)}\sqrt{1+{\left. x^\prime\right.}^{2}{\left( y\right)} }{\left.\text{d} x\right.}
+$$
 
 ### 极坐标形式
 
 由于用极坐标表示有
 
-```am
-{ x = r(theta) cos theta; y = r(theta) sin theta :}
-```
+$$
+\displaystyle {\left\lbrace\begin{matrix*}[l] x= r{\left(\theta\right)} \cos{\theta}\\ y= r{\left(\theta\right)} \sin{\theta}\\\end{matrix*}\right.}
+$$
 
 求导有
 
-```am
-{ x' = r'(theta) cos theta - r(theta) sin theta; y' = r'(theta) sin theta + r(theta) cos theta :}
-```
+$$
+\displaystyle {\left\lbrace\begin{matrix*}[l] x^\prime= r^\prime{\left(\theta\right)} \cos{\theta}- r{\left(\theta\right)} \sin{\theta}\\ y^\prime= r^\prime{\left(\theta\right)} \sin{\theta}+ r{\left(\theta\right)} \cos{\theta}\\\end{matrix*}\right.}
+$$
 
 则
 
-```am
-S = 2 pi int _(theta_1) ^(theta_2) r(theta) sin theta sqrt(r^2(theta) + {:r':}^2 (theta)) "d" theta
-```
+$$
+\displaystyle  S= 2\pi\int_{\theta_{1} }^{\theta_{2} } r{\left(\theta\right)} \sin{\theta}\sqrt{r^{2}{\left(\theta\right)}+{\left. r^\prime\right.}^{2}{\left(\theta\right)} }\text{d}\theta
+$$
 
 ## 弧长公式
 
@@ -130,44 +130,44 @@ S = 2 pi int _(theta_1) ^(theta_2) r(theta) sin theta sqrt(r^2(theta) + {:r':}^2
 
 光滑参数曲线 $C$ 由参数方程
 
-```am
-{ x = x(t); y = y(t) :}
-```
+$$
+\displaystyle {\left\lbrace\begin{matrix*}[l] x= x{\left( t\right)}\\ y= y{\left( t\right)}\\\end{matrix*}\right.}
+$$
 
-其中 `$t in [alpha, beta]$`，其弧长为
+其中 $\displaystyle  t\in{\left[\alpha,\beta\right]}$，其弧长为
 
-```am
-s = int _alpha ^beta sqrt({:x':}^2(t) + {:y':}^2(t)) "d"t
-```
+$$
+\displaystyle  s=\int_{\alpha}^{\beta}\sqrt{ {\left. x^\prime\right.}^{2}{\left( t\right)}+{\left. y^\prime\right.}^{2}{\left( t\right)} }\text{d} t
+$$
 
 ### 直角坐标形式
 
-```am
-{x = x; y = y(x) :}
-```
+$$
+\displaystyle {\left\lbrace\begin{matrix*}[l] x= x\\ y= y{\left( x\right)}\\\end{matrix*}\right.}
+$$
 
-```am
-s = int _alpha ^beta sqrt(1 + {:y':}^2(t)) dx
-```
+$$
+\displaystyle  s=\int_{\alpha}^{\beta}\sqrt{1+{\left. y^\prime\right.}^{2}{\left( t\right)} }{\left.\text{d} x\right.}
+$$
 
 ### 极坐标形式
 
 由于用极坐标表示有
 
-```am
-{ x = r(theta) cos theta; y = r(theta) sin theta :}
-```
+$$
+\displaystyle {\left\lbrace\begin{matrix*}[l] x= r{\left(\theta\right)} \cos{\theta}\\ y= r{\left(\theta\right)} \sin{\theta}\\\end{matrix*}\right.}
+$$
 
 求导有
 
-```am
-{ x' = r'(theta) cos theta - r(theta) sin theta; y' = r'(theta) sin theta + r(theta) cos theta :}
-```
+$$
+\displaystyle {\left\lbrace\begin{matrix*}[l] x^\prime= r^\prime{\left(\theta\right)} \cos{\theta}- r{\left(\theta\right)} \sin{\theta}\\ y^\prime= r^\prime{\left(\theta\right)} \sin{\theta}+ r{\left(\theta\right)} \cos{\theta}\\\end{matrix*}\right.}
+$$
 
 则
 
-```am
-s = int _(theta_1) ^(theta_2) sqrt(r^2(theta) + {:r':}^2 (theta)) "d" theta
-```
+$$
+\displaystyle  s=\int_{\theta_{1} }^{\theta_{2} }\sqrt{r^{2}{\left(\theta\right)}+{\left. r^\prime\right.}^{2}{\left(\theta\right)} }\text{d}\theta
+$$
 
 

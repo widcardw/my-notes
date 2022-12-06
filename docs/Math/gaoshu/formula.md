@@ -174,10 +174,5 @@ $$
 
 ## 变限积分
 
-- `$f(x)$` 为偶函数，则 `$F(x) = int_0 ^x f(t) "d"t$` 为奇函数，注意，必须满足 `$F(0)=0$`
-- `$f(x)$` 为奇函数，则 `$F(x)=int_a ^x f(t) "d"t$` 为偶函数，没有上面的限制，因此下限可以是 `$a$`
-
-
-```am
-I = underset (Sigma)(iint)  (2x^2) / sqrt(4x^4 + (x^2 + y^2) ^2) "d"S
-```
+- $\displaystyle  f{\left( x\right)}$ 为偶函数，则 $\displaystyle  F{\left( x\right)}=\int_{0}^{x} f{\left( t\right)}\text{d} t$ 为奇函数，注意，必须满足 $\displaystyle  F{\left( 0\right)}= 0$
+- $\displaystyle  f{\left( x\right)}$ 为奇函数，则 $\displaystyle  F{\left( x\right)}=\int_{a}^{x} f{\left( t\right)}\text{d} t$ 为偶函数，没有上面的限制，因此下限可以是 $\displaystyle  a$

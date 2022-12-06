@@ -65,35 +65,31 @@ $$
 
 特别的
 
-```am
-Gamma(1/2) = sqrt(pi)
-```
+$$
+\displaystyle \Gamma{\left(\frac{1}{2}\right)}=\sqrt{\pi}
+$$
 
 递归性质有
 
-```am
-Gamma(x+1) = x Gamma(x)
-```
+$$
+\displaystyle \Gamma{\left( x+ 1\right)}= x\Gamma{\left( x\right)}
+$$
 
 它是阶乘的一个延拓
 
-```am
-Gamma(n+1) = n!
-```
+$$
+\displaystyle \Gamma{\left( n+ 1\right)}={n!}
+$$
 
-如果令 `$sqrt x = t$`，则
+如果令 $\displaystyle \sqrt{x}= t$，则
 
-```am
-Gamma(r) & = int _0 ^(+oo) t^(2r-2) "e"^(-t^2) "d"(t^2)
-
-& = 2 int _0 ^(+oo) t^(2r-1) "e"^(-t^2) "d"t
-```
+$$
+\begin{aligned}\displaystyle \Gamma{\left( r\right)}&=\int_{0}^{+\infty} t^{2 r- 2}\text{e}^{- t^{2} }\text{d}{\left( t^{2}\right)} \\ \displaystyle &= 2\int_{0}^{+\infty} t^{2 r- 1}\text{e}^{- t^{2} }\text{d} t\end{aligned}
+$$
 
 特别的
 
-```am
-Gamma (1) & = 2 int _0 ^(+oo) t "e"^(-t^2) "d"t = 1
-
-Gamma (2) & =  2 int _0 ^(+oo) t^3 "e"^(-t^2) "d"t = 1
-```
+$$
+\begin{aligned}\displaystyle \Gamma{\left( 1\right)}&= 2\int_{0}^{+\infty} t\text{e}^{- t^{2} }\text{d} t= 1 \\ \displaystyle \Gamma{\left( 2\right)}&= 2\int_{0}^{+\infty} t^{3}\text{e}^{- t^{2} }\text{d} t= 1\end{aligned}
+$$
 
