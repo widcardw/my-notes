@@ -60,7 +60,7 @@ $$
 ## 伽马函数
 
 $$
-\displaystyle \Gamma{\left( x\right)}=\int_{0}^{+\infty} t^{x- 1}\text{e}^{- t}\text{d} t, x> 0
+\displaystyle \Gamma{\left( r\right)}=\int_{0}^{+\infty} x^{r- 1}\text{e}^{- x}\text{d} x, r> 0
 $$
 
 特别的
@@ -73,5 +73,27 @@ Gamma(1/2) = sqrt(pi)
 
 ```am
 Gamma(x+1) = x Gamma(x)
+```
+
+它是阶乘的一个延拓
+
+```am
+Gamma(n+1) = n!
+```
+
+如果令 `$sqrt x = t$`，则
+
+```am
+Gamma(r) & = int _0 ^(+oo) t^(2r-2) "e"^(-t^2) "d"(t^2)
+
+& = 2 int _0 ^(+oo) t^(2r-1) "e"^(-t^2) "d"t
+```
+
+特别的
+
+```am
+Gamma (1) & = 2 int _0 ^(+oo) t "e"^(-t^2) "d"t = 1
+
+Gamma (2) & =  2 int _0 ^(+oo) t^3 "e"^(-t^2) "d"t = 1
 ```
 

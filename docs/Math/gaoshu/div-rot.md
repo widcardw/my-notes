@@ -1,4 +1,4 @@
-# 梯度 散度 旋度
+ # 梯度 散度 旋度
 
 > 转自[知乎](https://zhuanlan.zhihu.com/p/336928427)
 
@@ -84,19 +84,9 @@ $$
 \end{aligned}
 $$
 
-```am
-grad xx grad psi & = |
-vec(e_x),vec(e_y),vec(e_z);
-del/(del x),del/(del y),del/(del z);
-(del psi)/(del x),(del psi)/(del y),(del psi)/(del z)
-|
-
-& = vec(e_x)((del^2 psi)/(del y del z)-(del^2 psi)/(del z dely))
-- vec(e_y)((del^2 psi)/(del x del z)-(del^2 psi)/(del z delx))
-+ vec(e_z)((del^2 psi)/(del x del y)-(del^2 psi)/(del y delx))
-
-& = bb 0
-```
+$$
+\begin{aligned}\displaystyle \nabla\times\nabla\psi&={\left|\begin{matrix}\vec{e_{x} }&\vec{e_{y} }&\vec{e_{z} }\\\frac{\partial}{\partial x}&\frac{\partial}{\partial y}&\frac{\partial}{\partial z}\\\frac{\partial\psi}{\partial x}&\frac{\partial\psi}{\partial y}&\frac{\partial\psi}{\partial z}\\\end{matrix}\right|} \\ \displaystyle &=\vec{e_{x} }{\left(\frac{\partial^{2}\psi}{\partial y\partial z}-\frac{\partial^{2}\psi}{\partial z\partial y}\right)}-\vec{e_{y} }{\left(\frac{\partial^{2}\psi}{\partial x\partial z}-\frac{\partial^{2}\psi}{\partial z\partial x}\right)}+\vec{e_{z} }{\left(\frac{\partial^{2}\psi}{\partial x\partial y}-\frac{\partial^{2}\psi}{\partial y\partial x}\right)} \\ \displaystyle &={\mathbf{0} }\end{aligned}
+$$
 
 梯度的旋度恒为 0
 
@@ -123,6 +113,8 @@ $$
 
 旋度的散度恒为 0
 
+> [!note] 梯无旋，旋无散。
+
 ## 8. 方向导数
 
 定义
@@ -135,9 +127,12 @@ $$
 
 $f(x,y,z)$ 在 $P(x_{0},y_{0},z_{0})$ 可微，与方向 $\vec l$ 同方向的单位向量 $\vec{e_{l} } = \{\cos \alpha, \cos \beta, \cos \gamma\}$，则
 
+
 $$
 \begin{aligned}
-{ \partial f \over \partial \boldsymbol l } & = f'_{x} \cdot \cos \alpha + f'_{y} \cdot \cos \beta + f'_{z} \cdot \cos \gamma \\
+{ \partial f \over \partial \boldsymbol l } 
+& = {\left(\frac{\partial{f} }{\partial x},\frac{\partial{f} }{\partial y},\frac{\partial{f} }{\partial z}\right)}\cdot\vec{e_{l} } \\
+& = f'_{x} \cdot \cos \alpha + f'_{y} \cdot \cos \beta + f'_{z} \cdot \cos \gamma \\
 & = \nabla f \cdot \vec {e_{l} } \\
 & = |\nabla f| \cdot | \vec {e_{l} } | \cdot \cos \theta \\
 & = \sqrt { \left({\partial f \over \partial x}\right)^{2} + \left({\partial f \over \partial y}\right)^{2} + \left({\partial f \over \partial z}\right)^{2} } \cdot \cos \theta \\

@@ -114,6 +114,16 @@ $$
 > 
 > $$
 
+#### 一致估计量
+
+设 $\displaystyle \hat{\theta}$ 是 $\displaystyle \theta$ 的估计量，若对 $\displaystyle \forall\varepsilon> 0$，有 $\displaystyle \lim_{n\to\infty} P{\left({\left|\hat{\theta}-\theta\right|}<\varepsilon\right)}= 1$，或 $\displaystyle \lim_{n\to\infty} P{\left({\left|\hat{\theta}-\theta\right|}\ge\varepsilon\right)}= 0$，则 $\displaystyle \hat{\theta}$ 是 $\displaystyle \theta$ 的一致估计量。
+
+证明方法
+
+$$
+\displaystyle {\left\lbrace\begin{matrix*}[l]\underset{n\to\infty}{\lim} E\hat{\theta}=\theta\\\underset{n\to\infty}{\lim} D\hat{\theta}= 0\\\end{matrix*}\right.}
+$$
+
 #### 区间估计
 
 ##### 置信区间
@@ -161,6 +171,11 @@ $$
 > - 确定检验统计量及拒绝域形式
 > - 按犯第一类错误的概率等于 $\alpha$ 求出拒绝域 $W$
 > - 根据样本值计算检验统计量 $T$ 的观测值 $t$，当 $t \in W$ 时，拒绝原假设；否则，接受原假设
+
+|            | $H_0$ 正确 | $H_0$ 错误 |
+|:----------:|:----------:|:----------:|
+| 拒绝 $H_0$ | 第一类错误 |    正确    |
+| 接受 $H_0$ |    正确    | 第二类错误 |
 
 #### 检验 $\mu$
 

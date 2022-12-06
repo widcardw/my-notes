@@ -154,7 +154,7 @@ f_{Z}(z) & =\int_{-\infty}^{+\infty}f(z-y, y) \mathrm{d} y
 \end{aligned}
 $$
 
-特别的，当 $X$ 与 $Y$ 相互独立时，$f(x,y)=f_{X}(x)f_{Y}(y)$，则有卷积公式
+特别的，当 $X$ 与 $Y$ 相互独立时，$f(x,y)=f_{X}(x)f_{Y}(y)$，则有==卷积公式==
 
 $$
 \begin{aligned}

@@ -126,7 +126,7 @@ bool BSTInsert(BSTNode* t, int k) {
 
 - 每个结点或是红色，或是黑色的
 - ==根结点是黑色的==
-- 叶结点（虚构的外部结,点、NULL 结点）都是黑色的
+- 叶结点（虚构的外部结点、NULL 结点）都是黑色的
 - ==不存在两个相邻的红结点==（即红结点的父结,点和孩子结点均是黑色的）
 - 对每个结点，从该结点到任一叶结点的==简单路径==上，所含==黑结点的数量相同==
 
@@ -143,12 +143,15 @@ bool BSTInsert(BSTNode* t, int k) {
 ![[public/data-structure/red-black-tree-to-234-tree.excalidraw.png]]
 
 父节点为黑
+
 ![[public/data-structure/rbt-fujiedianweihei.excalidraw.png]]
 
 需要旋转的情况
+
 ![[public/data-structure/rbt-11131619.excalidraw.png]]
 
 上溢的情况
+
 ![[public/data-structure/rbt-shangyi.excalidraw.png]]
 
 #### 3. 删除

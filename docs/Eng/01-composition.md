@@ -269,7 +269,7 @@ To begin with, this contest is scheduled to start at 19:00 on June 26 in the Cen
 
 Finally, all of us hope that you can be one of the main judge for/of the contest and give professional comments. 
 
-(I am convinced that with your support, this contest will be successful and we are looking forward to your favorable reply at your earliest convenience. 
+(I am convinced that with your support, this contest will be successful and we are looking forward to your favorable reply at your earliest convenience.)
 
 <p style="text-align:right">Yours sincerely,</p>
 

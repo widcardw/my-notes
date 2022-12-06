@@ -23,6 +23,22 @@ $$
 f(x) \sim {a_{0} \over 2} + \sum\limits_{n=1}^{\infty}(a_{n} \cos nx + b_{n} \sin nx)
 $$
 
+如果函数 $f(x)$ 是周期为 $T$ 的函数，在周期上可积，则
+
+```am
+a_n & = 2/T int _T f(x) cos n{:(2 pi)/T:}x dx
+
+b_n & = 2/T int _T f(x) sin n{:(2 pi)/T:}x dx
+```
+
+为 $f(x)$ 的傅里叶系数；称
+
+```am
+a_0/2 + sum_(n=1)^oo (a_n cos n{:(2 pi)/T:}x + b_n sin n{:(2 pi)/T:}x)
+```
+
+为 $f(x)$ 以 $T$ 为周期的形式傅里叶级数
+
 ## 2. 傅里叶级数的收敛性（狄利克雷收敛定理）
 
 设 $f(x)$ 是周期为 $2\pi$ 的可积函数，且满足

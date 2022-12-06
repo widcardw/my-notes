@@ -70,4 +70,104 @@ $$
 {x^{2} \over a^{2} } + {y^{2} \over b^{2} } - {z^{2} \over c^{2} } = -1
 $$
 
+## 旋转曲面表面积
+
+### 参数方程形式
+
+光滑参数曲线 $C$ 由参数方程
+
+```am
+{ x = x(t); y = y(t) :}
+```
+
+其中，`$t in [alpha, beta]$`，且 `$y(t) >= 0$`. 则曲线 $C$ 绕 $x$ 轴旋转所得的旋转曲面表面积为
+
+```am
+S = 2 pi int _alpha ^beta y(t) sqrt({:x':}^2 (t) + {:y':}^2 (t) ) "d" t
+```
+
+### 直角坐标形式
+
+```am
+{x = x; y = y(x) :}
+```
+
+曲线 $C$ 绕 $x$ 轴旋转所得旋转曲面的表面积为
+
+```am
+S =2 pi int_alpha^beta y(x) "d"S = 2 pi int_alpha^beta y(x) sqrt(1 + {:y':}^2(x)) dx
+```
+
+绕 $y$ 轴旋转所得旋转曲面的表面积为
+
+```am
+S = 2 pi int _alpha ^beta x(y) "d"S = 2 pi int _alpha ^beta x(y) sqrt(1 + {:x':}^2 (y)) dx
+```
+
+### 极坐标形式
+
+由于用极坐标表示有
+
+```am
+{ x = r(theta) cos theta; y = r(theta) sin theta :}
+```
+
+求导有
+
+```am
+{ x' = r'(theta) cos theta - r(theta) sin theta; y' = r'(theta) sin theta + r(theta) cos theta :}
+```
+
+则
+
+```am
+S = 2 pi int _(theta_1) ^(theta_2) r(theta) sin theta sqrt(r^2(theta) + {:r':}^2 (theta)) "d" theta
+```
+
+## 弧长公式
+
+### 参数方程形式
+
+光滑参数曲线 $C$ 由参数方程
+
+```am
+{ x = x(t); y = y(t) :}
+```
+
+其中 `$t in [alpha, beta]$`，其弧长为
+
+```am
+s = int _alpha ^beta sqrt({:x':}^2(t) + {:y':}^2(t)) "d"t
+```
+
+### 直角坐标形式
+
+```am
+{x = x; y = y(x) :}
+```
+
+```am
+s = int _alpha ^beta sqrt(1 + {:y':}^2(t)) dx
+```
+
+### 极坐标形式
+
+由于用极坐标表示有
+
+```am
+{ x = r(theta) cos theta; y = r(theta) sin theta :}
+```
+
+求导有
+
+```am
+{ x' = r'(theta) cos theta - r(theta) sin theta; y' = r'(theta) sin theta + r(theta) cos theta :}
+```
+
+则
+
+```am
+s = int _(theta_1) ^(theta_2) sqrt(r^2(theta) + {:r':}^2 (theta)) "d" theta
+```
+
 
