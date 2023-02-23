@@ -128,6 +128,21 @@ const githubEditUrl = `${CONFIG.GITHUB_EDIT_URL}/${currentFile}`;
       <div id="grid-main">
         <PageContent frontmatter={frontmatter} headings={headings} githubEditUrl={githubEditUrl}>
           <slot />
+          <script src="https://giscus.app/client.js"
+            data-repo="widcardw/giscus-discussion"
+            data-repo-id="R_kgDOHOA75A"
+            data-category="Announcements"
+            data-category-id="DIC_kwDOHOA75M4COuTG"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="transparent_dark"
+            data-lang="zh-CN"
+            crossorigin="anonymous"
+            async>
+          </script>
         </PageContent>
       </div>
       <aside id="grid-right" class="grid-sidebar" title="Table of Contents">

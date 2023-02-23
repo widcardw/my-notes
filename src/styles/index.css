@@ -108,6 +108,10 @@ p,
   margin-top: 0.75rem;
 }
 
+.content li {
+  line-height: 1.5rem;
+}
+
 small,
 .text_small {
   font-size: 0.833rem;
@@ -122,7 +126,7 @@ a {
 }
 
 article>section :is(ul, ol)>*+* {
-  margin-top: 0.75rem;
+  margin-top: 0.5rem;
 }
 
 article>section nav :is(ul, ol)>*+* {
@@ -402,4 +406,8 @@ h2.heading {
 .mark {
   background-color: var(--mark-highlight-color);
   margin: 0 0.0625rem;
+}
+
+html {
+  scroll-behavior: smooth;
 }
