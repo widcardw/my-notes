@@ -51,7 +51,7 @@ $ npm config set registry https://registry.npm.taobao.org
 $ vi ~/.cargo/config
 ```
 
-```conf
+```toml
 [source.crates-io]
 registry = "https://github.com/rust-lang/crates.io-index"
 replace-with = 'ustc'

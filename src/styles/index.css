@@ -232,6 +232,7 @@ pre {
   font-size: 0.85em;
   overflow-y: hidden;
   overflow-x: auto;
+  tab-size: 2rem;
 }
 
 table {

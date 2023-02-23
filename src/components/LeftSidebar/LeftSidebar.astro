@@ -18,9 +18,11 @@ const currentPageMatch = currentPage.endsWith('/')
   <ul class="nav-groups">
     {Object.entries(SIDEBAR).map(([header, children]) => (
       <li>
-        <div class="nav-group">
-          <h2 class="heading">{header}</h2>
-          <ul>
+        <details class="nav-group" open={children && (children[0].link.split('/').shift() === currentPageMatch.split('/').shift())}>
+          <summary>
+            <h2 class="heading">{header}</h2>
+          </summary>
+          <div class="nav-body">
             {children.map((child) => {
               const url = Astro.site?.pathname + child.link;
               return (
@@ -31,8 +33,8 @@ const currentPageMatch = currentPage.endsWith('/')
                 </li>
               );
             })}
-          </ul>
-        </div>
+          </div>
+        </details>
       </li>
     ))}
   </ul>
@@ -56,6 +58,10 @@ const currentPageMatch = currentPage.endsWith('/')
     margin-right: 1rem;
   }
 
+  .heading {
+    cursor: pointer;
+  }
+
   .nav-groups {
     height: 100%;
     padding: 2rem 0;
@@ -64,8 +70,20 @@ const currentPageMatch = currentPage.endsWith('/')
     max-height: 100vh;
   }
 
+  summary::marker {
+    content: '';
+  }
+
+  .nav-group > .nav-body {
+    margin-left: 0.5rem;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  
   .nav-groups > li + li {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
   .nav-groups > :first-child {
