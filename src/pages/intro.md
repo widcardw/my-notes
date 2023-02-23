@@ -4,32 +4,39 @@ description: Docs intro
 layout: ~/layouts/MainLayout.astro
 ---
 
-Hello, I'm ==highlighted==!
-
 ## TODO
 
 ### 课外内容
 
-- 在线文档相关（需要参考 VuePress-Theme-Hope 的组件）
-	- [x] VuePress 和 VitePress 更加完善的 admonition 插件
-	- [x] 阅读 markdown it 源码（大概率会咕）
-	- [ ] wavedrom 插件再稍微尝试一下，如果编译还爆内存就不去搞它的
-- manim 进阶部分笔记
-    - [ ] 更新 manim 中文文档 <https://docs.manim.org.cn>
-	- [x] updater 样例
-	- [ ] 自定义物件
-	- [ ] 交互场景的用法
-	- [x] ==Shaders 的用法==
-- ==学习 Vue 3 框架内核==
-    - 尝试用 Vue 3 + TypeScript 的方式去写一些项目，而不是用 Vue 2 + JavaScript 的方法
-	- 没想到啊，这个也鸽了
-- 学习 wasm
-	- [x] vite 搭建 wasm 环境已经成功了，详见 [Vite-rsw](https://widcardw.github.io/article/notes/vite-rsw.html)
-- markdown-it
+#### manim 进阶部分笔记
+
+- [ ] 更新 manim 中文文档 <https://docs.manim.org.cn>
+- [x] updater 样例
+- [x] 自定义物件
+- [ ] 交互场景的用法
+- [x] ==Shaders 的用法==
+
+#### remark
+
+- [x] 使用 Astro 部署文档，这样访问可以秒开
+- [x] remark mark highlight
+- [ ] 学习 remark 的核心并编写一些插件
+- [ ] 在 Astro 中注入 mermaid-js 和 wavedrom，难度较大，暂时先放着
+- [ ] 接入 giscus 评论模块
+- [ ] 为 remark-plugin-wikilink 接入 video, audio 的支持
+
 
 ## DONE
 
-### 插件
+### 使用 Astro 部署文档
+
+之前的笔记都是用 VuePress 来部署的，但似乎因为我引入了一些包，导致首次加载速度非常慢，因此一直想要找一个替代品。最近也在学 Solidjs，对 TSX 的好感极佳，因此就转而使用 Astro + Solidjs 了。
+
+然而，remark 的插件还是相当的强大，只不过对我来说很难写，之后再一步一步的学习吧。
+
+### markdown-it 插件
+
+> 该部分主要用于 vitepress 或者 vuepress 的文档，现在我已经改用 Astro 了，所以也只是给后人铺路了。
 
 #### 1. 图片显示问题
 
@@ -155,7 +162,3 @@ import WaveDrom from 'wavedrom'
 还是挺麻烦的，毕竟没有去读人家的源码，不知道哪些包是直接用 `default` 导出的，哪些是 `module.exports` 直接赋值的。
 
 直接看打包过的 js 文件很乱，本来还想写一个 `vitepress-plugin-wavedrom` 插件，但是没有想到怎么引入，所以就直接摆烂了 `¯\_(ツ)_/¯` 。
-
-#### 4. 评论系统
-
-使用了 vuepress-plugin-comment2 插件，终于能在这里评论了。大家评论的时候注意 ==不要泄露个人信息== ！
