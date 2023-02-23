@@ -1,0 +1,25 @@
+kbd {
+    padding: 0.2rem 0.4rem;
+    font-family: PT Mono, system-ui, monospace;
+    border-radius: 0.2rem;
+    box-shadow: 0px 1px 3px var(--color-base-50);
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+}
+
+table {
+    width: 100%;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+.mermaid {
+    text-align: center;
+}
+
+.WaveDrom {
+    max-width: 100%;
+}

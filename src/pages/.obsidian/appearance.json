@@ -1,0 +1,14 @@
+{
+  "accentColor": "",
+  "theme": "moonstone",
+  "enabledCssSnippets": [
+    "code-highlight",
+    "kbd"
+  ],
+  "textFontFamily": "CMU Serif,Songti SC",
+  "monospaceFontFamily": "PT Mono,system-ui",
+  "showViewHeader": true,
+  "baseFontSize": 15,
+  "interfaceFontFamily": "",
+  "translucency": false
+}
