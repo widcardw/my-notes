@@ -252,8 +252,8 @@ tr:nth-of-type(even) {
 }
 
 th, thead {
-  background: var(--color-black);
-  color: var(--color-white);
+  background: var(--theme-bg-offset);
+  /* color: var(--color-white); */
   font-weight: bold;
 }
 
