@@ -26,18 +26,15 @@ import '~/styles/index.css';
 </script> -->
 
 <!-- This is intentionally inlined to avoid FOUC -->
-<!-- <script is:inline type="module">
-  import { onMount } from 'solid-js'
-  onMount(() => {
-    const root = document.documentElement;
-    const theme = localStorage.getItem('theme');
-    if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      root.classList.add('theme-dark');
-    } else {
-      root.classList.remove('theme-dark');
-    }
-  })
-</script> -->
+<script is:inline>
+  const root = document.documentElement;
+  const theme = localStorage.getItem('theme');
+  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    root.classList.add('theme-dark');
+  } else {
+    root.classList.remove('theme-dark');
+  }
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-TEL60V1WM9" is:inline></script>

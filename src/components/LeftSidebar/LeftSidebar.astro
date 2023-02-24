@@ -16,17 +16,14 @@ const currentPageMatch = currentPage.endsWith('/')
 
 <SideBar SIDEBAR={routes} current={currentPageMatch} url={Astro.site?.pathname} />
 
-<!-- <script is:inline type="module">
-  import { onMount } from 'solid-js'
-  onMount(() => {
-    window.addEventListener('DOMContentLoaded', () => {
-      var target = document.querySelector('[aria-current="page"]');
-      if (target && target.offsetTop > window.innerHeight - 100) {
-        document.querySelector('.nav-groups').scrollTop = target.offsetTop;
-      }
-    })
+<script is:inline>
+  window.addEventListener('DOMContentLoaded', () => {
+    var target = document.querySelector('[aria-current="page"]');
+    if (target && target.offsetTop > window.innerHeight - 100) {
+      document.querySelector('.nav-groups').scrollTop = target.offsetTop;
+    }
   })
-</script> -->
+</script>
 
 <style>
   nav {
