@@ -2,10 +2,10 @@ import type { MarkdownHeading } from 'astro'
 import type { Component } from 'solid-js'
 import { For, mergeProps } from 'solid-js'
 
-interface ItemOffsets {
-  id: string
-  topOffset: number
-}
+// interface ItemOffsets {
+//   id: string
+//   topOffset: number
+// }
 
 const TableOfContents: Component<{ headings: MarkdownHeading[] }> = (_props) => {
   const props = mergeProps({ headings: [] }, _props)

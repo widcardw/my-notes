@@ -1,5 +1,7 @@
- # 梯度 散度 旋度
-
+---
+title: 梯度 散度 旋度
+layout: ~/layouts/MainLayout.astro
+---
 > 转自[知乎](https://zhuanlan.zhihu.com/p/336928427)
 
 ## 1. 算子

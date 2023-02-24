@@ -1,6 +1,7 @@
 ---
 // import { getLanguageFromURL } from '~/languages';
 import { SIDEBAR } from '~/config';
+import { SideBar } from './SideBar';
 
 type Props = {
   currentPage: string;
@@ -14,31 +15,7 @@ const currentPageMatch = currentPage.endsWith('/')
 // const sidebar = SIDEBAR[langCode];
 ---
 
-<nav aria-labelledby="grid-left">
-  <ul class="nav-groups">
-    {Object.entries(SIDEBAR).map(([header, children]) => (
-      <li>
-        <details class="nav-group" open={children && (children[0].link.split('/').shift() === currentPageMatch.split('/').shift())}>
-          <summary>
-            <h2 class="heading">{header}</h2>
-          </summary>
-          <div class="nav-body">
-            {children.map((child) => {
-              const url = Astro.site?.pathname + child.link;
-              return (
-                <li class="nav-link">
-                  <a href={url} aria-current={currentPageMatch === child.link ? 'page' : false}>
-                    {child.text}
-                  </a>
-                </li>
-              );
-            })}
-          </div>
-        </details>
-      </li>
-    ))}
-  </ul>
-</nav>
+<SideBar SIDEBAR={SIDEBAR} current={currentPageMatch} url={Astro.site?.pathname} />
 
 <script is:inline type="module">
   import { onMount } from 'solid-js'
@@ -75,7 +52,7 @@ const currentPageMatch = currentPage.endsWith('/')
   }
 
   .nav-group > .nav-body {
-    margin-left: 0.5rem;
+    margin-left: 0.75rem;
   }
 
   summary::-webkit-details-marker {

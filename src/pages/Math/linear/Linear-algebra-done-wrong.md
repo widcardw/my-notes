@@ -220,7 +220,8 @@ $$
 > 
 > 则称二次型 $f$ 为正定二次型，对应矩阵称为正定矩阵
 
-> [!success] $\displaystyle \forall{\mathbf{x}}\ne{\mathbf{0}},{f}> 0$
+> [!success] 性质
+> $\displaystyle \forall{\mathbf{x}}\ne{\mathbf{0}},{f}> 0$
 
 > [!note] 可逆线性变换不改变二次型的正定性
 
