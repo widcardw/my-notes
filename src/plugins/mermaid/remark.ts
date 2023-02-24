@@ -3,9 +3,9 @@ import { visit } from 'unist-util-visit'
 function createMermaidDiv(contents: string) {
   return {
     type: 'html',
-    value: `<pre class="mermaid">
+    value: `<div class="mermaid">
     ${contents}
-  </pre>`,
+  </div>`,
   }
 }
 
