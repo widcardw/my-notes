@@ -375,7 +375,7 @@ $$
 > | ,   | $\doteq$ |           |            |            |
 > | i   |          |           | $\gtrdot$  |            |
 > 
-> 由 [[compile/s05_downtop#3 Martin 算法]] ，画图，可以得到下面的结果
+> 由 [[compilers/s05_downtop#3 Martin 算法]] ，画图，可以得到下面的结果
 > 
 > ![[public/compile/comxhjfyujkp.svg]]
 > 

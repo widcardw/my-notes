@@ -1,7 +1,6 @@
 import { For, Match, Switch } from 'solid-js'
 import type { Component } from 'solid-js'
 import type { SidebarChild, SidebarType } from '~/config'
-import { SIDEBAR } from '~/config'
 import './SideBar.css'
 
 function removeLeadingSlash(s: string) {
@@ -56,7 +55,7 @@ const SideBar: Component<{
   return (
     <nav aria-labelledby="grid-left">
       <ul class="nav-groups">
-        <For each={SIDEBAR}>
+        <For each={props.SIDEBAR}>
           {child => (
             <li class="nav-link">
               <ChildBar bar={child} url={props.url + child.link} current={props.current} />

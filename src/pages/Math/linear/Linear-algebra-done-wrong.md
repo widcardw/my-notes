@@ -1,5 +1,5 @@
 ---
-title: Linear Algebra Done Outrageously Wrong
+title: Linear Algebra Done Wrong
 layout: ~/layouts/MainLayout.astro
 ---
 
