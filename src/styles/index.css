@@ -54,7 +54,7 @@ h5,
 h6 {
   margin-bottom: 1rem;
   font-weight: bold;
-  line-height: 1;
+  line-height: 1.5;
 }
 
 h1,
@@ -410,4 +410,8 @@ h2.heading {
 
 html {
   scroll-behavior: smooth;
+}
+
+svg.WaveDrom {
+  max-width: 100%;
 }

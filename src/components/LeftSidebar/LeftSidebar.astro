@@ -16,7 +16,7 @@ const currentPageMatch = currentPage.endsWith('/')
 
 <SideBar SIDEBAR={routes} current={currentPageMatch} url={Astro.site?.pathname} />
 
-<script is:inline type="module">
+<!-- <script is:inline type="module">
   import { onMount } from 'solid-js'
   onMount(() => {
     window.addEventListener('DOMContentLoaded', () => {
@@ -26,7 +26,7 @@ const currentPageMatch = currentPage.endsWith('/')
       }
     })
   })
-</script>
+</script> -->
 
 <style>
   nav {

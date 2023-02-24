@@ -8,6 +8,8 @@ import { remarkMark } from 'remark-mark-highlight'
 import remarkCallouts from 'remark-callouts'
 import remarkWikiLink from '@flowershow/remark-wiki-link'
 import { wikilinkPageResolver } from './src/plugins/wikilink/resolver'
+import { remarkMermaid } from './src/plugins/mermaid/remark'
+import { remarkWavedrom } from './src/plugins/wavedrom/remark'
 
 // https://astro.build/config
 export default defineConfig({
@@ -28,6 +30,8 @@ export default defineConfig({
       [remarkWikiLink, {
         pageResolver: wikilinkPageResolver,
       }],
+      remarkMermaid,
+      remarkWavedrom,
     ],
     rehypePlugins: [rehypeKatex],
   },
