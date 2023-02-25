@@ -31,13 +31,7 @@ $$
 E=\{(v_0,v_1),(v_1,v_2),(v_1,v_3),(v_2,v_3)\}
 $$
 
-```mermaid
-graph LR
-V0((V0)) --- V1
-V1((V1)) --- V2
-V1 --- V3((V3))
-V2((V2)) --- V3
-```
+![[public/algorithm/ds-graph-01.excalidraw.svg]]
 
 ##### b. 有向边集
 
@@ -45,15 +39,7 @@ $$
 E=\{<v_0,v_1>,<v_1,v_2>,<v_2,v_1>,<v_1,v_3>,<v_2,v_3>,<v_3,v_2>\}
 $$
 
-```mermaid
-graph LR
-V0((V0)) --> V1
-V1((V1)) --> V2
-V2((V2)) --> V1
-V1 --> V3
-V2 --> V3
-V3((V3)) --> V2
-```
+![[public/algorithm/ds-graph-03.svg]]
 
 ### 1.2. 图的连通性
 
@@ -69,22 +55,7 @@ V3((V3)) --> V2
 
 #### 2.1.1. 图示
 
-```mermaid
-graph LR
-V0((V0))
-V1((V1))
-V2((V2))
-V3((V3))
-V4((V4))
-
-V0 --2--> V1
-V1 --5--> V3
-V0 --3--> V2
-V2 --6--> V4
-V3 --4--> V2
-V3 --1--> V4
-V4 --7--> V1
-```
+![[public/algorithm/ds-graph-04.excalidraw.svg]]
 
 下面的矩阵表示从第 $i$ 行到第 $j$ 列的路径长度
 
@@ -129,7 +100,7 @@ print(m)
 #### 2.2.1. 图示
 
 
-![[public/algorithm/linked_graph.svg]]
+![[public/algorithm/ds-graph-02.svg]]
 
 #### 2.2.2. 数据结构
 
@@ -174,22 +145,7 @@ public:
 
 再把上面的图拿下来。
 
-```mermaid
-graph LR
-V1((V1))
-V2((V2))
-V3((V3))
-V4((V4))
-V5((V5))
-
-V1 --2--> V2
-V2 --5--> V4
-V1 --3--> V3
-V3 --6--> V5
-V4 --4--> V3
-V4 --1--> V5
-V5 --7--> V2
-```
+![[public/algorithm/ds-graph-04.excalidraw.svg]]
 
 #### 2.3.1. 初步构建
 

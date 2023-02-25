@@ -403,7 +403,7 @@ h2.heading {
   scroll-margin: calc(var(--theme-sidebar-offset, 5rem) + 2rem) 0 2rem;
 }
 
-.mark {
+.mark, mark {
   background-color: var(--mark-highlight-color);
   margin: 0 0.0625rem;
 }
