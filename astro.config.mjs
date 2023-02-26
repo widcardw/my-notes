@@ -36,5 +36,8 @@ export default defineConfig({
       remarkAsciiMathBlock,
     ],
     rehypePlugins: [rehypeKatex],
+    shikiConfig: {
+      theme: 'nord',
+    },
   },
 })
