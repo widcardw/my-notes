@@ -4,14 +4,6 @@ description: Docs intro
 layout: ~/layouts/MainLayout.astro
 ---
 
-$\LaTeX$
-
-```am
-int
-```
-
-`$bb A$`
-
 ## TODO
 
 ### 课外内容
@@ -31,6 +23,7 @@ int
 - [ ] 学习 remark 的核心并编写一些插件
 - [x] 在 Astro 中注入 mermaid-js 和 wavedrom，难度较大，暂时先放着
 - [x] 接入 giscus 评论模块
+- [x] 为 remark 支持 AsciiMath
 - [ ] 为 remark-plugin-wikilink 接入 video, audio 的支持
 
 
