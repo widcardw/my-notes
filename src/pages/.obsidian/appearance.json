@@ -3,12 +3,13 @@
   "theme": "moonstone",
   "enabledCssSnippets": [
     "code-highlight",
-    "kbd"
+    "kbd",
+    "fonts"
   ],
   "textFontFamily": "CMU Serif,Songti SC",
   "monospaceFontFamily": "PT Mono,system-ui",
   "showViewHeader": true,
-  "baseFontSize": 15,
+  "baseFontSize": 16,
   "interfaceFontFamily": "",
   "translucency": false
 }

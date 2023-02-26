@@ -8,15 +8,15 @@ layout: ~/layouts/MainLayout.astro
 
 向量算子
 
-$$
-\nabla = \mathbf{grad} = { \partial \over \partial x} \vec{e_x} +{ \partial \over \partial y} \vec{e_y} + { \partial \over \partial z} \vec{e_z}
-$$
+```am
+grad = bb(tex(grad)) = pp{::}x vec(e_x) + pp{::}y vec(e_y) + pp{::}z vec(e_z)
+```
 
 其中，$\vec{e_x}, \vec{e_y}, \vec{e_z}$ 分别是 $X,Y,Z$ 方向上的单位向量。使用向量方式书写有
 
-$$
-\nabla = \mathbf{grad} = \left[ { \partial \over \partial x},{ \partial \over \partial y}, { \partial \over \partial z} \right]^{\rm T}
-$$
+```am
+grad = bb(tex(grad)) = [pp{::}x,pp{::}y,pp{::}z]^"T"
+```
 
 ## 2. 梯度
 
@@ -51,26 +51,19 @@ $$
 
 旋度是一个向量，它表示单位面积的环量，即环量面密度。旋度的作用对象是一个矢量函数，对于一个矢量函数 $\vec f=[f_x,f_y,f_z]^{\rm T}$，旋度的定义为
 
-$$
-\nabla \times \vec f = \begin{vmatrix}
- \vec{e_x} & \vec{e_y}  & \vec{e_z}  \\
-{ \partial \over \partial x} & { \partial \over \partial y} & { \partial \over \partial z} \\
- f_x & f_y & f_z
-\end{vmatrix}
-$$
+```am
+grad xx vec f = | vec(e_x), vec(e_y), vec(e_z); pp{::}x, pp{::}y, pp{::}z; f_x, f_y, f_z|
+```
 
 ## 5. 对标量场的梯度求散度
 
-$$
-\begin{aligned}
-\nabla \cdot (\nabla \psi) & = \nabla ^ {\rm T}(\nabla \psi) \\
-& = \left[ { \partial \over \partial x},{ \partial \over \partial y}, { \partial \over \partial z} \right]
-\begin{bmatrix}
-{ \partial \psi \over \partial x} \\ { \partial \psi \over \partial y} \\ { \partial \psi \over \partial z}
-\end{bmatrix} \\
-& = { \partial^2 \psi \over \partial x^2}+{ \partial^2 \psi \over \partial y^2}+ { \partial^2 \psi \over \partial z^2} 
-\end{aligned}
-$$
+```am
+grad * (grad psi) & = grad^"T"(grad psi)
+
+& = [pp{::}x, pp{::}y, pp{::}z][pp psi x;pp psi y; pp psi z]
+
+& = pp^2 psi x + pp^2 psi y + pp^2 psi z
+```
 
 ## 6. 对标量场的梯度求旋度
 

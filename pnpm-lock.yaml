@@ -6,6 +6,7 @@ specifiers:
   '@types/node': ^18.0.0
   '@widcardw/eslint-config': ^0.3.1
   '@widcardw/eslint-config-solid': ^0.3.1
+  asciimath-parser: 0.4.0-beta.4
   astro: ^1.6.0
   eslint: ^8.34.0
   rehype-katex: ^6.0.2
@@ -15,6 +16,7 @@ specifiers:
   remark-math: ^5.1.1
   solid-js: ^1.6.11
   typescript: ^4.9.5
+  unist-util-is: ^5.2.0
   unist-util-visit: ^4.1.2
 
 dependencies:
@@ -27,6 +29,7 @@ devDependencies:
   '@flowershow/remark-wiki-link': 1.0.0
   '@widcardw/eslint-config': 0.3.1_7kw3g6rralp5ps6mg3uyzz6azm
   '@widcardw/eslint-config-solid': 0.3.1_7kw3g6rralp5ps6mg3uyzz6azm
+  asciimath-parser: 0.4.0-beta.4
   eslint: 8.34.0
   rehype-katex: 6.0.2
   remark-callouts: 2.0.0
@@ -34,6 +37,7 @@ devDependencies:
   remark-mark-highlight: 0.1.0
   remark-math: 5.1.1
   typescript: 4.9.5
+  unist-util-is: 5.2.0
   unist-util-visit: 4.1.2
 
 packages:
@@ -1053,6 +1057,10 @@ packages:
       es-abstract: 1.21.1
       es-shim-unscopables: 1.0.0
       get-intrinsic: 1.2.0
+    dev: true
+
+  /asciimath-parser/0.4.0-beta.4:
+    resolution: {integrity: sha512-r1GwLu4qaWiNLprLlgsQmEnUbghwe6s4tffr6x7oIoZZJT0poksMADR27ypCQirKqjLSj73wjyWi+7ieH30bNg==}
     dev: true
 
   /ast-types/0.14.2:

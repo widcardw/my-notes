@@ -4,6 +4,14 @@ description: Docs intro
 layout: ~/layouts/MainLayout.astro
 ---
 
+$\LaTeX$
+
+```am
+int
+```
+
+`$bb A$`
+
 ## TODO
 
 ### 课外内容
@@ -21,8 +29,8 @@ layout: ~/layouts/MainLayout.astro
 - [x] 使用 Astro 部署文档，这样访问可以秒开
 - [x] remark mark highlight
 - [ ] 学习 remark 的核心并编写一些插件
-- [ ] 在 Astro 中注入 mermaid-js 和 wavedrom，难度较大，暂时先放着
-- [ ] 接入 giscus 评论模块
+- [x] 在 Astro 中注入 mermaid-js 和 wavedrom，难度较大，暂时先放着
+- [x] 接入 giscus 评论模块
 - [ ] 为 remark-plugin-wikilink 接入 video, audio 的支持
 
 

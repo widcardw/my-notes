@@ -10,6 +10,7 @@ import remarkWikiLink from '@flowershow/remark-wiki-link'
 import { wikilinkPageResolver } from './src/plugins/wikilink/resolver'
 import { remarkMermaid } from './src/plugins/mermaid/remark'
 import { remarkWavedrom } from './src/plugins/wavedrom/remark'
+import { remarkAsciiMathBlock } from './src/plugins/asciimath/block'
 
 // https://astro.build/config
 export default defineConfig({
@@ -32,6 +33,7 @@ export default defineConfig({
       }],
       remarkMermaid,
       remarkWavedrom,
+      remarkAsciiMathBlock,
     ],
     rehypePlugins: [rehypeKatex],
   },

@@ -21,6 +21,7 @@
 		"@flowershow/remark-wiki-link": "^1.0.0",
 		"@widcardw/eslint-config": "^0.3.1",
 		"@widcardw/eslint-config-solid": "^0.3.1",
+		"asciimath-parser": "0.4.0-beta.4",
 		"eslint": "^8.34.0",
 		"rehype-katex": "^6.0.2",
 		"remark-callouts": "^2.0.0",
@@ -28,6 +29,7 @@
 		"remark-mark-highlight": "^0.1.0",
 		"remark-math": "^5.1.1",
 		"typescript": "^4.9.5",
+		"unist-util-is": "^5.2.0",
 		"unist-util-visit": "^4.1.2"
 	},
 	"eslintConfig": {
