@@ -335,7 +335,8 @@ h2.heading {
 }
 
 .heading-link:hover,
-.heading-link:focus {
+.heading-link:focus,
+.heading-link.active {
   border-left-color: var(--theme-accent);
   color: var(--theme-accent);
 }

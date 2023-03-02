@@ -15,7 +15,7 @@ import { remarkAsciiMathBlock } from './src/plugins/asciimath/block'
 // https://astro.build/config
 export default defineConfig({
   integrations: [solidJs()],
-  site: 'http://astro.build',
+  site: 'https://notes.widcard.win',
   publicDir: 'src/pages/public/',
   resolve: {
     alias: {
