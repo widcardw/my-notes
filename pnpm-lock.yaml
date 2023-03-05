@@ -6,6 +6,8 @@ specifiers:
   '@types/node': ^18.0.0
   '@widcardw/eslint-config': ^0.3.1
   '@widcardw/eslint-config-solid': ^0.3.1
+  '@widcardw/remark-asciimath': ^0.0.1
+  '@widcardw/remark-mermaid-simple': ^0.0.1
   asciimath-parser: 0.4.0-beta.4
   astro: ^1.6.0
   eslint: ^8.34.0
@@ -29,6 +31,8 @@ devDependencies:
   '@flowershow/remark-wiki-link': 1.0.0
   '@widcardw/eslint-config': 0.3.1_7kw3g6rralp5ps6mg3uyzz6azm
   '@widcardw/eslint-config-solid': 0.3.1_7kw3g6rralp5ps6mg3uyzz6azm
+  '@widcardw/remark-asciimath': 0.0.1
+  '@widcardw/remark-mermaid-simple': 0.0.1
   asciimath-parser: 0.4.0-beta.4
   eslint: 8.34.0
   rehype-katex: 6.0.2
@@ -931,6 +935,14 @@ packages:
       - jest
       - supports-color
       - typescript
+    dev: true
+
+  /@widcardw/remark-asciimath/0.0.1:
+    resolution: {integrity: sha512-H5cb980WnQ67LRQqVVug8yzGdZNkaWei97qvFZZZcb/7S9ZH1PS+hgrmP/9kve2mGD9LKKmHtHt9G5zPWEKKGg==}
+    dev: true
+
+  /@widcardw/remark-mermaid-simple/0.0.1:
+    resolution: {integrity: sha512-ExJ+3XiQhYMJ2h6B8Rcp21+NUkP3qFrGbIGhuvtFXgXN7MDIfCO0v3yBC0Rx3nfpX4UcJPePN42BTcpgFTI26Q==}
     dev: true
 
   /acorn-jsx/5.3.2_acorn@8.8.2:

@@ -6,8 +6,8 @@ const TableOfContents: Component<{ headings: MarkdownHeading[] }> = (_props) => 
   const props = mergeProps({ headings: [] }, _props)
 
   const [currentHeading, setCurrentHeading] = createSignal({
-    slug: props.headings?.[0].slug || '',
-    text: props.headings?.[0].text || '',
+    slug: props.headings?.[0]?.slug || '',
+    text: props.headings?.[0]?.text || '',
   })
 
   const setCurrent: IntersectionObserverCallback = (entries) => {

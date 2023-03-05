@@ -29,19 +29,6 @@ function wikilinkPageResolver(name: string) {
     [, heading] = name.split('#')
     name = name.replace(`#${heading}`, '')
   }
-  // if (opts.permalinks || opts.markdownFolder) {
-  //   const url = opts.permalinks.find(
-  //     p =>
-  //       p === name
-  //       || (p.split('/').pop() === name
-  //         && !opts.permalinks.includes(p.split('/').pop())),
-  //   )
-  //   if (url) {
-  //     if (heading)
-  //       return [`${url}#${heading}`.replace(/ /g, '-').toLowerCase()]
-  //     return image ? [url] : [url.replace(/ /g, '-').toLowerCase()]
-  //   }
-  // }
   if (name.startsWith('public'))
     name = name.replace('public/', '')
   name = name.replace(/ (\d)/g, '$1')

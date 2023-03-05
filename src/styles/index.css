@@ -416,3 +416,24 @@ html {
 svg.WaveDrom {
   max-width: 100%;
 }
+
+.mermaid:not([data-processed="true"]) {
+  font-family: var(--font-mono);
+  opacity: 0.2;
+}
+
+.mermaid.loading::before {
+  content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWRhc2hhcnJheT0iMTUiIHN0cm9rZS1kYXNob2Zmc2V0PSIxNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiIGQ9Ik0xMiAzQzE2Ljk3MDYgMyAyMSA3LjAyOTQ0IDIxIDEyIj48YW5pbWF0ZSBmaWxsPSJmcmVlemUiIGF0dHJpYnV0ZU5hbWU9InN0cm9rZS1kYXNob2Zmc2V0IiBkdXI9IjAuM3MiIHZhbHVlcz0iMTU7MCIvPjxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgZHVyPSIxLjVzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgdHlwZT0icm90YXRlIiB2YWx1ZXM9IjAgMTIgMTI7MzYwIDEyIDEyIi8+PC9wYXRoPjwvc3ZnPg==');
+  position: absolute;
+  transform: scale(3);
+  transform-origin: left top;
+}
+
+.line.highlighted::before {
+  content: ' ';
+  position: absolute;
+  background: #88c0d015;
+  width: calc(100% - 0.15rem);
+  margin-left: -1.25rem;
+  border-left: 0.15rem solid #88c0d0;
+}

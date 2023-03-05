@@ -7,10 +7,10 @@ import remarkGfm from 'remark-gfm'
 import { remarkMark } from 'remark-mark-highlight'
 import remarkCallouts from 'remark-callouts'
 import remarkWikiLink from '@flowershow/remark-wiki-link'
+import { remarkMermaid } from '@widcardw/remark-mermaid-simple'
+import { remarkAsciiMath } from '@widcardw/remark-asciimath'
 import { wikilinkPageResolver } from './src/plugins/wikilink/resolver'
-import { remarkMermaid } from './src/plugins/mermaid/remark'
 import { remarkWavedrom } from './src/plugins/wavedrom/remark'
-import { remarkAsciiMathBlock } from './src/plugins/asciimath/block'
 
 // https://astro.build/config
 export default defineConfig({
@@ -31,9 +31,9 @@ export default defineConfig({
       [remarkWikiLink, {
         pageResolver: wikilinkPageResolver,
       }],
-      remarkMermaid,
+      [remarkMermaid, { includeLoading: true }],
       remarkWavedrom,
-      remarkAsciiMathBlock,
+      remarkAsciiMath,
     ],
     rehypePlugins: [rehypeKatex],
     shikiConfig: {
