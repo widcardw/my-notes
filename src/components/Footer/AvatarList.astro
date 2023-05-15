@@ -1,12 +1,17 @@
 ---
+import { SITE } from '~/config';
+
+let userAndRepo = SITE.repo.replace('https://github.com/', '')
+if (userAndRepo.endsWith('/')) userAndRepo = userAndRepo.slice(0, -1)
+
 // fetch all commits for just this page's path
 type Props = {
   path: string;
 };
 const { path } = Astro.props as Props;
 const resolvedPath = `${path}`;
-const url = `https://api.github.com/repos/widcardw/my-notes/commits?path=${resolvedPath}`;
-const commitsURL = `https://github.com/widcardw/my-notes/commits/main/${resolvedPath}`;
+const url = `https://api.github.com/repos/${userAndRepo}/commits?path=${resolvedPath}`;
+const commitsURL = `${SITE.repo}/commits/main/${resolvedPath}`;
 
 type Commit = {
   author: {

@@ -1,6 +1,6 @@
 import type { MarkdownHeading } from 'astro'
 import type { Component } from 'solid-js'
-import { For, createSignal, from, mergeProps, onCleanup, onMount } from 'solid-js'
+import { For, createSignal, mergeProps, onCleanup, onMount } from 'solid-js'
 
 const TableOfContents: Component<{ headings: MarkdownHeading[] }> = (_props) => {
   const props = mergeProps({ headings: [] }, _props)

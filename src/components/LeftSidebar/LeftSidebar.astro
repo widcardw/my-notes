@@ -1,5 +1,4 @@
 ---
-// import { getLanguageFromURL } from '~/languages';
 import { SideBar } from './SideBar';
 import { routes } from '~/scripts/routes.json'
 
@@ -11,7 +10,6 @@ const { currentPage } = Astro.props as Props;
 const currentPageMatch = currentPage.endsWith('/')
   ? currentPage.slice(1, -1)
   : currentPage.slice(1);
-// const langCode = getLanguageFromURL(currentPage);
 ---
 
 <SideBar SIDEBAR={routes} current={currentPageMatch} url={Astro.site?.pathname} />

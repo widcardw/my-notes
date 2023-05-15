@@ -29,19 +29,20 @@ const icons = [
   </svg>,
 ]
 
+const [theme, setTheme] = createSignal((() => {
+  if (import.meta.env.SSR)
+    return undefined
+
+  if (typeof localStorage !== undefined && localStorage.getItem('theme'))
+    return localStorage.getItem('theme')
+
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches)
+    return 'dark'
+
+  return 'light'
+})())
+
 const ThemeToggle: Component = () => {
-  const [theme, setTheme] = createSignal((() => {
-    if (import.meta.env.SSR)
-      return undefined
-
-    if (typeof localStorage !== undefined && localStorage.getItem('theme'))
-      return localStorage.getItem('theme')
-
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches)
-      return 'dark'
-
-    return 'light'
-  })())
 
   onMount(() => {
     createEffect(() => {
@@ -85,3 +86,7 @@ const ThemeToggle: Component = () => {
 }
 
 export default ThemeToggle
+
+export {
+  theme as colorTheme
+}

@@ -23,5 +23,8 @@ src/pages/.obsidian/core-plugins-migration.json
 src/pages/.obsidian/workspace.json
 src/pages/.obsidian/workspaces.json
 
-src/pages/_Excalidraw
-src/pages/_论文
+src/pages/_*
+!src/pages/_template/*
+
+src/pages/.obsidian/graph.json
+src/pages/public/plba

@@ -7,7 +7,10 @@ import LeftSidebar from '~/components/LeftSidebar/LeftSidebar.astro';
 import RightSidebar from '~/components/RightSidebar/RightSidebar.astro';
 import * as CONFIG from '~/config';
 import type { MarkdownHeading } from 'astro';
+import { GiscusArea } from '~/components/Giscus/GiscusArea';
 import Footer from '~/components/Footer/Footer.astro';
+
+const { GISCUS } = CONFIG
 
 type Props = {
   frontmatter: CONFIG.Frontmatter;
@@ -19,6 +22,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const currentPage = Astro.url.pathname;
 const currentFile = `src/pages${currentPage.replace(/\/$/, '')}.md`;
 const githubEditUrl = `${CONFIG.GITHUB_EDIT_URL}/${currentFile}`;
+
 ---
 
 <html dir={frontmatter.dir ?? 'ltr'} lang={frontmatter.lang ?? 'en-us'} class="initial">
@@ -128,28 +132,28 @@ const githubEditUrl = `${CONFIG.GITHUB_EDIT_URL}/${currentFile}`;
       <div id="grid-main">
         <PageContent frontmatter={frontmatter} headings={headings} githubEditUrl={githubEditUrl}>
           <slot />
-          <script src="https://giscus.app/client.js"
-            data-repo="widcardw/giscus-discussion"
-            data-repo-id="R_kgDOHOA75A"
-            data-category="Announcements"
-            data-category-id="DIC_kwDOHOA75M4COuTG"
-            data-mapping="pathname"
-            data-strict="0"
-            data-reactions-enabled="1"
-            data-emit-metadata="0"
-            data-input-position="bottom"
-            data-theme="transparent_dark"
-            data-lang="zh-CN"
-            data-loading="lazy"
-            crossorigin="anonymous"
-            async>
-          </script>
+          {GISCUS.enabled && (
+            <GiscusArea
+              repo={GISCUS.repo}
+              repoId={GISCUS.repoId}
+              category={GISCUS.category}
+              categoryId={GISCUS.categoryId}
+              mapping={GISCUS.mapping}
+              strict={GISCUS.strict}
+              reactionsEnabled={GISCUS.reactionsEnabled}
+              emitMetadata={GISCUS.emitMetadata}
+              inputPosition={GISCUS.inputPosition}
+              lang={GISCUS.lang}
+              loading={GISCUS.loading}
+              client:idle
+            />
+          )}
         </PageContent>
       </div>
       <aside id="grid-right" class="grid-sidebar" title="Table of Contents">
         <RightSidebar headings={headings} githubEditUrl={githubEditUrl} />
       </aside>
     </main>
-    <!-- <Footer path={currentFile} /> -->
+    <Footer path={currentFile} />
   </body>
 </html>

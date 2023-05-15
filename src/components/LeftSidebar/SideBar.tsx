@@ -1,4 +1,4 @@
-import { For, Match, Switch } from 'solid-js'
+import { For, Match, Show, Switch } from 'solid-js'
 import type { Component } from 'solid-js'
 import type { SidebarChild, SidebarType } from '~/config'
 import './SideBar.css'
@@ -30,7 +30,15 @@ const ChildBar: Component<{
           open={props.current.startsWith(removeLeadingSlash(props.url || ''))}
         >
           <summary>
-            <h2 class="heading">{props.bar.text}</h2>
+            <Show when={props.bar.index} fallback={<span class="heading">{props.bar.text}</span>}>
+              <a
+                class="heading not-link"
+                style={{ "font-weight": 'bold' }}
+                href={props.url}
+                aria-current={props.current === removeLeadingSlash(props.url || '') ? 'page' : false}
+              >{props.bar.text}</a>
+            </Show>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-down fold-icon"><path d="m6 9 6 6 6-6"/></svg>
           </summary>
           <div class="nav-body">
             <For each={props.bar.children}>

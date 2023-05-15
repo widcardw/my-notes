@@ -81,3 +81,7 @@ body {
   --prism-selector: #a1b567;
   --un-prose-borders: #333333;
 }
+
+body {
+  --code-size: 0.875rem;
+}

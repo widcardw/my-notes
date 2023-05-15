@@ -15,6 +15,8 @@ async function getTitle(path: string) {
   return null
 }
 
+const parentStack: SidebarChild[] = []
+
 async function accessDir(url: string) {
   const fullDir = `${D}/${url}`
   const dir = await fs.opendir(fullDir)
@@ -24,14 +26,26 @@ async function accessDir(url: string) {
       continue
     if (dirent.isFile()) {
       const noExt = dirent.name.replace(/\.md$/, '')
-      b.push({ text: await getTitle(`${fullDir}/${dirent.name}`) || noExt, link: noExt })
+      if (noExt === 'index') {
+        const parent = parentStack[parentStack.length - 1] // -1 is out of range
+        if (parent)
+         parent.index = true
+        const title = await getTitle(`${fullDir}/${dirent.name}`)
+        if (title && parent) 
+          parent.text = title
+      }
+      else {
+        b.push({ text: await getTitle(`${fullDir}/${dirent.name}`) || noExt, link: noExt })
+      }
     }
     else if (dirent.isDirectory()) {
       const current: SidebarChild = { text: dirent.name, link: dirent.name, children: [] }
+      parentStack.push(current)
       const innerUrl = `${url}/${dirent.name}`
       const b2 = (await accessDir(innerUrl)).sort((i, j) => i.link.localeCompare(j.link))
       current.children = b2
       b.push(current)
+      parentStack.pop()
     }
   }
   return b
@@ -40,7 +54,10 @@ async function accessDir(url: string) {
 async function generateRoute() {
   try {
     await fs.access(D)
-    const res = { routes: (await accessDir('')).sort((i, j) => i.link.localeCompare(j.link)) }
+    const res = { 
+      routes: (await accessDir(''))
+        .sort((i, j) => (j.children ? 1 : 0) - (i.children ? 1 : 0) || i.link.localeCompare(j.link)) 
+    }
     fs.writeFile('./src/scripts/routes.json', JSON.stringify(res, null, 2))
   }
   catch (e) {

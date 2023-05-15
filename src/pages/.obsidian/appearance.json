@@ -1,15 +1,15 @@
 {
   "accentColor": "",
-  "theme": "moonstone",
+  "theme": "system",
   "enabledCssSnippets": [
     "code-highlight",
     "kbd",
     "fonts"
   ],
-  "textFontFamily": "CMU Serif,Songti SC",
-  "monospaceFontFamily": "PT Mono,system-ui",
+  "textFontFamily": "Songti SC",
+  "monospaceFontFamily": "IBM Plex Mono,system-ui",
   "showViewHeader": true,
-  "baseFontSize": 16,
+  "baseFontSize": 18,
   "interfaceFontFamily": "",
   "translucency": false
 }

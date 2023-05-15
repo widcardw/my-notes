@@ -49,7 +49,7 @@ pnpm i -D mdit-plg-double-bracket-media
 
 然后在 `docs/.vuepress/config.js` 中引入
 
-```js
+```js ins={5}
 import doubleBracketMedia from 'mdit-plg-double-bracket-media'
 
 export default {

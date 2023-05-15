@@ -112,7 +112,7 @@ function kmp(s: string, t: string, next: number[]): number {
 const t = 'abcac'
 const next = Array(t.length).fill(0)
 
-getNextVal(t, next)
+getNext(t, next)
 const i = kmp('ababcabcacbab', t, next)
 console.log(next, i)
 // [-1, 0, 0, 0, 1] 5

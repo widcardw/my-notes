@@ -1124,6 +1124,76 @@ int main()
 }
 ```
 
+#### 0-1 背包
+
+```cpp
+#include <iostream>
+using namespace std;
+const int MAX = 1005;
+int n, W;
+int f[MAX], w[MAX], v[MAX];
+int main()
+{
+	cin >> n >> W;
+	for (int i = 1; i <= n; i++)
+		cin >> w[i] >> v[i];
+	for (int i = 1; i <= n; i++)
+		for (int l = W; l >= w[i]; l--)
+			if (f[l] < f[l - w[i]] + v[i])
+				f[l] = f[l - w[i]] + v[i];
+	cout << f[W] << endl;
+	return 0;
+}
+```
+
+#### 完全背包
+
+```cpp
+#include <iostream>
+using namespace std;
+const int MAX = 1005;
+int n, W;
+int f[MAX], w[MAX], v[MAX];
+int main()
+{
+	cin >> n >> W;
+	for (int i = 1; i <= n; i++)
+		cin >> w[i] >> v[i];
+	for (int i = 1; i <= n; i++)
+		for (int l = w[i]; l <= W; l++)
+			if (f[l] < f[l - w[i]] + v[i])
+				f[l] = f[l - w[i]] + v[i];
+	cout << f[W] << endl;
+	return 0;
+}
+```
+
+#### 多重背包
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int a[10005], b[10005], t = 0, n, m, dp[10005] = { }, w, v, s;
+int main()
+{
+    cin >> n >> m;
+    while(n--)
+    {
+        cin >> v >> w >> s;
+        while(s--)
+        {
+            a[++t] = v;
+            b[t] = w;
+        } //死拆，把多重背包拆成01背包
+    }
+    for(int i = 1; i <= t; i++)
+	    for(int j = m; j >= a[i]; j--)
+		    dp[j] = max(dp[j - a[i]] + b[i], dp[j]);
+    cout << dp[m] << endl;
+    return 0;
+}
+```
+
 #### 5.2.3. 股票买卖
 
 <https://www.acwing.com/problem/content/79/>
@@ -1717,8 +1787,8 @@ void build(ll *a, Node *tree, int left, int right, int k)
     else
     {
         int mid = (left + right) >> 1;
-        build(a, tree, left, mid, 2 * k + 1);              // 左孩子下标 2 * k + 1
-        build(a, tree, mid + 1, right, 2 * k + 2);         // 右孩子下标 2 * k + 2
+        build(a, tree, left, mid, 2 * k + 1);       // 左孩子下标 2 * k + 1
+        build(a, tree, mid + 1, right, 2 * k + 2);  // 右孩子下标 2 * k + 2
         tree[k].s = tree[2 * k + 1].s + tree[2 * k + 2].s; // 对左右子树求和
     }
 }
@@ -1787,7 +1857,8 @@ void test()
 }
 int main()
 {
-    test(); return 0;
+    test(); 
+    return 0;
 }
 ```
 

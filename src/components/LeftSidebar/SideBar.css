@@ -23,8 +23,23 @@ summary::marker {
   margin-left: 0.75rem;
 }
 
+.nav-group[open]>summary>.fold-icon {
+  transform: rotate(0deg);
+}
+
+.nav-group summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 summary::-webkit-details-marker {
   display: none;
+}
+
+.fold-icon {
+  transition: 0.2s ease;
+  transform: rotate(-90deg);
 }
 
 .nav-groups>li+li {
@@ -48,23 +63,44 @@ summary::-webkit-details-marker {
   margin-bottom: 0.5rem;
 }
 
-.nav-link a {
+.nav-link>a, .nav-link>details>summary {
   font-size: 1rem;
   margin: 1px;
-  padding: 0.3rem 1rem;
   font: inherit;
   color: inherit;
   text-decoration: none;
-  display: block;
   border-radius: 0.2rem;
 }
 
-.nav-link a:hover,
-.nav-link a:focus {
+.nav-link a.not-link {
+  text-decoration: none;
+  color: var(--theme-text);
+}
+
+.nav-link a.not-link[aria-current='page'] {
+  color: var(--theme-text-accent);
+}
+
+.nav-link summary a {
+  flex: 1;
+}
+
+.nav-link>a {
+  display: block;
+  padding: 0.3rem 1rem;
+}
+
+.nav-link>details>summary {
+  padding: 0.3rem 0.5rem 0.3rem 1rem;
+}
+
+.nav-link>a:hover,
+.nav-link>a:focus,
+.nav-link>details>summary:hover {
   background-color: var(--theme-bg-hover);
 }
 
-.nav-link a[aria-current='page'] {
+.nav-link>a[aria-current='page'], .nav-link summary:has(a[aria-current='page']) {
   color: var(--theme-text-accent);
   background-color: var(--theme-bg-accent);
   font-weight: 600;

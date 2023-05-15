@@ -5,7 +5,6 @@
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
-		"check": "astro check && tsc",
 		"build": "astro build",
 		"preview": "astro preview",
 		"astro": "astro",
@@ -13,31 +12,26 @@
 	},
 	"dependencies": {
 		"@astrojs/solid-js": "^2.0.2",
-		"@types/node": "^18.0.0",
-		"astro": "^1.6.0",
-		"solid-js": "^1.6.11"
+		"astro": "^2.0.16",
+		"solid-js": "^1.4.3"
 	},
 	"devDependencies": {
-		"@flowershow/remark-wiki-link": "^1.0.0",
-		"@widcardw/eslint-config": "^0.3.1",
-		"@widcardw/eslint-config-solid": "^0.3.1",
-		"@widcardw/remark-asciimath": "^0.0.1",
+		"@flowershow/remark-wiki-link": "^1.1.2",
+		"@types/chroma-js": "^2.4.0",
+		"@types/html-escaper": "^3.0.0",
+		"@types/mdast": "^3.0.11",
+		"@types/node": "^18.14.6",
+		"@widcardw/remark-asciimath": "^0.0.3",
 		"@widcardw/remark-mermaid-simple": "^0.0.1",
-		"asciimath-parser": "0.4.0-beta.4",
-		"eslint": "^8.34.0",
+		"chroma-js": "^2.4.2",
+		"giscus": "^1.2.8",
+		"html-escaper": "^3.0.3",
+		"parse-numeric-range": "^1.3.0",
+		"rehype-external-links": "^2.0.1",
 		"rehype-katex": "^6.0.2",
 		"remark-callouts": "^2.0.0",
-		"remark-gfm": "^3.0.1",
 		"remark-mark-highlight": "^0.1.0",
 		"remark-math": "^5.1.1",
-		"typescript": "^4.9.5",
-		"unist-util-is": "^5.2.0",
 		"unist-util-visit": "^4.1.2"
-	},
-	"eslintConfig": {
-		"extends": [
-			"@widcardw",
-			"@widcardw/eslint-config-solid"
-		]
 	}
 }
