@@ -134,12 +134,13 @@ const githubEditUrl = `${CONFIG.GITHUB_EDIT_URL}/${currentFile}`;
           <slot />
           {GISCUS.enabled && (
             <GiscusArea
+              id={GISCUS.id}
+              term={GISCUS.term}
               repo={GISCUS.repo}
               repoId={GISCUS.repoId}
               category={GISCUS.category}
               categoryId={GISCUS.categoryId}
               mapping={GISCUS.mapping}
-              strict={GISCUS.strict}
               reactionsEnabled={GISCUS.reactionsEnabled}
               emitMetadata={GISCUS.emitMetadata}
               inputPosition={GISCUS.inputPosition}

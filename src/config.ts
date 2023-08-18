@@ -1,3 +1,5 @@
+import type { GiscusProps } from "./components/Giscus/GiscusArea"
+
 export const SITE = {
   /**
    * The top left title.
@@ -33,7 +35,7 @@ export const OPEN_GRAPH = {
   twitter: 'astrodotbuild',
 }
 
-export const GISCUS = {
+export const GISCUS: GiscusPropsFull = {
   enabled: true,
   id: 'comments',
   repo: 'widcardw/giscus-discussion',
@@ -86,5 +88,7 @@ export interface SidebarChild {
   children?: SidebarChild[]
   index?: boolean
 }
+
+type GiscusPropsFull = GiscusProps & { enabled: boolean }
 
 export type SidebarType = SidebarChild[]

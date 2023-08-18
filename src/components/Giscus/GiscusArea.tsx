@@ -1,19 +1,22 @@
 import { createSignal, type Component, onMount, Show, createEffect, onCleanup } from "solid-js";
 import { colorTheme } from "../RightSidebar/ThemeToggleButton";
 
-const GiscusArea: Component<{
+interface GiscusProps {
+  id: string
+  term: string
   repo: string
   repoId: string
   category: string
   categoryId: string
   mapping: string
-  strict: string
   reactionsEnabled: string
   emitMetadata: string
   inputPosition: 'top' | 'bottom'
   lang: string
   loading: string
-}> = (props) => {
+}
+
+const GiscusArea: Component<GiscusProps> = (props) => {
   const [mounted, setMounted] = createSignal(false)
   createEffect(() => {
     if (mounted())
@@ -37,7 +40,7 @@ const GiscusArea: Component<{
 
   const observer = new IntersectionObserver(observerCb)
 
-  onMount(() => observer.observe(target()))
+  onMount(() => observer.observe(target()!))
 
   onCleanup(() => observer.disconnect())
 
@@ -48,13 +51,15 @@ const GiscusArea: Component<{
         style={{ 'margin': '4rem auto', 'opacity': 0.5, 'border-bottom': '1px solid #7f7f7f', 'max-width': '15rem' }}
       />
       <Show when={mounted() && visible()}>
+        {/* @ts-expect-error giscus web component type error */}
         <giscus-widget
+          id={props.id}
+          term={props.term}
           repo={props.repo}
           repo-id={props.repoId}
           category={props.category}
           category-id={props.categoryId}
           mapping={props.mapping}
-          strict={props.strict}
           reactions-enabled={props.reactionsEnabled}
           emit-metadata={props.emitMetadata}
           input-position={props.inputPosition}
@@ -68,5 +73,9 @@ const GiscusArea: Component<{
 }
 
 export {
-  GiscusArea
+  GiscusArea,
+}
+
+export type {
+  GiscusProps,
 }

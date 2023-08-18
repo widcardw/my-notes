@@ -5,7 +5,7 @@ import {
   MarkerType,
   MarkerTypeOrder,
 } from './types'
-import { ShikiBlock } from "~/plugins/code-highlight/shiki-block"
+import { ShikiBlock } from "./shiki-block"
 
 function isTerminal(lang: string) {
   return ["shellscript", "shell", "bash", "sh", "zsh"].includes(lang)

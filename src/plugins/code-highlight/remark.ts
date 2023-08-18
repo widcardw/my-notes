@@ -1,7 +1,8 @@
 import { visit } from 'unist-util-visit'
 import type { BuildVisitor } from 'unist-util-visit'
 import type { BlockContent, Parent, Root } from 'mdast'
-import type { AstroIntegration } from 'astro'  
+import type { AstroIntegration } from 'astro'
+import { rehypeCodeSnippets } from './rehype'
 
 const CodeSnippetTagname = 'CodeSnippets'
 export const codeSnippetAutoImport: Record<string, [string, string][]> = {
@@ -9,18 +10,18 @@ export const codeSnippetAutoImport: Record<string, [string, string][]> = {
 }
 
 interface NodeProps {
-  attributes?: Record<string, string | boolean | number | undefined | null>  
+  attributes?: Record<string, string | boolean | number | undefined | null>
 }
 
 export interface CodeSnippetWrapper extends Parent {
-	type: 'codeSnippetWrapper'  
-	children: BlockContent[]  
+  type: 'codeSnippetWrapper'
+  children: BlockContent[]
 }
 
 declare module 'mdast' {
-	interface BlockContentMap {
-		codeSnippetWrapper: CodeSnippetWrapper  
-	}
+  interface BlockContentMap {
+    codeSnippetWrapper: CodeSnippetWrapper
+  }
 }
 
 function makeAFMDComponentNode(
@@ -32,47 +33,47 @@ function makeAFMDComponentNode(
     type: 'codeSnippetWrapper',
     data: { hName, hProperties: attributes },
     children,
-  }  
+  }
 }
 
 // From https://github.com/withastro/docs/blob/3444c5734bfc180548de54a1a34f573b3383c941/integrations/astro-code-snippets.ts
 function parseMeta(meta: string) {
-  let title: string | undefined  
+  let title: string | undefined
   meta = meta.replace(/(?:\s|^)title\s*=\s*(["'])(.*?)(?<!\\)\1/, (_, __, content) => {
     title = content
     return ''
   })
 
-  const lineMarkings: string[] = []  
+  const lineMarkings: string[] = []
   meta = meta.replace(/(?:\s|^)(?:([a-zA-Z]+)\s*=\s*)?({[0-9,\s-]*})/g, (_, prefix, range) => {
-    lineMarkings.push(`${prefix || 'mark'}=${range}`)  
-    return ''  
-  })  
+    lineMarkings.push(`${prefix || 'mark'}=${range}`)
+    return ''
+  })
 
-  const inlineMarkings: string[] = []  
+  const inlineMarkings: string[] = []
   meta = meta.replace(
     /(?:\s|^)(?:([a-zA-Z]+)\s*=\s*)?([/"'])(.*?)(?<!\\)\2(?=\s|$)/g,
     (_, prefix, delimiter, expression) => {
-      inlineMarkings.push(`${prefix || 'mark'}=${delimiter}${expression}${delimiter}`)  
-      return ''  
+      inlineMarkings.push(`${prefix || 'mark'}=${delimiter}${expression}${delimiter}`)
+      return ''
     }
-  )  
+  )
 
   return {
     title,
     lineMarkings,
     inlineMarkings,
     meta,
-  }  
+  }
 }
 
 export function encodeMarkdownStringProp(input: string | undefined) {
-  return (input !== undefined && encodeURIComponent(input)) || undefined  
+  return (input !== undefined && encodeURIComponent(input)) || undefined
 }
 
 export function encodeMarkdownStringArrayProp(arrInput: string[] | undefined) {
-  if (arrInput === undefined) return undefined  
-  return arrInput.map((input) => encodeURIComponent(input)).join(',') || undefined  
+  if (arrInput === undefined) return undefined
+  return arrInput.map((input) => encodeURIComponent(input)).join(',') || undefined
 }
 
 
@@ -85,7 +86,7 @@ function visitCodeBlock(ast: any) {
 
       const attributes = {
         lang,
-        title: encodeMarkdownStringProp(title),
+        title: (title),
         lineMarkings: encodeMarkdownStringArrayProp(lineMarkings),
         inlineMarkings: encodeMarkdownStringArrayProp(inlineMarkings),
       }
@@ -119,6 +120,7 @@ export function astroCodeSnippets(): AstroIntegration {
         updateConfig({
           markdown: {
             remarkPlugins: [remarkHighlightLine],
+            rehypePlugins: [rehypeCodeSnippets],
           },
         })
       },

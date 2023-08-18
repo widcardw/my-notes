@@ -3,15 +3,6 @@ import type { Frontmatter } from '~/config';
 import MoreMenu from '../RightSidebar/MoreMenu.astro';
 import TableOfContents from '../RightSidebar/TableOfContents';
 import type { MarkdownHeading } from 'astro';
-import {
-  InlineMarkingDefinition,
-  LineMarkingDefinition,
-  MarkerType,
-  MarkerTypeOrder,
-} from "~/plugins/code-highlight/types";
-import rangeParser from "parse-numeric-range";
-import { ShikiBlock } from "~/plugins/code-highlight/shiki-block";
-import { transformHtml as transformCodeSnippet } from '~/plugins/code-highlight/api';
 
 type Props = {
   frontmatter: Frontmatter;
@@ -22,9 +13,6 @@ type Props = {
 const { frontmatter, headings, githubEditUrl } = Astro.props as Props;
 const title = frontmatter.title;
 
-let slotHtml = await Astro.slots.render('default')
-
-slotHtml = slotHtml.replace(/<codesnippets([^>]+)>([\s\S]+?)<\/codesnippets>/g, transformCodeSnippet)
 ---
 
 <article id="article" class="content">
@@ -33,8 +21,7 @@ slotHtml = slotHtml.replace(/<codesnippets([^>]+)>([\s\S]+?)<\/codesnippets>/g, 
     <nav class="block sm:hidden">
       <TableOfContents client:media="(max-width: 50em)" headings={headings} />
     </nav>
-    <!-- <slot /> -->
-    <Fragment set:html={slotHtml} />
+    <slot />
   </section>
   <nav class="block sm:hidden">
     <MoreMenu editHref={githubEditUrl} />
@@ -43,6 +30,7 @@ slotHtml = slotHtml.replace(/<codesnippets([^>]+)>([\s\S]+?)<\/codesnippets>/g, 
 
 <script type="module">
   if (document.querySelector('.mermaid')){
+    // @ts-expect-error import module from cdnjs
     const mermaid = (await import('https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs')).default
     mermaid.initialize({ 
       startOnLoad: false,
@@ -54,17 +42,17 @@ slotHtml = slotHtml.replace(/<codesnippets([^>]+)>([\s\S]+?)<\/codesnippets>/g, 
       }
     })
   }
-  if (document.querySelector('script[type="WaveDrom"]')) {
-    console.log('has wavedrom')
-    const skin = document.createElement('script')
-    skin.src = 'https://cdnjs.cloudflare.com/ajax/libs/wavedrom/3.1.0/skins/default.js'
-    skin.type = 'text/javascript'
-    document.body.appendChild(skin)
-    await import('https://cdnjs.cloudflare.com/ajax/libs/wavedrom/3.1.0/wavedrom.min.js')
-    setTimeout(() => {
-      WaveDrom.ProcessAll()
-    }, 1000)
-  }
+  // if (document.querySelector('script[type="WaveDrom"]')) {
+  //   console.log('has wavedrom')
+  //   const skin = document.createElement('script')
+  //   skin.src = 'https://cdnjs.cloudflare.com/ajax/libs/wavedrom/3.1.0/skins/default.js'
+  //   skin.type = 'text/javascript'
+  //   document.body.appendChild(skin)
+  //   await import('https://cdnjs.cloudflare.com/ajax/libs/wavedrom/3.1.0/wavedrom.min.js')
+  //   setTimeout(() => {
+  //     WaveDrom.ProcessAll()
+  //   }, 1000)
+  // }
 </script>
 
 <style>
