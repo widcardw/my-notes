@@ -1,474 +1,542 @@
 {
   "routes": [
     {
-      "text": "algorithm",
-      "link": "algorithm",
+      "text": "afterclass",
+      "link": "afterclass",
       "children": [
         {
-          "text": "图的数据结构",
-          "link": "graph"
-        },
-        {
-          "text": "解题报告",
-          "link": "report"
-        }
-      ]
-    },
-    {
-      "text": "compilers",
-      "link": "compilers",
-      "children": [
-        {
-          "text": "期末习题",
-          "link": "final"
-        },
-        {
-          "text": "第 1 章 引论",
-          "link": "s01_intro"
-        },
-        {
-          "text": "第 2 章 文法与语言",
-          "link": "s02_lang"
-        },
-        {
-          "text": "第 3 章 词法分析与有限自动机",
-          "link": "s03_lex"
-        },
-        {
-          "text": "第 4 章 自顶向下的语法分析",
-          "link": "s04_topdown"
-        },
-        {
-          "text": "第 5 章 自底向上的语法分析（上）",
-          "link": "s05_downtop"
-        },
-        {
-          "text": "第 5 章 自底向上的语法分析-LR(0)",
-          "link": "s05_downtop-LR(0)"
-        },
-        {
-          "text": "第 5 章 自底向上的语法分析 SLR(1)",
-          "link": "s05_downtop-LR(1)"
-        },
-        {
-          "text": "第 6 章 属性文法",
-          "link": "s06_property"
-        },
-        {
-          "text": "第 7 章 语义分析与语法制导的翻译",
-          "link": "s07_translate"
-        },
-        {
-          "text": "第 8 章 运行时环境",
-          "link": "s08_runtime"
-        }
-      ]
-    },
-    {
-      "text": "computer-network",
-      "link": "computer-network",
-      "children": [
-        {
-          "text": "第 1 章 计算机网络体系结构",
-          "link": "sec1_structure"
-        },
-        {
-          "text": "第 2 章 物理层",
-          "link": "sec2_physical_layer"
-        },
-        {
-          "text": "第 3 章 数据链路层",
-          "link": "sec3_data_link_layer"
-        },
-        {
-          "text": "第 4 章 网络层",
-          "link": "sec4_network_layer"
-        },
-        {
-          "text": "第 5 章 传输层",
-          "link": "sec5_transmition_layer"
-        },
-        {
-          "text": "第 6 章 应用层",
-          "link": "sec6_app_layer"
-        }
-      ]
-    },
-    {
-      "text": "cryptography",
-      "link": "cryptography",
-      "children": [
-        {
-          "text": "第 1 章 引言",
-          "link": "s01_intro"
-        },
-        {
-          "text": "第 3 章 分组密码体制",
-          "link": "s03_block-cipher"
-        },
-        {
-          "text": "第 4 章 公钥密码",
-          "link": "s04_pk"
-        },
-        {
-          "text": "第 5 章 密钥管理",
-          "link": "s05_key-management"
-        },
-        {
-          "text": "第 6 章 消息认证与哈希函数",
-          "link": "s06_identify-hash"
-        },
-        {
-          "text": "第 7 章 数字签名",
-          "link": "s07_sign"
-        },
-        {
-          "text": "第 8 章 密码协议",
-          "link": "s08_proto"
-        }
-      ]
-    },
-    {
-      "text": "cs",
-      "link": "cs",
-      "children": [
-        {
-          "text": "五级流水线数据通路",
-          "link": "note"
-        },
-        {
-          "text": "五级流水线 CPU 设计",
-          "link": "report"
-        },
-        {
-          "text": "第 1 章 计算机系统概述",
-          "link": "s1_intro"
-        },
-        {
-          "text": "第 2 章 数据的表示和运算",
-          "link": "s2_calc"
-        },
-        {
-          "text": "第 3 章 存储系统",
-          "link": "s3_mem"
-        },
-        {
-          "text": "第 4 章 指令系统",
-          "link": "s4_ins"
-        },
-        {
-          "text": "第 5 章 中央处理器",
-          "link": "s5_cpu"
-        },
-        {
-          "text": "第 6 章 总线",
-          "link": "s6_bus"
-        },
-        {
-          "text": "第 7 章 输入输出系统",
-          "link": "s7_io"
-        }
-      ]
-    },
-    {
-      "text": "data-structure",
-      "link": "data-structure",
-      "children": [
-        {
-          "text": "第 2 章 线性表",
-          "link": "section02-linear-list"
-        },
-        {
-          "text": "第 3 章 栈 队列 数组",
-          "link": "section03-stack-queue"
-        },
-        {
-          "text": "第 4 章 串",
-          "link": "section04-string"
-        },
-        {
-          "text": "第 5 章 树与二叉树",
-          "link": "section05-tree"
-        },
-        {
-          "text": "第 6 章 图",
-          "link": "section06-graph"
-        },
-        {
-          "text": "第 7 章 查找",
-          "link": "section07-search"
-        },
-        {
-          "text": "第 8 章 排序",
-          "link": "section08-sort"
-        }
-      ]
-    },
-    {
-      "text": "Intel8086",
-      "link": "Intel8086",
-      "children": [
-        {
-          "text": "第 1 章 概述",
-          "link": "c1-intro"
-        },
-        {
-          "text": "第 2 章 IA-32 微处理器",
-          "link": "c2-IA32-8086"
-        },
-        {
-          "text": "第 3 章 8086",
-          "link": "c3-instructions"
-        },
-        {
-          "text": "第 4 章 汇编语言程序设计",
-          "link": "c4-programming"
-        },
-        {
-          "text": "第 5 章 处理器总线时序和系统总线",
-          "link": "c5-timing-bus"
-        },
-        {
-          "text": "第 6 章 存储器",
-          "link": "c6-mem"
-        },
-        {
-          "text": "第 7 章 输入输出",
-          "link": "c7-io"
-        },
-        {
-          "text": "第 8 章 8253 定时器 计数器",
-          "link": "c8-8253"
-        },
-        {
-          "text": "第 8 章 8255 并行传输接口",
-          "link": "c8-8255"
-        }
-      ]
-    },
-    {
-      "text": "Java",
-      "link": "Java",
-      "children": [
-        {
-          "text": "netty",
-          "link": "netty",
+          "text": "Java",
+          "link": "Java",
           "children": [
             {
-              "text": "BIO 介绍",
-              "link": "01-BIO"
-            },
+              "text": "netty",
+              "link": "netty",
+              "children": [
+                {
+                  "text": "BIO 介绍",
+                  "link": "01-BIO"
+                },
+                {
+                  "text": "AIO",
+                  "link": "02_5-async-IO"
+                },
+                {
+                  "text": "NIO",
+                  "link": "02-NIO"
+                },
+                {
+                  "text": "零拷贝",
+                  "link": "03-zero-copy"
+                },
+                {
+                  "text": "Netty",
+                  "link": "04-netty"
+                },
+                {
+                  "text": "Netty 黑马",
+                  "link": "04-netty-hm"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "manim",
+          "link": "manim",
+          "children": [
             {
-              "text": "AIO",
-              "link": "02_5-async-IO"
-            },
+              "text": "从贝塞尔曲线到概率模型",
+              "link": "bezier"
+            }
+          ]
+        },
+        {
+          "text": "web",
+          "link": "web",
+          "children": [
             {
-              "text": "NIO",
-              "link": "02-NIO"
-            },
-            {
-              "text": "零拷贝",
-              "link": "03-zero-copy"
-            },
-            {
-              "text": "Netty",
-              "link": "04-netty"
-            },
-            {
-              "text": "Netty 黑马",
-              "link": "04-netty-hm"
+              "text": "更加方便的 querySelector",
+              "link": "HTML-skills"
             }
           ]
         }
       ]
     },
     {
-      "text": "manim",
-      "link": "manim",
+      "text": "postgraduate",
+      "link": "postgraduate",
       "children": [
         {
-          "text": "从贝塞尔曲线到概率模型",
-          "link": "bezier"
+          "text": "cmu",
+          "link": "cmu",
+          "children": [
+            {
+              "text": "db-15-445",
+              "link": "db-15-445",
+              "children": [
+                {
+                  "text": "Relational Model　",
+                  "link": "c01-relational-model"
+                },
+                {
+                  "text": "Intermediate SQL",
+                  "link": "c02-intermediate-sql"
+                },
+                {
+                  "text": "Database Storage Part 1",
+                  "link": "c03-Database-storage-1"
+                },
+                {
+                  "text": "Database Storage Part 2",
+                  "link": "c04-Database-storage-2"
+                },
+                {
+                  "text": "Buffer Pools",
+                  "link": "c05-Buffer-Pools"
+                },
+                {
+                  "text": "Hash Tables",
+                  "link": "c06-hash-tables"
+                },
+                {
+                  "text": "Tree Indexes",
+                  "link": "c07-tree-indexes"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
     {
-      "text": "Math",
-      "link": "Math",
+      "text": "undergraduate",
+      "link": "undergraduate",
       "children": [
         {
-          "text": "gaoshu",
-          "link": "gaoshu",
+          "text": "algorithm",
+          "link": "algorithm",
           "children": [
             {
-              "text": "构造辅助函数的方法",
-              "link": "Auxiliary_function"
+              "text": "图的数据结构",
+              "link": "graph"
             },
             {
-              "text": "常用初等函数的导数和积分",
-              "link": "derivative"
-            },
-            {
-              "text": "微分方程",
-              "link": "differential-equation"
-            },
-            {
-              "text": "梯度 散度 旋度",
-              "link": "div-rot"
-            },
-            {
-              "text": "一些公式",
-              "link": "formula"
-            },
-            {
-              "text": "傅里叶级数",
-              "link": "Fourier-Series"
-            },
-            {
-              "text": "空间解析几何",
-              "link": "space"
-            },
-            {
-              "text": "泰勒公式",
-              "link": "taylor"
+              "text": "解题报告",
+              "link": "report"
             }
           ]
         },
         {
-          "text": "linear",
-          "link": "linear",
+          "text": "compilers",
+          "link": "compilers",
           "children": [
             {
-              "text": "Linear Algebra Done Wrong",
-              "link": "Linear-algebra-done-wrong"
+              "text": "期末习题",
+              "link": "final"
+            },
+            {
+              "text": "第 1 章 引论",
+              "link": "s01_intro"
+            },
+            {
+              "text": "第 2 章 文法与语言",
+              "link": "s02_lang"
+            },
+            {
+              "text": "第 3 章 词法分析与有限自动机",
+              "link": "s03_lex"
+            },
+            {
+              "text": "第 4 章 自顶向下的语法分析",
+              "link": "s04_topdown"
+            },
+            {
+              "text": "第 5 章 自底向上的语法分析（上）",
+              "link": "s05_downtop"
+            },
+            {
+              "text": "第 5 章 自底向上的语法分析-LR(0)",
+              "link": "s05_downtop-LR(0)"
+            },
+            {
+              "text": "第 5 章 自底向上的语法分析 SLR(1)",
+              "link": "s05_downtop-LR(1)"
+            },
+            {
+              "text": "第 6 章 属性文法",
+              "link": "s06_property"
+            },
+            {
+              "text": "第 7 章 语义分析与语法制导的翻译",
+              "link": "s07_translate"
+            },
+            {
+              "text": "第 8 章 运行时环境",
+              "link": "s08_runtime"
             }
           ]
         },
         {
-          "text": "probability",
-          "link": "probability",
+          "text": "computer-network",
+          "link": "computer-network",
           "children": [
             {
-              "text": "概率论",
+              "text": "第 1 章 计算机网络体系结构",
+              "link": "sec1_structure"
+            },
+            {
+              "text": "第 2 章 物理层",
+              "link": "sec2_physical_layer"
+            },
+            {
+              "text": "第 3 章 数据链路层",
+              "link": "sec3_data_link_layer"
+            },
+            {
+              "text": "第 4 章 网络层",
+              "link": "sec4_network_layer"
+            },
+            {
+              "text": "第 5 章 传输层",
+              "link": "sec5_transmition_layer"
+            },
+            {
+              "text": "第 6 章 应用层",
+              "link": "sec6_app_layer"
+            }
+          ]
+        },
+        {
+          "text": "cryptography",
+          "link": "cryptography",
+          "children": [
+            {
+              "text": "第 1 章 引言",
+              "link": "s01_intro"
+            },
+            {
+              "text": "第 3 章 分组密码体制",
+              "link": "s03_block-cipher"
+            },
+            {
+              "text": "第 4 章 公钥密码",
+              "link": "s04_pk"
+            },
+            {
+              "text": "第 5 章 密钥管理",
+              "link": "s05_key-management"
+            },
+            {
+              "text": "第 6 章 消息认证与哈希函数",
+              "link": "s06_identify-hash"
+            },
+            {
+              "text": "第 7 章 数字签名",
+              "link": "s07_sign"
+            },
+            {
+              "text": "第 8 章 密码协议",
+              "link": "s08_proto"
+            }
+          ]
+        },
+        {
+          "text": "cs",
+          "link": "cs",
+          "children": [
+            {
+              "text": "五级流水线数据通路",
+              "link": "note"
+            },
+            {
+              "text": "五级流水线 CPU 设计",
+              "link": "report"
+            },
+            {
+              "text": "第 1 章 计算机系统概述",
+              "link": "s1_intro"
+            },
+            {
+              "text": "第 2 章 数据的表示和运算",
+              "link": "s2_calc"
+            },
+            {
+              "text": "第 3 章 存储系统",
+              "link": "s3_mem"
+            },
+            {
+              "text": "第 4 章 指令系统",
+              "link": "s4_ins"
+            },
+            {
+              "text": "第 5 章 中央处理器",
+              "link": "s5_cpu"
+            },
+            {
+              "text": "第 6 章 总线",
+              "link": "s6_bus"
+            },
+            {
+              "text": "第 7 章 输入输出系统",
+              "link": "s7_io"
+            }
+          ]
+        },
+        {
+          "text": "data-structure",
+          "link": "data-structure",
+          "children": [
+            {
+              "text": "第 2 章 线性表",
+              "link": "section02-linear-list"
+            },
+            {
+              "text": "第 3 章 栈 队列 数组",
+              "link": "section03-stack-queue"
+            },
+            {
+              "text": "第 4 章 串",
+              "link": "section04-string"
+            },
+            {
+              "text": "第 5 章 树与二叉树",
+              "link": "section05-tree"
+            },
+            {
+              "text": "第 6 章 图",
+              "link": "section06-graph"
+            },
+            {
+              "text": "第 7 章 查找",
+              "link": "section07-search"
+            },
+            {
+              "text": "第 8 章 排序",
+              "link": "section08-sort"
+            }
+          ]
+        },
+        {
+          "text": "Intel8086",
+          "link": "Intel8086",
+          "children": [
+            {
+              "text": "第 1 章 概述",
+              "link": "c1-intro"
+            },
+            {
+              "text": "第 2 章 IA-32 微处理器",
+              "link": "c2-IA32-8086"
+            },
+            {
+              "text": "第 3 章 8086",
+              "link": "c3-instructions"
+            },
+            {
+              "text": "第 4 章 汇编语言程序设计",
+              "link": "c4-programming"
+            },
+            {
+              "text": "第 5 章 处理器总线时序和系统总线",
+              "link": "c5-timing-bus"
+            },
+            {
+              "text": "第 6 章 存储器",
+              "link": "c6-mem"
+            },
+            {
+              "text": "第 7 章 输入输出",
+              "link": "c7-io"
+            },
+            {
+              "text": "第 8 章 8253 定时器 计数器",
+              "link": "c8-8253"
+            },
+            {
+              "text": "第 8 章 8255 并行传输接口",
+              "link": "c8-8255"
+            }
+          ]
+        },
+        {
+          "text": "Math",
+          "link": "Math",
+          "children": [
+            {
+              "text": "gaoshu",
+              "link": "gaoshu",
+              "children": [
+                {
+                  "text": "构造辅助函数的方法",
+                  "link": "Auxiliary_function"
+                },
+                {
+                  "text": "常用初等函数的导数和积分",
+                  "link": "derivative"
+                },
+                {
+                  "text": "微分方程",
+                  "link": "differential-equation"
+                },
+                {
+                  "text": "梯度 散度 旋度",
+                  "link": "div-rot"
+                },
+                {
+                  "text": "一些公式",
+                  "link": "formula"
+                },
+                {
+                  "text": "傅里叶级数",
+                  "link": "Fourier-Series"
+                },
+                {
+                  "text": "空间解析几何",
+                  "link": "space"
+                },
+                {
+                  "text": "泰勒公式",
+                  "link": "taylor"
+                }
+              ]
+            },
+            {
+              "text": "linear",
+              "link": "linear",
+              "children": [
+                {
+                  "text": "Linear Algebra Done Wrong",
+                  "link": "Linear-algebra-done-wrong"
+                }
+              ]
+            },
+            {
+              "text": "probability",
+              "link": "probability",
+              "children": [
+                {
+                  "text": "概率论",
+                  "link": "c1"
+                },
+                {
+                  "text": "概率论-多维随机变量",
+                  "link": "c2-multi-variable"
+                },
+                {
+                  "text": "概率论-随机变量数字特征",
+                  "link": "c3-shuzitezhen"
+                },
+                {
+                  "text": "概率论-数理统计",
+                  "link": "c4-tongji"
+                },
+                {
+                  "text": "概率论-参数估计",
+                  "link": "c5-estimation"
+                },
+                {
+                  "text": "例题",
+                  "link": "ex"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "os",
+          "link": "os",
+          "children": [
+            {
+              "text": "1. 操作系统基本概念",
+              "link": "1-1_intro"
+            },
+            {
+              "text": "习题",
+              "link": "2-0_exercise"
+            },
+            {
+              "text": "2.1. 进程",
+              "link": "2-1_proc"
+            },
+            {
+              "text": "2.2. 进程调度",
+              "link": "2-2_proc-sche"
+            },
+            {
+              "text": "3.1. 进程互斥与同步",
+              "link": "3-1_proc-sync"
+            },
+            {
+              "text": "3.2. 互斥与同步案例",
+              "link": "3-2_proc-mul"
+            },
+            {
+              "text": "3.4. 死锁",
+              "link": "3-4_dead-lock"
+            },
+            {
+              "text": "4. 存储管理",
+              "link": "4_mem"
+            },
+            {
+              "text": "5. 设备管理",
+              "link": "5_device"
+            },
+            {
+              "text": "6. 文件管理",
+              "link": "6_file"
+            },
+            {
+              "text": "期中复习",
+              "link": "final"
+            },
+            {
+              "text": "操作系统内核实验",
+              "link": "lab"
+            },
+            {
+              "text": "期末复习",
+              "link": "mid-term"
+            }
+          ]
+        },
+        {
+          "text": "pratice",
+          "link": "pratice",
+          "children": [
+            {
+              "text": "第一次",
               "link": "c1"
             },
             {
-              "text": "概率论-多维随机变量",
-              "link": "c2-multi-variable"
+              "text": "第二次",
+              "link": "c2"
             },
             {
-              "text": "概率论-随机变量数字特征",
-              "link": "c3-shuzitezhen"
+              "text": "第三次",
+              "link": "c3"
             },
             {
-              "text": "概率论-数理统计",
-              "link": "c4-tongji"
+              "text": "第四次",
+              "link": "c4"
             },
             {
-              "text": "概率论-参数估计",
-              "link": "c5-estimation"
+              "text": "第五次",
+              "link": "c5"
             },
             {
-              "text": "例题",
-              "link": "ex"
+              "text": "第六次",
+              "link": "c6"
+            },
+            {
+              "text": "CentOS 安装 MySQL",
+              "link": "CentOS_7_install_MySQL"
+            },
+            {
+              "text": "CentOS 安装 Nodejs",
+              "link": "CentOSinstallNodejs"
             }
           ]
-        }
-      ]
-    },
-    {
-      "text": "os",
-      "link": "os",
-      "children": [
-        {
-          "text": "1. 操作系统基本概念",
-          "link": "1-1_intro"
-        },
-        {
-          "text": "习题",
-          "link": "2-0_exercise"
-        },
-        {
-          "text": "2.1. 进程",
-          "link": "2-1_proc"
-        },
-        {
-          "text": "2.2. 进程调度",
-          "link": "2-2_proc-sche"
-        },
-        {
-          "text": "3.1. 进程互斥与同步",
-          "link": "3-1_proc-sync"
-        },
-        {
-          "text": "3.2. 互斥与同步案例",
-          "link": "3-2_proc-mul"
-        },
-        {
-          "text": "3.4. 死锁",
-          "link": "3-4_dead-lock"
-        },
-        {
-          "text": "4. 存储管理",
-          "link": "4_mem"
-        },
-        {
-          "text": "5. 设备管理",
-          "link": "5_device"
-        },
-        {
-          "text": "6. 文件管理",
-          "link": "6_file"
-        },
-        {
-          "text": "期中复习",
-          "link": "final"
-        },
-        {
-          "text": "操作系统内核实验",
-          "link": "lab"
-        },
-        {
-          "text": "期末复习",
-          "link": "mid-term"
-        }
-      ]
-    },
-    {
-      "text": "pratice",
-      "link": "pratice",
-      "children": [
-        {
-          "text": "第一次",
-          "link": "c1"
-        },
-        {
-          "text": "第二次",
-          "link": "c2"
-        },
-        {
-          "text": "第三次",
-          "link": "c3"
-        },
-        {
-          "text": "第四次",
-          "link": "c4"
-        },
-        {
-          "text": "第五次",
-          "link": "c5"
-        },
-        {
-          "text": "第六次",
-          "link": "c6"
-        },
-        {
-          "text": "CentOS 安装 MySQL",
-          "link": "CentOS_7_install_MySQL"
-        },
-        {
-          "text": "CentOS 安装 Nodejs",
-          "link": "CentOSinstallNodejs"
         }
       ]
     },
@@ -487,16 +555,6 @@
         {
           "text": "curl 命令的使用",
           "link": "curl"
-        }
-      ]
-    },
-    {
-      "text": "web",
-      "link": "web",
-      "children": [
-        {
-          "text": "更加方便的 querySelector",
-          "link": "HTML-skills"
         }
       ]
     }

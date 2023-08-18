@@ -5,7 +5,7 @@ layout: ~/layouts/MainLayout.astro
 
 ## 0. 操作系统
 
-[[os/1-1_intro#定义]]
+[[undergraduate/os/1-1_intro#定义]]
 
 操作系统中的基础抽象——进程抽象、虚存抽象和文件抽象。
 
@@ -115,7 +115,7 @@ layout: ~/layouts/MainLayout.astro
 
 中断：指在程序执行过程中，遇到紧急处理的事件时，暂时中止现行程序。在 CPU 上的运行，转而执行相应的事件处理程序，待处理完成后再返回断点或调度其他程序执行过程。
 
-[[os/1-1_intro#中断的分类]]
+[[undergraduate/os/1-1_intro#中断的分类]]
 
 - 从中断事件的性质
   - 强迫性中断
@@ -132,15 +132,15 @@ layout: ~/layouts/MainLayout.astro
 
 进程是具有独立功能的程序，在某个数据集合上的一次运行活动，也是操作系统进行资源分配和保护的基本单位。
 
-[[os/2-1_proc#1 定义]]
+[[undergraduate/os/2-1_proc#1 定义]]
 
-[[os/2-1_proc#4 进程的特征]]
+[[undergraduate/os/2-1_proc#4 进程的特征]]
 
 ### 5.1. 进程状态转换
 
 中断暂停当前运行进程的执行，把处理器转换至内核态，内核态获得处理器控制权后，并把控制权交给另一个进程。
 
-[[os/2-1_proc#2 进程状态的转换]]
+[[undergraduate/os/2-1_proc#2 进程状态的转换]]
 
 #### 三态
 
@@ -180,7 +180,7 @@ layout: ~/layouts/MainLayout.astro
 - 减少管理开销
 - 并发程度提高
 
-[[os/2-1_proc#^multi-thread]]
+[[undergraduate/os/2-1_proc#^multi-thread]]
 
 ### 5.5. 进程调度算法
 
@@ -191,7 +191,7 @@ layout: ~/layouts/MainLayout.astro
 - 时间片轮转 RR
 - 优先级调度算法
 
-[[os/2-2_proc-sche#2 2 4 调度算法]]
+[[undergraduate/os/2-2_proc-sche#2 2 4 调度算法]]
 
 ### 5.6. 进程优先权
 
@@ -199,15 +199,15 @@ layout: ~/layouts/MainLayout.astro
 
 ### 6.1. 互斥
 
-[[os/3-1_proc-sync#1 2 进程互斥]]
+[[undergraduate/os/3-1_proc-sync#1 2 进程互斥]]
 
 ### 6.2. 同步
 
-[[os/3-1_proc-sync#1 1 进程同步]]
+[[undergraduate/os/3-1_proc-sync#1 1 进程同步]]
 
 ### 6.3. 信号量
 
-[[os/3-1_proc-sync#2 3 4 信号量机制]]
+[[undergraduate/os/3-1_proc-sync#2 3 4 信号量机制]]
 
 ### 6.4. 临界区
 
@@ -217,11 +217,11 @@ layout: ~/layouts/MainLayout.astro
 
 ### 6.5. 哲学家算法
 
-[[os/3-2_proc-mul#6 五位哲学家就餐问题]]
+[[undergraduate/os/3-2_proc-mul#6 五位哲学家就餐问题]]
 
 ### 6.6. 生产者消费者算法
 
-[[os/3-2_proc-mul#2 多生产者和多消费者问题]]
+[[undergraduate/os/3-2_proc-mul#2 多生产者和多消费者问题]]
 
 ### 6.7. 和尚挑水问题
 

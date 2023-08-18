@@ -79,7 +79,7 @@ EU 为一个存储器操作数而计算出来的偏移量称为操作数的==有
 
 #### 3.1. 规定段地址
 
-[[Intel8086/c2-IA32-8086#^memory-organization]]
+[[undergraduate/Intel8086/c2-IA32-8086#^memory-organization]]
 
 #### 3.2. 规定偏移量
 
@@ -292,7 +292,7 @@ OUT <端口地址/DX>, AL
 
 采用==寄存器 DI== 寻址==目的操作数==，且假定是在现行的附加段区域中（段地址保存在==段寄存器 ES== 中）；
 
-[[Intel8086/c2-IA32-8086#^memory-organization]]
+[[undergraduate/Intel8086/c2-IA32-8086#^memory-organization]]
 
 串操作时，地址指针会自动修改，具体由标志位 `DF` 控制。如 `DF==1` 则每次操作后 `SI` 和 `DI` 自减；如 `DF==0` 则 `SI` 和 `DI` 自增。
 

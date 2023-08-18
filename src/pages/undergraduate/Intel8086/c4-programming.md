@@ -271,11 +271,11 @@ MY_STACK ENDS
 
 #### 2.2. 重复
 
-[[Intel8086/c3-instructions#^repeat-op]]
+[[undergraduate/Intel8086/c3-instructions#^repeat-op]]
 
 #### 2.3. 锁定
 
-[[Intel8086/c3-instructions#6 处理器控制指令]]
+[[undergraduate/Intel8086/c3-instructions#6 处理器控制指令]]
 
 ```asm
 CYCLE:	LOCK	DEC	COUNT
@@ -285,4 +285,4 @@ CYCLE:	LOCK	DEC	COUNT
 
 ### 4. 串操作指令
 
-[[Intel8086/c3-instructions#5 串操作指令]]
+[[undergraduate/Intel8086/c3-instructions#5 串操作指令]]

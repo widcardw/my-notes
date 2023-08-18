@@ -1885,7 +1885,7 @@ int main()
 
 ##### 代码实现
 
-采用了链式前向星存储图结构，[查看详情](algorithm/graph.md)
+采用了链式前向星存储图结构，[查看详情](undergraduate/algorithm/graph.md)
 
 ```cpp
 #include <iostream>

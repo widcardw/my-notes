@@ -5,13 +5,13 @@ layout: ~/layouts/MainLayout.astro
 
 ## 操作系统资源管理技术
 
-[[os/final#3 资源抽象]]
+[[undergraduate/os/final#3 资源抽象]]
 
 ### 复用
 
 ### 虚拟
 
-[[os/1-1_intro#虚拟 Virtual]]
+[[undergraduate/os/1-1_intro#虚拟 Virtual]]
 
 #### 时分复用技术
 
@@ -27,33 +27,33 @@ layout: ~/layouts/MainLayout.astro
 
 ### 抽象
 
-[[os/4_mem#1 3 2 地址映射]]
+[[undergraduate/os/4_mem#1 3 2 地址映射]]
 
 ## 模式切换与进程切换
 
-[[os/2-1_proc#3 5 进程的切换]]
+[[undergraduate/os/2-1_proc#3 5 进程的切换]]
 
-[[os/2-2_proc-sche#3 进程的切换与过程]]
+[[undergraduate/os/2-2_proc-sche#3 进程的切换与过程]]
 
-[[os/final#5 3 模式转换]]
+[[undergraduate/os/final#5 3 模式转换]]
 
 ## 处理器调度
 
-[[os/2-2_proc-sche#2 2 4 调度算法]]
+[[undergraduate/os/2-2_proc-sche#2 2 4 调度算法]]
 
 ## 死锁
 
-[[os/3-4_dead-lock]]
+[[undergraduate/os/3-4_dead-lock]]
 
 ## 抖动（页面淘汰/置换算法）
 
-[[os/4_mem#6 2 6 缺页中断率]]
+[[undergraduate/os/4_mem#6 2 6 缺页中断率]]
 
 ## 缓冲技术
 
-[[os/5_device#3 缓冲技术]]
+[[undergraduate/os/5_device#3 缓冲技术]]
 
-[[os/5_device#缓冲技术]]
+[[undergraduate/os/5_device#缓冲技术]]
 
 ## 设备独立性
 
@@ -61,39 +61,39 @@ layout: ~/layouts/MainLayout.astro
 
 通常用户不指定特定的设备，而==指定逻辑设备==，使得用户作业和物理设备独立开来，再通过其它途径==建立逻辑设备和物理设备之间的对应关系==，我们称这种特性为 “设备独立性”。具有设备独立性的系统中，用户编写程序时==使用的设备与实际使用的设备无关==，亦即==逻辑设备名是用户命名的==，可以更改。物理设备名是系统规定的，是不可更改的。设备管理的功能之一就是把逻辑设备名转换成物理设备名。
 
-[[os/5_device#SPOOLing 软件]]
+[[undergraduate/os/5_device#SPOOLing 软件]]
 
 ## 页面置换算法
 
 ### OPT
 
-[[os/4_mem#最佳页面替换算法 OPT]]
+[[undergraduate/os/4_mem#最佳页面替换算法 OPT]]
 
 
 
 ### FIFO
 
-[[os/4_mem#先进先出 FIFO]]
+[[undergraduate/os/4_mem#先进先出 FIFO]]
 
 ### LRU
 
-[[os/4_mem#最近最少使用 LRU]]
+[[undergraduate/os/4_mem#最近最少使用 LRU]]
 
 ### CLOCK
 
-[[os/4_mem#时钟置换算法 CLOCK]]
+[[undergraduate/os/4_mem#时钟置换算法 CLOCK]]
 
 ## 磁盘调度算法
 
-[[os/5_device#4 3 搜查定位]]
+[[undergraduate/os/5_device#4 3 搜查定位]]
 
 ## 文件系统索引节点
 
 ### inode
 
-[[os/6_file#2 1 1 FCB 文件控制块]]
+[[undergraduate/os/6_file#2 1 1 FCB 文件控制块]]
 
-[[os/6_file#2 2 层次目录结构]]
+[[undergraduate/os/6_file#2 2 层次目录结构]]
 
 ### 存储空间计算
 
@@ -103,15 +103,15 @@ layout: ~/layouts/MainLayout.astro
 
 ## 分页式存储管理的原理与地址转换
 
-[[os/4_mem#4 分页存储管理]]
+[[undergraduate/os/4_mem#4 分页存储管理]]
 
 ## 虚拟存储管理中请求分页
 
-[[os/4_mem#6 2 请求分页虚拟存储管理]]
+[[undergraduate/os/4_mem#6 2 请求分页虚拟存储管理]]
 
 ### 请求分页的原理
 
-[[os/4_mem#6 2 2 基本原理]]
+[[undergraduate/os/4_mem#6 2 2 基本原理]]
 
 ### 虚拟地址转换
 
@@ -123,11 +123,11 @@ layout: ~/layouts/MainLayout.astro
 
 ## 空间存储管理方法
 
-[[os/6_file#4 3 文件空间管理]]
+[[undergraduate/os/6_file#4 3 文件空间管理]]
 
 ## 工作集理论
 
-[[os/4_mem#工作集模型与工作集置换算法 WS]]
+[[undergraduate/os/4_mem#工作集模型与工作集置换算法 WS]]
 
 ## 信号量的变化范围
 
