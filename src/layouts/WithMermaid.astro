@@ -1,0 +1,20 @@
+---
+---
+
+<slot />
+
+<script>
+  if (document.querySelector(".mermaid")) {
+    // @ts-expect-error import module from cdnjs
+    const mermaid = (await import("https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs")).default;
+    mermaid.initialize({
+      startOnLoad: false,
+    });
+    mermaid.run().then(() => {
+      const els = document.querySelectorAll(".mermaid");
+      for (const el of els) {
+        el.classList.remove("loading");
+      }
+    });
+  }
+</script>

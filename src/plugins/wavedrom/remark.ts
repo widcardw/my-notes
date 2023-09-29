@@ -1,3 +1,5 @@
+import type { Root } from 'mdast';
+import type { Plugin } from 'unified';
 import { visit } from 'unist-util-visit'
 
 function createWaveDromDiv(contents: string) {
@@ -9,21 +11,19 @@ function createWaveDromDiv(contents: string) {
   }
 }
 
-function visitCodeBlock(ast: any) {
+function visitCodeBlock(ast: Root) {
   return visit(ast, 'code', (node, index, parent) => {
-    const { lang, value }: { lang: string; value: string } = node
+    const { lang, value } = node
     if (lang !== 'wavedrom')
-      return node
+      return
 
     const newNode = createWaveDromDiv(value)
-    parent.children.splice(index, 1, newNode)
-
-    return node
+    parent?.children.splice(Number(index), 1, newNode as any)
   })
 }
 
-export function remarkWavedrom() {
-  return function transformer(ast: any, vFile: any, next: any) {
+export const remarkWavedrom: Plugin<[], Root> = () => {
+  return function transformer(ast: Root, vFile: any, next: any) {
     visitCodeBlock(ast)
     if (typeof next === 'function')
       return next(null, ast, vFile)

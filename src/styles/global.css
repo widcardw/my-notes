@@ -1,0 +1,23 @@
+@import "@widcardw/remark-callouts/index.css";
+@import 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.3/katex.min.css';
+
+.callout-title-content, .callout-fold {
+    margin-top: 0 !important;
+}
+
+[data-theme="dark"] mark {
+    color: var(--sl-color-text);
+    background-color: #2f7fff40;
+}
+
+img, video {
+    margin: 0 auto;
+}
+
+[data-theme="dark"] .expressive-code.ec-theme-github-light {
+    display: none;
+}
+
+[data-theme="light"] .expressive-code.ec-theme-github-dark {
+    display: none;
+}

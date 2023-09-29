@@ -1,44 +1,77 @@
-import { defineConfig } from 'astro/config'
-import solidJs from "@astrojs/solid-js"
-import { remarkMark } from 'remark-mark-highlight'
-import remarkCallouts from 'remark-callouts'
-import remarkMath from 'remark-math'
-import rehypeKatex from 'rehype-katex'
-import { remarkAsciiMath } from '@widcardw/remark-asciimath'
-import { remarkWikiLink } from '@flowershow/remark-wiki-link'
-import rehypeExternalLinks from 'rehype-external-links'
-import { SITE, PUBDIR } from './src/config'
-import { remarkMermaid } from './src/plugins/mermaid/remark'
-import { wikilinkPageResolver } from './src/plugins/wikilink/resolver'
-import { astroCodeSnippets } from './src/plugins/code-highlight/remark'
-import { remarkWavedrom } from './src/plugins/wavedrom/remark'
+import { defineConfig } from 'astro/config';
+import starlight from '@astrojs/starlight';
+import { remarkMark } from 'remark-mark-highlight';
+import { remarkCallouts } from '@widcardw/remark-callouts';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import { remarkAsciiMath } from '@widcardw/remark-asciimath';
+import { remarkWikiLink } from './src/plugins/wiki/remarkWikiLink';
+import { remarkWavedrom } from './src/plugins/wavedrom/remark';
+import { remarkMermaid } from './src/plugins/mermaid/remark';
+
+import expressiveCode from "astro-expressive-code";
 
 // https://astro.build/config
 export default defineConfig({
-  site: SITE.site,
   integrations: [
-    solidJs(),
-    astroCodeSnippets(),
-  ],
-  // you should put your static assets in this directory
-  publicDir: PUBDIR,
+    // astroCodeSnippets(),
+    expressiveCode({ theme: ['github-light', 'github-dark'] }),
+    starlight({
+      title: 'My Docs',
+      customCss: ['./src/styles/global.css', './src/styles/mermaid.css'],
+      social: {
+        github: 'https://github.com/withastro/starlight'
+      },
+      sidebar: [{
+        label: '业余学习',
+        autogenerate: {
+          directory: 'afterclass'
+        },
+        collapsed: true
+      }, {
+        label: '本科笔记',
+        autogenerate: {
+          directory: 'undergraduate'
+        },
+        collapsed: true
+      }, {
+        label: '研究生笔记',
+        autogenerate: {
+          directory: 'postgraduate'
+        },
+        collapsed: true
+      }, {
+        label: '实用工具',
+        autogenerate: {
+          directory: 'utils'
+        },
+        collapsed: true
+      }]
+    })],
+  publicDir: 'src/content/docs/public',
   markdown: {
-    gfm: true,
     remarkPlugins: [
-      remarkMark as any,
-      remarkCallouts,
-      [remarkMermaid, { includeLoading: true }],
+      (remarkMark as any), 
+      remarkCallouts, 
+      remarkMath, 
+      remarkAsciiMath, 
+      [remarkWikiLink, {
+      // wikiLinkResolver: wikilinkPageResolver
+      pathFormat: 'obsidian-absolute',
+      wikiLinkResolver: (target: string) => {
+        // for [[#heading]] links
+        if (!target) return [];
+        let permalink = target.replace(/\/index$/, "");
+        // TODO what to do with [[index]] link?
+        if (permalink.length === 0) permalink = "/";
+        permalink = permalink.replace('public/', '');
+        return [permalink];
+      }
+    }],
       remarkWavedrom,
-      remarkMath,  // used for math
-      remarkAsciiMath,  // used for math
-      [remarkWikiLink, { pageResolver: wikilinkPageResolver }],
+      remarkMermaid,
     ],
-    rehypePlugins: [
-      rehypeKatex,  // used for math
-      [rehypeExternalLinks, { target: '_blank', rel: 'nofollow' }],
-    ],
-    shikiConfig: {
-      theme: 'nord',
-    },
-  },
-})
+
+    rehypePlugins: [(rehypeKatex as any)]
+  }
+});

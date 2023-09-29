@@ -1,5 +1,7 @@
 # build output
 dist/
+# generated types
+.astro/
 
 # dependencies
 node_modules/
@@ -18,13 +20,13 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-src/pages/.obsidian/plugins
-src/pages/.obsidian/core-plugins-migration.json
-src/pages/.obsidian/workspace.json
-src/pages/.obsidian/workspaces.json
+src/content/docs/.obsidian/plugins
+src/content/docs/.obsidian/core-plugins-migration.json
+src/content/docs/.obsidian/workspace.json
+src/content/docs/.obsidian/workspaces.json
 
-src/pages/**/_*
-!src/pages/_template/*
+src/content/docs/**/_*
+!src/content/docs/_template/*
 
-src/pages/.obsidian/graph.json
-src/pages/public/plba
+src/content/docs/.obsidian/graph.json
+src/content/docs/public/plba
