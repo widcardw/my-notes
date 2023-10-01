@@ -33,7 +33,7 @@ DBMS 只保存日志记录，不在页中保存元组。
 
 类似于归并排序
 
-![[_Excalidraw/cmu/c03/log-compaction.excalidraw]]
+![](./assets/c04-Database-storage-2/log-compaction.excalidraw.svg)
 
 #### 通用压缩
 
@@ -131,7 +131,7 @@ DESCRIBE student;
 - Hybrid Transaction + Analytical Processing
 	- OLTP + OLAP together on the same database instance
 
-  ![[_Excalidraw/cmu/c03/database-workloads-oltp-olap.excalidraw]]
+![](./assets/c04-Database-storage-2/database-workloads-oltp-olap.excalidraw.svg)
 
 ### Observation
 
@@ -174,5 +174,4 @@ DBMS 按照一种属性（或者说，按照列）来连续存储所有的 tuple
 	- 每个值都与 tuple id 一起存储在这一列中
 	- 查询时会根据 tuple id 重新组合
 
-![[_Excalidraw/cmu/c05/tuple-identification.excalidraw|tuple-identification.excalidraw]]
-
+![](./assets/c04-Database-storage-2/tuple-identification.excalidraw.svg)

@@ -1,5 +1,6 @@
 @import "@widcardw/remark-callouts/index.css";
 @import 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.3/katex.min.css';
+@import 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap';
 
 .callout-title-content, .callout-fold {
     margin-top: 0 !important;

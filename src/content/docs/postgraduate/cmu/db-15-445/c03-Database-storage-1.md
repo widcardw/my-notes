@@ -4,7 +4,7 @@ title: Database Storage Part 1
 
 ## 数据存储架构
 
-![[_Excalidraw/cmu/c03/cmu-db-15-445-storage-hierarchy.excalidraw]]
+![](./assets/c03-Database-storage-1/cmu-db-15-445-storage-hierarchy.excalidraw.svg)
 
 ## 顺序访问 vs. 随机访问
 
@@ -23,7 +23,7 @@ DBMS 想要最大化顺序存取
 
 ## Disk-orient DBMS
 
-![[_Excalidraw/cmu/c03/cmu-db-15-445-dbms.excalidraw]]
+![](./assets/c03-Database-storage-1/cmu-db-15-445-dbms.excalidraw.svg)
 
 # Why not use the OS?
 
@@ -106,7 +106,7 @@ A **heap file** is an ==unordered collection== of pages with tuples that are sto
 - 空闲页表 free page list 的头指针
 - 数据页表 data page list 的头指针
 
-![[_Excalidraw/cmu/c03/heap-file-linked-list.excalidraw]]
+![](./assets/c03-Database-storage-1/heap-file-linked-list.excalidraw.svg)
 
 ### Page Directory
 
@@ -157,8 +157,7 @@ Directory 也记录每页空余插槽的数量。
 
 当插入一个 tuple 的时候，槽数组将从前往后插入，tuple 将从后往前插入。当槽数组和 tuple 数据相遇的时候说明当前页已满。
 
-![[_Excalidraw/cmu/c03/slotted-pages.excalidraw|400]]
-
+![](./assets/c03-Database-storage-1/slotted-pages.excalidraw.svg)
 
 ## Tuple Layout
 
@@ -183,7 +182,7 @@ CREATE TABLE foo (
 );
 ```
 
-![[_Excalidraw/cmu/c05/tuple-data-create-table-schema.excalidraw]]
+![](./assets/c03-Database-storage-1/tuple-data-create-table-schema.excalidraw.svg)
 
 #### Record IDs
 

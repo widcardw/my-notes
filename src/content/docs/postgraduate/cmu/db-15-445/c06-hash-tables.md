@@ -45,7 +45,7 @@ Hash table 实现了无序的关联数组，将 key 映射到 value.
 
 需要寻找元素时，对 key 取数组长度 $n$ 的余数，来找到在数组中的偏移量。
 
-![[_Excalidraw/cmu/c06/static-hash-table.excalidraw|400]]
+![](./assets/c06-hash-tables/static-hash-table.excalidraw.svg)
 
 > [!note] Assumptions
 > - 已知元素的数量
@@ -96,18 +96,18 @@ Hash table 实现了无序的关联数组，将 key 映射到 value.
 
 #### Insertion
 
-![[_Excalidraw/cmu/c06/linear-probe-hash-insertion.excalidraw|400]]
+![](./assets/c06-hash-tables/linear-probe-hash-insertion.excalidraw.svg)
 
 #### Deletion
 
-![[_Excalidraw/cmu/c06/linear-probe-hash-deletion-1.excalidraw]]
+![](./assets/c06-hash-tables/linear-probe-hash-deletion-1.excalidraw.svg)
 
 先删除 C，然后删除 D，但发现 D 的位置是空的，那么程序就会认为 D 不在哈希表中，这就会导致严重的问题。
 
 > [!success] Approach #1: Tombstone
 > 在已经删除的位置上写入一个“已删除”的标志，以表明以前这里有值，但是被删除了，如果当前 key 还未匹配到，那么会继续向后匹配。
 > 
-> ![[_Excalidraw/cmu/c06/linear-probe-hash-tombstone.excalidraw|400]]
+> ![](./assets/c06-hash-tables/linear-probe-hash-tombstone.excalidraw.svg)
 
 > [!success] Approach #2: Movement
 > 将刚才删除的单元，以及这个单元以下的部分重新排列。在这个例子中，删除 C 的同时，会将 D, E, F 都向上移动一格。但是同时算法也有可能将 B 移动到最底端的格子中，这种情况应该需要避免。
@@ -135,10 +135,10 @@ Hash table 实现了无序的关联数组，将 key 映射到 value.
 
 查找和删除的复杂度是 $O(1)$，因为每个哈希表只检查一个位置
 
-![[_Excalidraw/cmu/c06/cuckoo-hashing-1.excalidraw]]
+![](./assets/c06-hash-tables/cuckoo-hashing-1.excalidraw.svg)
 
 
-![[_Excalidraw/cmu/c06/cuckoo-hashing-2.excalidraw]]
+![](./assets/c06-hash-tables/cuckoo-hashing-2.excalidraw.svg)
 
 > [!faq] 如果这一过程中遇到了循环 kick out
 > 可能需要一些标记来标识，如果真的遇到了循环，可能需要通过更换 hash 函数或者其他方式来修复这一问题。
@@ -154,7 +154,7 @@ Hash table 实现了无序的关联数组，将 key 映射到 value.
 
 为哈希表中每个槽维护一个 bucket 的链表，将所有哈希值相同的元素，放到同一个 bucket 链中，如果超出了 bucket size，那么就在链表后面挂载新的 bucket
 
-![[_Excalidraw/cmu/c06/chained-hashing.excalidraw|chained-hashing.excalidraw]]
+![](./assets/c06-hash-tables/chained-hashing.excalidraw.svg)
 
 ### Extendible Hashing
 
@@ -162,10 +162,10 @@ Hash table 实现了无序的关联数组，将 key 映射到 value.
 
 拆分时，重新洗牌 bucket entries，并增加要检测的位数。
 
-![[_Excalidraw/cmu/c06/extendable-hashing-1.excalidraw]]
+![](./assets/c06-hash-tables/extendable-hashing-1.excalidraw.svg)
 
 
-![[_Excalidraw/cmu/c06/extendable-hashing-2.excalidraw]]
+![](./assets/c06-hash-tables/extendable-hashing-2.excalidraw.svg)
 
 > 在删除元素的时候，表可以考虑缩减
 
@@ -177,6 +177,6 @@ Hash table 实现了无序的关联数组，将 key 映射到 value.
 
 对于一个给定的 key，使用多个哈希函数来找到正确的 bucket
 
-![[_Excalidraw/cmu/c06/linear-hashing-split.excalidraw]]
+![](./assets/c06-hash-tables/linear-hashing-split.excalidraw.svg)
 
 > 看不懂

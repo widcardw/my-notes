@@ -17,10 +17,10 @@ export default defineConfig({
     // astroCodeSnippets(),
     expressiveCode({ theme: ['github-light', 'github-dark'] }),
     starlight({
-      title: 'My Docs',
+      title: 'Notes',
       customCss: ['./src/styles/global.css', './src/styles/mermaid.css'],
       social: {
-        github: 'https://github.com/withastro/starlight'
+        github: 'https://github.com/widcardw/my-notes'
       },
       sidebar: [{
         label: '业余学习',

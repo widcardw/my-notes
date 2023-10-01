@@ -24,7 +24,7 @@ title: Buffer Pools
 - 何时将页面读入内存，何时写入磁盘
 - 目标是最小化==从磁盘读取数据==造成的阻塞
 
-![[_Excalidraw/cmu/c03/cmu-db-15-445-dbms.excalidraw]]
+![](./assets/c03-Database-storage-1/cmu-db-15-445-dbms.excalidraw.svg)
 
 ### Buffer Pool Organization
 

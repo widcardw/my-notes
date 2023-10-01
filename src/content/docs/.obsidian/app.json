@@ -1,5 +1,5 @@
 {
-  "newLinkFormat": "absolute",
+  "newLinkFormat": "relative",
   "showInlineTitle": false,
   "showLineNumber": true,
   "spellcheck": true,
@@ -11,5 +11,8 @@
     "downscalePercent": 100
   },
   "alwaysUpdateLinks": true,
-  "tabSize": 2
+  "tabSize": 2,
+  "useMarkdownLinks": true,
+  "newFileLocation": "root",
+  "attachmentFolderPath": "./assets"
 }
