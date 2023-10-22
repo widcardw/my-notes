@@ -20,7 +20,7 @@ title: CentOS 安装 MySQL
 移动到 `/usr/local/mysql/` 目录下。此步骤需要在 `/usr/local/` 下新建 `mysql` 文件夹。
 
 ```shell
-$ sudo mv mysql-8.0.27-1.el7.x86_64.rpm-bundle.tar /usr/local/mysql/
+sudo mv mysql-8.0.27-1.el7.x86_64.rpm-bundle.tar /usr/local/mysql/
 ```
 
 ## 2. 删除mariadb
@@ -28,50 +28,50 @@ $ sudo mv mysql-8.0.27-1.el7.x86_64.rpm-bundle.tar /usr/local/mysql/
 ### 2.1. 通过命令查看 mariadb 的安装包
 
 ```shell
-$ rpm -qa | grep mariadb
+rpm -qa | grep mariadb
 ```
 
 ### 2.2. 通过命令卸载 mariadb
 
 ```shell
-$ rpm -e mariadb-libs-5.5.68-1.el7.x86_64 --nodeps
+rpm -e mariadb-libs-5.5.68-1.el7.x86_64 --nodeps
 ```
 
 通过命令查看 mariadb 是否卸载
 
 ```shell
-$ rpm -qa | grep mariadb
+rpm -qa | grep mariadb
 ```
 
 ## 3. 安装 MySQL
 
 ```shell
-$ pwd
+pwd
 /usr/local/mysql
 ```
 
 ### 3.1. 解压
 
 ```shell
-$ sudo tar -xvf mysql-8.0.27-1.el7.x86_64.rpm-bundle.tar
+sudo tar -xvf mysql-8.0.27-1.el7.x86_64.rpm-bundle.tar
 ```
 
 ### 3.2. 安装 common
 
 ```shell
-$ sudo rpm -ivh mysql-community-common-8.0.27-1.el7.x86_64.rpm --nodeps --force
+sudo rpm -ivh mysql-community-common-8.0.27-1.el7.x86_64.rpm --nodeps --force
 ```
 
 ### 3.3. 安装 libs
 
 ```shell
-$ sudo rpm -ivh mysql-community-libs-8.0.27-1.el7.x86_64.rpm --nodeps --force
+sudo rpm -ivh mysql-community-libs-8.0.27-1.el7.x86_64.rpm --nodeps --force
 ```
 
 ### 3.4. 安装 client
 
 ```shell
-$ sudo rpm -ivh mysql-community-client-8.0.27-1.el7.x86_64.rpm --nodeps --force
+sudo rpm -ivh mysql-community-client-8.0.27-1.el7.x86_64.rpm --nodeps --force
 ```
 
 ### 3.5. 安装 server
@@ -79,13 +79,13 @@ $ sudo rpm -ivh mysql-community-client-8.0.27-1.el7.x86_64.rpm --nodeps --force
 该步骤花费时间较长
 
 ```shell
-$ sudo rpm -ivh mysql-community-server-8.0.27-1.el7.x86_64.rpm --nodeps --force
+sudo rpm -ivh mysql-community-server-8.0.27-1.el7.x86_64.rpm --nodeps --force
 ```
 
 ### 3.6. 通过命令查看安装包
 
 ```shell
-$ rpm -qa | grep mysql
+rpm -qa | grep mysql
 ```
 
 ## 4. 初始化与相关配置
@@ -93,25 +93,25 @@ $ rpm -qa | grep mysql
 ### 4.1. 初始化
 
 ```shell
-$ sudo mysqld --initialize;
+sudo mysqld --initialize;
 ```
 
 如果遇到报错 `mysqld: error while loading shared libraries: libnuma.so.1`，执行下面的命令
 
 ```shell
-$ yum -y install numactl
+yum -y install numactl
 ```
 
 ```shell
-$ sudo chown mysql:mysql /var/lib/mysql -R;
-$ sudo systemctl start mysqld.service;
-$ sudo systemctl enable mysqld;
+sudo chown mysql:mysql /var/lib/mysql -R;
+sudo systemctl start mysqld.service;
+sudo systemctl enable mysqld;
 ```
 
 ### 4.2. 查看密码
 
 ```shell
-$ sudo cat /var/log/mysqld.log | grep password
+sudo cat /var/log/mysqld.log | grep password
 ```
 
 ```shell
@@ -124,7 +124,7 @@ A temporary password is generated for root@localhost: 3l-/wkz#>iHl
 ### 5.1. 登录
 
 ```shell
-$ mysql -uroot -p
+mysql -uroot -p
 ```
 
 密码即为刚刚生成的字符串。
@@ -148,13 +148,13 @@ skip-grant-tables
 ### 6.2. 重启 mysql 服务
 
 ```shell
-$ sudo service mysqld restart
+sudo service mysqld restart
 ```
 
 ### 6.3. 再次登录 mysql
 
 ```shell
-$ mysql -uroot -p
+mysql -uroot -p
 ```
 
 此时登录密码为空。

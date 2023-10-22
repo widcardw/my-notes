@@ -10,13 +10,13 @@ title: 关于换源的一些配置
 可以用命令
 
 ```shell
-$ pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 ### 临时使用
 
 ```shell
-$ pip3 install numpy -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip3 install numpy -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 ## npm
@@ -24,7 +24,7 @@ $ pip3 install numpy -i https://pypi.tuna.tsinghua.edu.cn/simple
 ### 命令方法
 
 ```shell
-$ npm config set registry https://registry.npm.taobao.org
+npm config set registry https://registry.npm.taobao.org
 ```
 
 ## maven
@@ -47,7 +47,7 @@ $ npm config set registry https://registry.npm.taobao.org
 使用 vim 编辑
 
 ```shell
-$ vi ~/.cargo/config
+vi ~/.cargo/config
 ```
 
 ```toml

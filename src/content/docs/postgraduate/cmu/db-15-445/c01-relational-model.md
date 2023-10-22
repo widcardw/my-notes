@@ -86,7 +86,7 @@ Create a new Table: **ArtistAlbum** (<u>artist_id</u>, <u>album_id</u>), the ids
 
 Choose a subset of the tuples that satisfies a selection predicate. 
 
-Syntax: `$sigma_"predict"(R)$`
+Syntax: $sigma_"predict"(R)$
 
 ```sql mark={1}
 select * from R
@@ -97,18 +97,18 @@ where a_id='a2' and b_id>102;
 
 Generate a relation with tuples that contains only the specified attributes.
 
-Syntax: `$Pi_(A_1, A_2, ...,A_n)R()$`
+Syntax: $Pi_(A_1, A_2, ...,A_n)R()$
 
 ```sql mark=/b_id-100, a_id/
 select b_id-100, a_id
 from R where a_id='a2';
 ```
 
-`$Pi_tt(b_(id)-100, a_(id))(sigma_tt(a_(id)='a2'))(R)$`
+$Pi_tt(b_(id)-100, a_(id))(sigma_tt(a_(id)='a2'))(R)$
 
 ### Union
 
-Syntax: `$(R uu S)$`
+Syntax: $(R uu S)$
 
 ```sql
 (select * from R) union all (select * from S);
@@ -116,7 +116,7 @@ Syntax: `$(R uu S)$`
 
 ### Intersection
 
-Syntax: `$(R nn S)$`
+Syntax: $(R nn S)$
 
 ```sql
 (select * from R) intersection (select * from S);
@@ -124,7 +124,7 @@ Syntax: `$(R nn S)$`
 
 ### Difference
 
-Syntax: `$(R-S)$`
+Syntax: $(R-S)$
 
 ```sql
 (select * from R) exsept (select * from S);
@@ -147,7 +147,7 @@ select * from R, S;
 
 Generate a relation that contains all tuples that are a combination of two tuples (one from each input relation) with a **common value(s)** for one or more attributes.
 
-Syntax: `$(R |><| S)$`
+Syntax: $(R |><| S)$
 
 **R** (a_id, b_id)
 
@@ -165,7 +165,7 @@ Syntax: `$(R |><| S)$`
 | a4   | 104  |
 | a5   | 105  | 
 
-`$R |><| S$`
+$R |><| S$
 
 | a_id | b_id |
 | ---- | ---- |

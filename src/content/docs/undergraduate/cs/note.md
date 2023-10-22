@@ -22,9 +22,9 @@ end
 ```
 - 使用命令行进行仿真
 ```shell
-> iverilog -o testbench testbench.v  # 编译 testbench
-> vvp testbench                      # 运行，即仿真
-> gtkwave wave.vcd                   # 查看波形
+iverilog -o testbench testbench.v  # 编译 testbench
+vvp testbench                      # 运行，即仿真
+gtkwave wave.vcd                   # 查看波形
 ```
 - `reg [31:0] Mem [63:0]` 的含义
   表示 32 位的寄存器组，共有 64 个寄存器单元，即==前面表示存储单元宽度==，==后面表示存储单元个数==

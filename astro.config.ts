@@ -3,8 +3,7 @@ import starlight from '@astrojs/starlight';
 import { remarkMark } from 'remark-mark-highlight';
 import { remarkCallouts } from '@widcardw/remark-callouts';
 import remarkMath from 'remark-math';
-import rehypeKatex from 'rehype-katex';
-import { remarkAsciiMath } from '@widcardw/remark-asciimath';
+import rehypeAsciimath from '@widcardw/rehype-asciimath'
 import { remarkWikiLink } from './src/plugins/wiki/remarkWikiLink';
 import { remarkWavedrom } from './src/plugins/wavedrom/remark';
 import { remarkMermaid } from './src/plugins/mermaid/remark';
@@ -54,7 +53,7 @@ export default defineConfig({
       (remarkMark as any), 
       remarkCallouts, 
       remarkMath, 
-      remarkAsciiMath, 
+      // remarkAsciiMath, 
       [remarkWikiLink, {
       // wikiLinkResolver: wikilinkPageResolver
       pathFormat: 'obsidian-absolute',
@@ -72,6 +71,6 @@ export default defineConfig({
       remarkMermaid,
     ],
 
-    rehypePlugins: [(rehypeKatex as any)]
+    rehypePlugins: [(rehypeAsciimath as any)]
   }
 });

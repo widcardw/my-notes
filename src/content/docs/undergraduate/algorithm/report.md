@@ -1618,6 +1618,28 @@ int getMaxValue(vector<vector<int>>& grid) {
 }
 ```
 
+数组的主元素
+
+```cpp
+int hasMajor(int* arr, int n) {
+    int a = arr[0], count = 1;
+    for (int i = 1; i < n; ++i) {
+        if (arr[i] == a) {
+	        count++;
+        }
+	    else {
+	        count--;
+	        if (count <= 0) {
+	            a = arr[i];
+	        }
+	    }
+    }
+    return a;
+}
+```
+
+
+
 ## 8. 树
 
 ### 8.1. 基本概念
@@ -2168,3 +2190,6 @@ int main()
     return 0;
 }
 ```
+
+
+

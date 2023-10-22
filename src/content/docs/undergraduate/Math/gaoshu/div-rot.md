@@ -7,25 +7,24 @@ title: 梯度 散度 旋度
 
 向量算子
 
-```am
+$$
 grad = bb(tex(grad)) = pp{::}x vec(e_x) + pp{::}y vec(e_y) + pp{::}z vec(e_z)
-```
+$$
 
 其中，$\vec{e_x}, \vec{e_y}, \vec{e_z}$ 分别是 $X,Y,Z$ 方向上的单位向量。使用向量方式书写有
 
-```am
+$$
 grad = bb(tex(grad)) = [pp{::}x,pp{::}y,pp{::}z]^"T"
-```
+$$
 
 ## 2. 梯度
 
 首先说明，梯度是一个==向量==，它表示函数在某个点处往哪个方向走，变化最快，即梯度等于方向导数的最大值。对于一个标量函数 $\psi$ 中，定义它的梯度为
 
 $$
-\begin{aligned}
-\nabla \psi & = \left[ { \partial \over \partial x},{ \partial \over \partial y}, { \partial \over \partial z} \right]^{\rm T} \psi \\
-& = \left[ { \partial \psi \over \partial x},{ \partial \psi \over \partial y}, { \partial \psi \over \partial z} \right]^{\rm T} 
-\end{aligned}
+grad psi &= [pp{::}x, pp{::}y, pp{::}z]^"T" varphi
+
+&= [pp psi x, pp psi y, pp psi z]^"T"
 $$
 
 > 只有标量函数才有梯度
@@ -35,13 +34,9 @@ $$
 散度是一个标量，它表示一个闭合曲面内单位体积的通量。散度的作用对象是一个矢量函数，对于一个矢量函数 $\vec f=[f_x,f_y,f_z]^{\rm T}$，散度的定义为
 
 $$
-\begin{aligned}
-\nabla \cdot f & = \nabla ^{\rm T} f = \left[ { \partial \over \partial x},{ \partial \over \partial y}, { \partial \over \partial z} \right]
-\begin{bmatrix}
-f_x \\ f_y \\ f_z
-\end{bmatrix} \\
-& = { \partial f_x \over \partial x}+{ \partial f_y \over \partial y}+ { \partial f_z \over \partial z} 
-\end{aligned}
+grad * f &= grad^"T" f = [pp{::}x,pp{::}y,pp{::}z][f_x;f_y;f_z]
+
+&= pp(f_x)x+pp(f_y)y+pp(f_z)z
 $$
 
 为了方便记忆，可以将散度类比于线性代数中的==向量内积==，两个向量的内积是一个标量，而散度的结果也是一个==标量==。
@@ -50,19 +45,19 @@ $$
 
 旋度是一个向量，它表示单位面积的环量，即环量面密度。旋度的作用对象是一个矢量函数，对于一个矢量函数 $\vec f=[f_x,f_y,f_z]^{\rm T}$，旋度的定义为
 
-```am
+$$
 grad xx vec f = | vec(e_x), vec(e_y), vec(e_z); pp{::}x, pp{::}y, pp{::}z; f_x, f_y, f_z|
-```
+$$
 
 ## 5. 对标量场的梯度求散度
 
-```am
+$$
 grad * (grad psi) & = grad^"T"(grad psi)
 
 & = [pp{::}x, pp{::}y, pp{::}z][pp psi x;pp psi y; pp psi z]
 
 & = pp^2 psi x + pp^2 psi y + pp^2 psi z
-```
+$$
 
 ## 6. 对标量场的梯度求旋度
 
@@ -114,7 +109,7 @@ $$
 定义
 
 $$
-{ \partial f \over \partial \boldsymbol{l} } = \lim_{\rho \to 0} { f(x+\Delta x , y + \Delta y, z + \Delta z) - f(x,y,z) \over \rho }
+pp f bm l = lim_(phi -> 0) (f(x+Delta x, y+Delta y,z+Delta z)-f(x,y,z)) / rho
 $$
 
 其中，$\rho = \sqrt{(\Delta x)^{2} + (\Delta y)^{2} + (\Delta z)^{2} }$ 且 $P'(x+ \Delta x, y + \Delta y, z + \Delta z)$ 为 $\boldsymbol l$ 上的点
@@ -123,15 +118,15 @@ $f(x,y,z)$ 在 $P(x_{0},y_{0},z_{0})$ 可微，与方向 $\vec l$ 同方向的�
 
 
 $$
-\begin{aligned}
-{ \partial f \over \partial \boldsymbol l } 
-& = {\left(\frac{\partial{f} }{\partial x},\frac{\partial{f} }{\partial y},\frac{\partial{f} }{\partial z}\right)}\cdot\vec{e_{l} } \\
-& = f'_{x} \cdot \cos \alpha + f'_{y} \cdot \cos \beta + f'_{z} \cdot \cos \gamma \\
-& = \nabla f \cdot \vec {e_{l} } \\
-& = |\nabla f| \cdot | \vec {e_{l} } | \cdot \cos \theta \\
-& = \sqrt { \left({\partial f \over \partial x}\right)^{2} + \left({\partial f \over \partial y}\right)^{2} + \left({\partial f \over \partial z}\right)^{2} } \cdot \cos \theta \\
-& \leqslant \sqrt { \left({\partial f \over \partial x}\right)^{2} + \left({\partial f \over \partial y}\right)^{2} + \left({\partial f \over \partial z}\right)^{2} } 
-\end{aligned}
+pp f bm l &= (ppfx, ppfy, ppfz) * vec e_l
+
+&= f_x' * cos alpha + f_y' * cos beta + f_z' * cos gamma
+
+&= grad f * vec e_l
+
+&= |grad f| * |vec e_l| * cos theta
+
+&= sqrt((ppfx)^2+(ppfy)^2+(ppfz)^2) * cos theta
+
+&<= sqrt((ppfx)^2+(ppfy)^2+(ppfz)^2)
 $$
-
-
