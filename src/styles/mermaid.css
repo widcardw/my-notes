@@ -1,6 +1,11 @@
-.mermaid:not([data-processed="true"]) {
+.mermaid.loading {
     font-family: var(--font-mono);
     opacity: 0.2;
+    white-space: pre;
+}
+
+.mermaid.loading br {
+    display: none;
 }
 
 .mermaid.loading::before {

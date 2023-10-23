@@ -1,5 +1,6 @@
 ---
 title: 五级流水线 CPU 设计
+layout: ~/layouts/WithMermaid.astro
 ---
 
 ## 1. 五级流水线运行流程
