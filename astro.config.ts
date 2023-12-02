@@ -12,6 +12,7 @@ import expressiveCode from "astro-expressive-code";
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://notes.widcard.win/',
   integrations: [
     // astroCodeSnippets(),
     expressiveCode({ theme: ['github-light', 'github-dark'] }),
@@ -21,56 +22,60 @@ export default defineConfig({
       social: {
         github: 'https://github.com/widcardw/my-notes'
       },
-      sidebar: [{
-        label: '业余学习',
-        autogenerate: {
-          directory: 'afterclass'
+      sidebar: [
+        {
+          label: '业余学习',
+          autogenerate: { directory: 'afterclass' },
+          collapsed: true,
         },
-        collapsed: true
-      }, {
-        label: '本科笔记',
-        autogenerate: {
-          directory: 'undergraduate'
+        {
+          label: '本科笔记',
+          autogenerate: { directory: 'undergraduate' },
+          collapsed: true,
         },
-        collapsed: true
-      }, {
-        label: '研究生笔记',
-        autogenerate: {
-          directory: 'postgraduate'
+        {
+          label: '研究生笔记',
+          autogenerate: { directory: 'postgraduate' },
+          collapsed: true,
         },
-        collapsed: true
-      }, {
-        label: '实用工具',
-        autogenerate: {
-          directory: 'utils'
+        {
+          label: '实用工具',
+          autogenerate: { directory: 'utils' },
+          collapsed: true,
         },
-        collapsed: true
-      }]
-    })],
+        {
+          label: '娱乐',
+          autogenerate: { directory: 'play' },
+          collapsed: true,
+        }
+      ],
+      lastUpdated: true,
+      editLink: { baseUrl: 'https://github.com/widcardw/my-notes/tree/main/' },
+    }),
+  ],
   publicDir: 'src/content/docs/public',
   markdown: {
     remarkPlugins: [
-      (remarkMark as any), 
-      remarkCallouts, 
-      remarkMath, 
+      (remarkMark as any),
+      remarkCallouts,
+      remarkMath,
       // remarkAsciiMath, 
       [remarkWikiLink, {
-      // wikiLinkResolver: wikilinkPageResolver
-      pathFormat: 'obsidian-absolute',
-      wikiLinkResolver: (target: string) => {
-        // for [[#heading]] links
-        if (!target) return [];
-        let permalink = target.replace(/\/index$/, "");
-        // TODO what to do with [[index]] link?
-        if (permalink.length === 0) permalink = "/";
-        permalink = permalink.replace('public/', '');
-        return [permalink];
-      }
-    }],
+        // wikiLinkResolver: wikilinkPageResolver
+        pathFormat: 'obsidian-absolute',
+        wikiLinkResolver: (target: string) => {
+          // for [[#heading]] links
+          if (!target) return [];
+          let permalink = target.replace(/\/index$/, "");
+          // TODO what to do with [[index]] link?
+          if (permalink.length === 0) permalink = "/";
+          permalink = permalink.replace('public/', '');
+          return [permalink];
+        }
+      }],
       remarkWavedrom,
       remarkMermaid,
     ],
-
     rehypePlugins: [(rehypeAsciimath as any)]
   }
 });

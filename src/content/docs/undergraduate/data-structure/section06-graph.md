@@ -26,24 +26,19 @@ layout: ~/layouts/WithMermaid.astro
 不带权
 
 $$
-A[i][j] = 
-\begin{cases}
-1, & (v_i, v_j) \text{ or } <v_i, v_j> \text{ in } E(G) \\
-0, & (v_i, v_j) \text{ or } <v_i, v_j> \text{ not in } E(G) \\
-\end{cases}
-
+A[i][j] = { 
+1, (v_i, v_j) or (:v_i, v_j:) in E(G);
+0, (v_i, v_j) or (:v_i, v_j:) !in E(G);
+:}
 $$
 
 带权
 
-
 $$
-A[i][j] = 
-\begin{cases}
-w_{ij}, & (v_i, v_j) \text{ or } <v_i, v_j> \text{ in } E(G) \\
-0 \text{ or } \infty, & (v_i, v_j) \text{ or } <v_i, v_j> \text{ not in } E(G) \\
-\end{cases}
-
+A[i][j] ={
+w_(ij), (v_i, v_j) or (:v_i, v_j:) in E(G);
+0 or oo, (v_i, v_j) or (:v_i, v_j:) !in E(G);
+:}
 $$
 
 ```cpp
@@ -222,7 +217,7 @@ function Prim(g: Graph, t: Graph) {
 
 #### 2. Kruskal 算法
 
-初始时为只有 $n$ 个顶点而无边的非连通图 $T=\{Y，\{\}\}$，每个顶点自成一个连通分量，然后按照==边的权值由小到大的顺序==，不断选取当前未被选取过且权值最小的边，若该边依附的顶点落在 $T$ 中不同的连通分量上，则将此边加入 $T$，否则合弃此边而选择下一条权值最小的边。以此类推，直至，中所有顶点都在一个连通分量上。
+初始时为只有 $n$ 个顶点而无边的非连通图 $T=\{Y,\{\}\}$，每个顶点自成一个连通分量，然后按照==边的权值由小到大的顺序==，不断选取当前未被选取过且权值最小的边，若该边依附的顶点落在 $T$ 中不同的连通分量上，则将此边加入 $T$，否则合弃此边而选择下一条权值最小的边。以此类推，直至，中所有顶点都在一个连通分量上。
 
 ```ts
 function Kruskal(g: Graph, t: Graph) {
@@ -353,7 +348,7 @@ $v_k$ 为 $v_j$ 的任意前驱，Weight 表示权值
 
 #### 4. 活动的最迟开始时间
 
-它是指该活动弧的终点所表示事件的最迟发生时间与该活动所需时间之差。若边 $<v_k,v_j>$ 表示活动 $a_i$，则有 $l(i) = vl(j) - \text{Weight}(v_k, v_j)$
+它是指该活动弧的终点所表示事件的最迟发生时间与该活动所需时间之差。若边 $(:v_k,v_j:)$ 表示活动 $a_i$，则有 $l(i) = vl(j) - \text{Weight}(v_k, v_j)$
 
 #### 5. 一个活动的最迟开始时间和其最早开始时间的差额
 
@@ -363,14 +358,14 @@ $$
 
 ```mermaid
 graph LR
-v1((V<sub>1</sub>)) -- "a<sub>1</sub>=3" --> v2((V<sub>2</sub>))
-v1-- "a<sub>2</sub>=2" --> v3((V<sub>3</sub>))
-v2 -- "a<sub>3</sub>=2" --> v4((V<sub>4</sub>))
-v3 -- "a<sub>5</sub>=4" --> v4
-v2 -- "a<sub>4</sub>=3" --> v5((V<sub>5</sub>))
-v5 -- "a<sub>8</sub>=1" --> v6((V<sub>6</sub>))
-v4 -- "a<sub>7</sub>=2" --> v6
-v3 -- "a<sub>6</sub>=3" --> v6
+v1((<i>V</i><sub>1</sub>)) -- "<i>a</i><sub>1</sub>=3" --> v2((<i>V</i><sub>2</sub>))
+v1-- "<i>a</i><sub>2</sub>=2" --> v3((<i>V</i><sub>3</sub>))
+v2 -- "<i>a</i><sub>3</sub>=2" --> v4((<i>V</i><sub>4</sub>))
+v3 -- "<i>a</i><sub>5</sub>=4" --> v4
+v2 -- "<i>a</i><sub>4</sub>=3" --> v5((<i>V</i><sub>5</sub>))
+v5 -- "<i>a</i><sub>8</sub>=1" --> v6((<i>V</i><sub>6</sub>))
+v4 -- "<i>a</i><sub>7</sub>=2" --> v6
+v3 -- "<i>a</i><sub>6</sub>=3" --> v6
 ```
 
 

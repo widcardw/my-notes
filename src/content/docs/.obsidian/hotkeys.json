@@ -25,5 +25,14 @@
       ],
       "key": "R"
     }
+  ],
+  "obsidian-asciimath:asciimath-insert-symbol": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "M"
+    }
   ]
 }

@@ -13,9 +13,7 @@ title: 第 3 章 栈 队列 数组
 $n$ 个不同元素进栈，出栈元素不同排列的个数为
 
 $$
-\begin{aligned}
-{1 \over n+1} C_{2n} ^{n}
-\end{aligned}
+1/(n+1) (2n) choose n
 $$
 
 ### 3.1.2. 栈的形式

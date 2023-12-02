@@ -29,7 +29,16 @@ int binary_search(int* L, int n, int key) {
 }
 ```
 
-ASL = $\displaystyle {1 \over n} \sum_{i=1}^n l_i = {1\over n}(1\times 1+2 \times 2 + \cdots + h \times 2^{h-1}) = {n+1 \over n} \log _2 (n+1) -1 \approx \log _2 (n+1) -1$
+$$
+ASL &= 1/n sum_(i=1)^n l_i
+
+&= 1/n(1xx1+2xx2+...+hxx2^(h-1))
+
+&=(n+1)/n log_2(n+1)
+
+&~~log_2(n+1)-1
+$$
+
 
 ### 7.2.3. 分块查找
 
