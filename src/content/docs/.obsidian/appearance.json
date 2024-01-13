@@ -7,7 +7,7 @@
     "fonts"
   ],
   "textFontFamily": "Charter,Songti SC",
-  "monospaceFontFamily": "IBM Plex Mono,system-ui",
+  "monospaceFontFamily": "Inconsolata,system-ui",
   "showViewHeader": true,
   "baseFontSize": 18,
   "interfaceFontFamily": "",
