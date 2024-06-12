@@ -7,7 +7,7 @@
     "fonts"
   ],
   "textFontFamily": "Charter,Songti SC",
-  "monospaceFontFamily": "Inconsolata,system-ui",
+  "monospaceFontFamily": "JetBrains Mono,system-ui",
   "showViewHeader": true,
   "baseFontSize": 18,
   "interfaceFontFamily": "",

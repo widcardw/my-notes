@@ -9,6 +9,7 @@ import { remarkWavedrom } from './src/plugins/wavedrom/remark';
 import { remarkMermaid } from './src/plugins/mermaid/remark';
 
 import expressiveCode from "astro-expressive-code";
+import { remarkAsciimath } from './src/plugins/asciimath/am-codeblock';
 
 // https://astro.build/config
 export default defineConfig({
@@ -58,6 +59,7 @@ export default defineConfig({
     remarkPlugins: [
       (remarkMark as any),
       remarkCallouts,
+      remarkAsciimath,
       remarkMath,
       // remarkAsciiMath, 
       [remarkWikiLink, {

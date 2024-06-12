@@ -54,6 +54,10 @@ body {
   --h6-color: var(--prism-number);
 }
 
+.cm-s-obsidian .HyperMD-codeblock {
+  font-size: 0.85em;
+}
+
 .theme-dark  {
   --prism-foreground: #d4cfbf;
   --prism-background: #151515;
@@ -81,4 +85,5 @@ body {
   --prism-selector: #a1b567;
   --un-prose-borders: #333333;
 }
+
 

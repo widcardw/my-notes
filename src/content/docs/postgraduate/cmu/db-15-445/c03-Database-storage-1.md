@@ -25,7 +25,7 @@ DBMS 想要最大化顺序存取
 
 ![](./assets/c03-Database-storage-1/cmu-db-15-445-dbms.excalidraw.svg)
 
-# Why not use the OS?
+## Why not use the OS?
 
 DBMS can use memory mapping (**mmap**) to store the contents of a file into the address space of a program.
 

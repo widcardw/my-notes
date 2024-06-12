@@ -127,7 +127,7 @@ Syntax: $(R nn S)$
 Syntax: $(R-S)$
 
 ```sql
-(select * from R) exsept (select * from S);
+(select * from R) except (select * from S);
 ```
 
 ### Product
