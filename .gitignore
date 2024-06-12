@@ -30,3 +30,4 @@ src/content/docs/**/_*
 
 src/content/docs/.obsidian/graph.json
 src/content/docs/public/plba
+.npmrc
