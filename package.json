@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "@astrojs/starlight": "^0.24.4",
-    "astro": "^4.11.3"
+    "astro": "^4.11.3",
+    "sharp": "^0.33.4"
   },
   "devDependencies": {
     "@portaljs/remark-wiki-link": "^1.2.0",
