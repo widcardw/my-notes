@@ -38,7 +38,7 @@ CPU 由运算器和控制器组成，控制器的功能是负责协调并控制�
 
 ### 5.1.2. CPU 的基本结构
 
-![[public/jz/jzcpustructuretsfgh.png]]
+![](./assets/jzcpustructuretsfgh.png)
 
 #### 1. 运算器
 
@@ -72,7 +72,7 @@ CPU 由运算器和控制器组成，控制器的功能是负责协调并控制�
 
 CPU 从主存中取出并执行一条指令的时间称为指令周期，不同指令的指令周期可能不同。指令周期通常用若干机器周期表示，一个机器周期又包含若干时钟周期（也称节拍或 $T$ 周期，它是 CPU 操作的最基本单位）。每个指令周期内的机器周期数可以不等。
 
-![[public/jz/jzzhouqi.png]]
+![](./assets/jzzhouqi.png)
 
 > - a 为定长机器周期，每个机器周期包含 4 个节拍
 > - b 为不定长机器周期，每个机器周期包含的节拍数可以为 4 个，也可以为 3 个
@@ -81,7 +81,7 @@ CPU 从主存中取出并执行一条指令的时间称为指令周期，不同�
 
 对于间接寻址的指令，为了取操作数，需要先访问一次主存，取出有效地址，然后访问主存，取出操作数，所以还需包括间址周期。间址周期介于取指周期和执行周期之间。
 
-![[public/jz/jzzhouqi2.png]]
+![](./assets/jzzhouqi2.png)
 
 当 CPU 采用中断方式实现主机和 I/O 设备的信息交换时，CPU 在每条指令执行结束前，都要发出中断查询信号，若有中断请求，则 CPU 进入中断响应阶段，又称中断周期。这样，一个完整的指令周期应包括==取指、间址、执行和中断== 4 个周期。
 
@@ -100,13 +100,13 @@ CPU 从主存中取出并执行一条指令的时间称为指令周期，不同�
 根据 PC 中的内容，从主存中取出指令代码并存放在 IR 中，PC 自增。
 
 
-![[public/jz/jzirzhouqi.png]]
+![](./assets/jzirzhouqi.png)
 
 #### 2. 间址周期
 
 取擦偶综述有效地址。一次间址将指令中的地址码送到 MAR 并送至地址线，此后 CU 向存储器发出读命令，并获取有效地址并存至 MDR。
 
-![[public/jz/jzidzhouqi.png]]
+![](./assets/jzidzhouqi.png)
 
 #### 3. 执行周期
 
@@ -116,7 +116,7 @@ CPU 从主存中取出并执行一条指令的时间称为指令周期，不同�
 
 处理中断请求。假设程序断点存入堆栈中，并用 SP 指示栈顶地址，而且进栈操作是先修改栈顶指针，后存入数据。
 
-![[public/jz/jzintzhjouq.png]]
+![](./assets/jzintzhjouq.png)
 
 ### 5.2.3. 指令执行方案
 
@@ -154,7 +154,7 @@ CPU 从主存中取出并执行一条指令的时间称为指令周期，不同�
 
 根据指令执行过程中的数据和地址流动方向安排连接线路，避免使用共享的总线，性能较高，单硬件较大。
 
-![[public/jz/jzcpupipeline.png]]
+![](./assets/jzcpupipeline.png)
 
 ##### 寄存器之间的数据传送
 
@@ -190,7 +190,7 @@ CPU 从主存中取出并执行一条指令的时间称为指令周期，不同�
 
 计算机硬件系统的五大功能部件通过数据总线、地址总线、控制总线连接在一起
 
-![[public/jz/jzwudabujianlianxian.png]]
+![](./assets/jzwudabujianlianxian.png)
 
 - 运算器部件通过数据总线与内存储器、输入设备、输出设备传送数据
 - 输入设备和输出设备通过接口电路与总线相连接
@@ -210,7 +210,7 @@ CPU 从主存中取出并执行一条指令的时间称为指令周期，不同�
 
 指令操作码是决定控制单元发出不同操作命令（控制信号）的关键。为了简化控制单元 CU 的逻辑，将指令的操作码译码和节拍发生器从 CU 分离出来，便可得到简化的控制单元图。
 
-![[public/jz/jzcustreg.png]]
+![](./assets/jzcustreg.png)
 
 CU 的输入信号来源：
 
@@ -261,7 +261,7 @@ CU 的输入信号来源：
 - 微地址形成部件
 - 微地址寄存器
 
-![[public/jz/jzweichengxu.png]]
+![](./assets/jzweichengxu.png)
 
 ##### 微程序控制器的工作过程
 
@@ -288,9 +288,9 @@ CU 的输入信号来源：
 	- 缩短微指令字长，单比直接编码慢
 - 字段间接编码方式
 
-![[public/jz/jzweizhilingzhijie.png]]
+![](./assets/jzweizhilingzhijie.png)
 
-![[public/jz/jzziduanzhijie.png]]
+![](./assets/jzziduanzhijie.png)
 
 #### 4. 微指令的地址形成方式
 
@@ -301,7 +301,7 @@ CU 的输入信号来源：
 
 ##### 水平型微指令
 
-![[public/jz/jzhoriweizhiling.png]]
+![](./assets/jzhoriweizhiling.png)
 
 从编码方式上看，直接编码、字段直接编码、字段间接编码、混合编码都属于水平型微指令。
 
@@ -432,7 +432,7 @@ CPU 的数据通路中有相应的异常检测和响应逻辑，外设接口中�
 - 访存 MEM
 - 写回 WB
 
-![[public/jz/jzliushuixiantu.png]]
+![](./assets/jzliushuixiantu.png)
 
 设计原则
 - 指令流水段个数以最复杂指令所用的功能段个数为准
@@ -456,7 +456,7 @@ CPU 的数据通路中有相应的异常检测和响应逻辑，外设接口中�
 
 #### 2. 流水线的表示方法
 
-![[public/jz/jzliushuixianshikong.png]]
+![](./assets/jzliushuixianshikong.png)
 
 在时刻 10T 时，流水线上有 6 条指令流出，若采用串行方式执行，在时刻 10T 只能完成两条指令。
 
@@ -471,7 +471,7 @@ A["程序计数器"] --> B["取指<br>IF"] --> C["译码<br>ID"] --> D["执行<b
 
 #### 1. 流水线的数据通路
 
-![[public/jz/jzliushuixiantonglu.png]]
+![](./assets/jzliushuixiantonglu.png)
 
 各种寄存器和数据存储器均采用统一时钟 CLK 进行同步，每来一个时钟，就会有一条新的指令进入流水线 IF 段；同时流水线寄存器会锁存前段加工处理完成的数据和控制信号，为下一段的功能部件提供数据输入。
 
@@ -616,7 +616,7 @@ $$
 
 每个时钟周期内可并发多条独立指令，以并行操作方式将多条指令编译并执行，为此需配置多个功能部件。
 
-![[public/jz/jzchaobiaoliang.png]]
+![](./assets/jzchaobiaoliang.png)
 
 #### 2. 超长指令字技术
 
@@ -676,7 +676,7 @@ SIMD 和 MIMD 是两种并行计算模式，其中 SIMD 是一种数据级并行
 
 上述两种多线程技术的变体，在实现指令级并行的同时，实现线程级并行。它在同一个时钟周期中，发射多个不同线程中的多条指令执行。
 
-![[public/jz/jzduoxianchengdeng.png]]
+![](./assets/jzduoxianchengdeng.png)
 
 ### 5.7.3. 多核处理器的基本概念
 

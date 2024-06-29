@@ -69,9 +69,9 @@ $$
 > 
 > 语法分析树有
 > 
-> ![[public/compile/compile050404jkui.svg]]
+> ![](./assets/compile050404jkui.svg)
 > 
-> 在特定位置，$A$ 的后继符号集合==是 $\text{Follow}(A)$ 的一个子集==，而 SLR 直接将 Follow 集作为判断的依据，扩大了限定的范围。
+> 在特定位置，AA 的后继符号集合==是 Follow(A) 的一个子集==，而 SLR 直接将 Follow 集作为判断的依据，扩大了限定的范围。
 > 
 > 而对它进行修改，当有归约项目 $R \to L \bullet$ 时，只有面临的输入符号为 `#` 时，才能执行 $R \to L$ 的归约
 
@@ -145,7 +145,7 @@ R & \to L & (6)
 \end{aligned}
 $$
 
-![[public/compile/compile050404fgsdfg.svg]]
+![](./assets/compile050404fgsdfg.svg)
 
 此时再看状态集 $I_2$，项目 $[R \to L \bullet, \#]$ 精确的指明了只有面临 `#` 时才能进行归约，若面临 `=`，则立即报错。这比 FOLLOW 集判断要精确的多。
 
@@ -160,10 +160,9 @@ $$
 
 > [!example] 构造例 5.15 中的 LR(1) 自动机和分析表
 > 
-> ![[public/compile/compile050404fdsdfv.svg]]
+> ![](./assets/compile050404fdsdfv.svg)
 > 
-> 
-> | 状态 | ACTION |     |     |     | GOTO |     |     |
+> |  状态 | ACTION |  |  |  | GOTO |     |     |
 > |:----:|:------:|:---:|:---:|:---:|:----:|:---:|:---:|
 > | ^^   | *      | i   | =   | #   | S    | L   | R   |
 > | 0    | s4     | s5  |     |     | 1    | 2   | 3   |

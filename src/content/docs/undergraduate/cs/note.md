@@ -143,7 +143,7 @@ assign if_id_bubble = IF_flush;
 
 #### 3.1. 连续需要用到同一个寄存器的数据冒险
 
-![[public/computer_design/cpu-design-01.png]]
+![](./computer_design/cpu-design-01.png)
 
 图中，若按照单周期的处理方式，仅能使得最后一条指令得到正确的结果。通过寄存器、存储器的==前半周期写，后半周期读==，解决了部分的冒险，可以使第 4 条指令也能够取到正确的数。
 
@@ -156,7 +156,7 @@ assign if_id_bubble = IF_flush;
 > - 若相关数据是上条指令 DM 读出内容，则如何？（Load-use 数据冒险）
 >   - 不能通过转发解决，随后指令需==被阻塞一个时钟==或加 NOP 指令
 
-![[public/computer_design/Pasted_image_20211025185052.png]]
+![](./computer_design/Pasted_image_20211025185052.png)
 
 把数据从流水段寄存器中直接取到 ALU 的输入端
 ^data-hazard
@@ -174,13 +174,13 @@ assign if_id_bubble = IF_flush;
 
 `lw` 指令需要经过下面的流程才能取到数，数据至少需要在 MEM 阶段之后才能得到。
 
-![[public/computer_design/Pasted_image_20211025201620.png]]
+![](./computer_design/Pasted_image_20211025201620.png)
 
 因此，在上面的示例中，`lw` 指令后紧跟着需要用到的寄存器，则需要使用==转发与延迟结合==的方法才能正确执行，需要延迟一个周期。
 
-![[public/computer_design/Pasted_image_20211025204029.png]]
+![](./computer_design/Pasted_image_20211025204029.png)
 
-![[public/computer_design/Pasted_image_20211025204102.png]]
+![](./computer_design/Pasted_image_20211025204102.png)
 
 ##### 3.2.1. 编写 `forward_unit` 模块
 
@@ -227,7 +227,7 @@ mux3to1 #(
 硬件阻塞方式，需要判断何时进行阻塞
 - 前面为 `lw` 指令，并且前面指令的目的寄存器等于当前刚取出指令的源寄存器，即 `stall = id_ex_MemtoReg && (id_ex_Rt == if_id_Rs || id_ex_Rt == if_id_Rt)`
 
-![[public/computer_design/Pasted_image_20211026083511.png]]
+![](./computer_design/Pasted_image_20211026083511.png)
 
 如何修改数据通路实现阻塞
 - 检测“阻塞”过程中

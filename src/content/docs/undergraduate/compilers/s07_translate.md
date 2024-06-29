@@ -37,7 +37,7 @@ title: 第 7 章 语义分析与语法制导的翻译
 - 一个内部节点代表一个操作符，它的孩子代表操作数
 - 在一个 DAG 中代表公共子表达式的节点具有==多个父节点==
 
-![[public/compile/s07_image_1.svg]]
+![](./assets/s07_image_1.svg)
 
 ### 7.2.3. 三地址代码
 
@@ -201,7 +201,7 @@ T.width = 4
 
 需要数据结构：符号表栈 tblptr 栈，偏移量栈 offset 栈
 
-![[public/compile/s07_image_2.svg]]
+![](./assets/s07_image_2.svg)
 
 
 
@@ -537,7 +537,7 @@ if (E) {
 } 
 ```
 
-![[public/compile/s07_image_3.svg]]
+![](./assets/s07_image_3.svg)
 
 ```js
 if (a > c || b < d) {
@@ -631,7 +631,7 @@ a < b || (c < d && e < f)
 
 假定整个表达式的真假出口已分别设置为 `Ltrue` 和 `Lfalse` ，首先画出自上而下的继承属性的计算（需要按照上面的布尔运算来生成）
 
-![[public/compile/s07_image_4.svg]]
+![](./assets/s07_image_4.svg)
 
 接下来自下而上计算综合属性
 
@@ -676,7 +676,7 @@ a < b || (c < d && e < f)
 
 - 为非终结符 E 赋予两个综合属性 E.trueList, E.falseList ，分别记录布尔表达式 E 所对应的四元式中需要回填“真”、“假”出口的四元式的标号所构成的链表
     - 例如，假定 E 的四元式中要回填“真”出口的 p, q, r 三个四元式，则 E.tureList 为
-    - ![[public/compile/s07_image_5.svg]]
+    - ![](./assets/s07_image_5.svg)
 - 引入语义变量和过程
     - 变量 `nextQuad` 指向下一条将要产生但尚未形成的四元式的地址（标号）`nextQuad` 的初值为 1 ，每当执行一次 `emit` 之后，`nextQuad` 将自动增 1
     - 函数 `makeList(i)` 将创建一个仅含 `i` 的新链表，其中 `i` 是四元式数组的一个下标；函数返回指向这个链的指针
@@ -710,7 +710,7 @@ E.trueList = merge(E1.trueList, E2.trueList)
 E.falseList = E2.falseList
 ```
 
-![[public/compile/s07_image_6.svg]]
+![](./assets/s07_image_6.svg)
 
 $E \to E_1 \text{ and } M E_2$
 
@@ -750,7 +750,7 @@ emit(`j, -, -, 0`)  // 0 表示链尾
 
 例：对表达式 `a < b || (c < d && e < f)` 分析
 
-![[public/compile/s07_image_7.svg]]
+![](./assets/s07_image_7.svg)
 
 ## 7.7. if 语句的翻译
 
@@ -764,7 +764,7 @@ S.code = E.code
        + gen(`${E.true}: `) + S1.code
 ```
 
-![[public/compile/s07_image_8.svg]]
+![](./assets/s07_image_8.svg)
 
 
 
@@ -782,13 +782,13 @@ S.code = E.code
        + gen(`${S.next}: `)
 ```
 
-![[public/compile/s07_image_9.svg]]
+![](./assets/s07_image_9.svg)
 
 ## 7.8. while 语句
 
 $S \to \text{while } E \text{ do } S_1$
 
-![[public/compile/s07_image_10.svg]]
+![](./assets/s07_image_10.svg)
 
 ```js
 S.begin = newLabel

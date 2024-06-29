@@ -100,16 +100,15 @@ $$
 > \end{aligned}
 > $$
 > 
-> ![[public/compile/compx667gyiio.svg]]
+> ![](./assets/compx667gyiio.svg)
 > 
-> |                                               |  0  |  1  |
+> | |   0  |  1  |
 > |:---------------------------------------------:|:---:|:---:|
 > | $\varepsilon \text{-Closure}(\{S\})=\{S, Y\}$ | {S, Y} | {A, Y} |
 > |                      {A, Y}                      | {S, Y} | $\varnothing$    |
 > 
-> ![[public/compile/compx87hghfh51.svg]]
+> ![](./assets/compx87hghfh51.svg)
 > 
-
 
 #### DFA
 
@@ -135,20 +134,20 @@ $$
 > \end{aligned}
 > $$
 > 
-> ![[public/compile/compxvbb.svg]]
+> ![](./assets/compxvbb.svg)
 > 
-> |                                      | 0      | 1             |
+> |   | 0      | 1             |
 > | ------------------------------------ | ------ | ------------- |
 > | $\varepsilon \text{-Closure}(\{Z\})$ | {Z, Y} | {A}           |
 > | {Z, Y}                               | {Z, Y} | {A}           |
 > | {A}                                  | {Z, Y} | $\varnothing$ |
 > 
-> ![[public/compile/compxbghfg.svg]]
+> ![](./assets/compxbghfg.svg)
 > 
 
 ##### 将下面的有限自动机确定并最小化
 
-![[public/compile/compx56765gj.svg]]
+![](./assets/compx56765gj.svg)
 
 > [!example] 解答
 > 
@@ -159,10 +158,9 @@ $$
 > | {0, 1}                                 | {0, 1}        | {0, 1} |
 > | {1}                                    | $\varnothing$ | {0}       |
 > 
-> ![[public/compile/compxtuhfu.svg]]
+> ![](./assets/compxtuhfu.svg)
 > 
 > 上图已经是确定化的最小有限自动机
-> 
 
 #### LL(1)
 
@@ -292,9 +290,7 @@ $$
 
 > [!example] 解答（已修改）
 > 
-> ![[public/compile/compx9876h.svg]]
-> 
-> Follow(S) = {+, #}
+> ![](./assets/compx9876h.svg)
 > 
 > | 状态 |  ACTION   |       |     | GOTO |
 > |:----:|:---------:|:-----:|:---:|:----:|
@@ -322,11 +318,9 @@ $$
 
 > [!example] 解答
 > 
-> ![[public/compile/comp987yhj.svg]]
+> ![](./assets/comp987yhj.svg)
 > 
-> Follow(S) = {#}
-> 
-> | 状态 |  ACTION   |           |     | GOTO |
+> |状态 |  ACTION   |           |     | GOTO |
 > |:----:|:---------:|:---------:|:---:|:----:|
 > |  ^^  |     a     |     b     |  #  |  S   |
 > |  0   | s2/~~r4~~ | s4/~~r4~~ | r4  |  1   |
@@ -377,12 +371,11 @@ $$
 > 
 > 由 [[undergraduate/compilers/s05_downtop#3 Martin 算法]] ，画图，可以得到下面的结果
 > 
-> ![[public/compile/comxhjfyujkp.svg]]
-> 
+> ![](./assets/comxhjfyujkp.svg)
 
 #### LR(1)
 
-##### 有文法 $G[S^\prime]$
+##### 有文法 $G[S']$
 
 $$
 \begin{aligned}
@@ -399,8 +392,7 @@ $$
 
 > [!example] 解答
 > 
-> ![[public/compile/compile050404fgsdfg.svg]]
-> 
+> ![](./assets/compile050404fgsdfg.svg)
 
 #### 语义 语法
 
@@ -640,9 +632,9 @@ void main() {
 
 > [!example] 解答
 > 
-> ![[public/compile/compxtjhgfhu.svg]]
+> ![](./assets/compxtjhgfhu.svg)
 > 
-> | 地址 | 内容       | 从属范围 |
+> | 地址|内容|从属范围|
 > | ---- | ---------- | -------- |
 > | 88   | k          | f(4, 2)  | 
 > | 89   | 老 BP = 94 | f(4, 2)  |

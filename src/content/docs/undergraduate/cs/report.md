@@ -33,19 +33,19 @@ D --"Dataout"--> E
 
 所以将所有指令都扩充到需要 5 个时钟周期来完成，每个时钟周期的长度由执行时间最长的那一个部件来决定。
 
-![[public/computer_design/Pasted_image_20211027142548.png]]
+![](./computer_design/Pasted_image_20211027142548.png)
 
 与此同时，在上述流程图中，仍然存在在 cycle 5 周期内，同时有指令 1 和指令 5 对寄存器进行访问，所以，在这里采用**寄存器和存储器的“先写后读”的方式**，来解决**结构冲突**。
 
 #### 1.2.2. 核心部件及寄存器的分布
 
-![[public/computer_design/Pasted_image_20211027143630.png]]
+![](./computer_design/Pasted_image_20211027143630.png)
 
 在每个部件后面，都加入状态寄存器，用于保存当前周期当前部件所进行的状态，使得数据能够像流水线一样传递到下一个部件，同时当前部件会接收到新的信号和状态。
 
 #### 1.2.3. 控制信号的给出
 
-![[public/computer_design/Pasted_image_20211027144521.png]]
+![](./computer_design/Pasted_image_20211027144521.png)
 
 Controller 控制器在 IF/ID 寄存器之后得到指令，并通过指令得到每个部件的控制信号，将这些信号发给下一级 ID/EX 寄存器，这些信号再经过下级寄存器继续流水发送。
 
@@ -138,7 +138,7 @@ Controller 接收 DataPath 发出的指令，发出从指令中翻译得到的�
 
 #### 3.1.1.1. 第一条指令的目的寄存器还未写入新值，后面的指令需要用到该寄存器的值
 
-![[public/computer_design/Pasted_image_20211027151747.png]]
+![](./computer_design/Pasted_image_20211027151747.png)
 
 图中，若按照单周期的处理方式，仅能使得最后一条指令得到正确的结果。通过寄存器、存储器的**前半周期写，后半周期读**，解决了部分的冒险，可以使第 4 条指令也能够取到正确的数。
 
@@ -146,7 +146,7 @@ Controller 接收 DataPath 发出的指令，发出从指令中翻译得到的�
 
 #### 3.1.1.2. Load 指令引起的数据冒险
 
-![[public/computer_design/Pasted_image_20211027151035.png]]
+![](./computer_design/Pasted_image_20211027151035.png)
 
 `lw` 指令需要经过上面的流程才能取到数，数据至少需要在 MEM 阶段之后才能得到。因此，在上面的示例中，如果 `lw` 指令后紧跟着需要用到的寄存器，则需要使用**转发与延迟结合**的方法才能正确执行，**需要延迟一个周期**。
 
@@ -154,7 +154,7 @@ Controller 接收 DataPath 发出的指令，发出从指令中翻译得到的�
 
 ##### 3.1.2.1. `beq` 和 `jump` 跳转指令引起的结构冒险
 
-![[public/computer_design/Pasted_image_20211027153112.png]]
+![](./computer_design/Pasted_image_20211027153112.png)
 
 在上图中，`branch & zero` 信号至少需要在 EX/ME 寄存器之后才能出现，如果需要跳转，则会将 `beq` 之后的 3 条无关指令放入 CPU 中运行。跳转之后的指令，如果需要用到寄存器或者存储器中的数据，则有可能发生错误。
 
@@ -171,13 +171,13 @@ Controller 接收 DataPath 发出的指令，发出从指令中翻译得到的�
   - 第一行指令的 DM 阶段读出的结果，转发给第三行指令的 EX 输入端
     - 需要将 ME/WB 寄存器的 `me_wr_ALUout_out` 转发至 `u_exec` 的 `busA`, `busB` 处。
 
-![[public/computer_design/Pasted_image_20211027155159.png]]
+![](./computer_design/Pasted_image_20211027155159.png)
 
 ##### 3.2.1.2. 若相关数据是上条指令 DM 读出内容（Load-use 冒险），则需要使用转发和阻塞配合实现
 
 `lw` 指令之后，如果下一条指令的源寄存器中包含 `lw` 的目的寄存器，则需要将 DM 中的数据进行转发，并且将下一条指令阻塞一个周期运行，其中包含了寄存器的检测。
 
-![[public/computer_design/Pasted_image_20211027155341.png]]
+![](./computer_design/Pasted_image_20211027155341.png)
 
 ##### 3.2.1.3. 解决方案
 
@@ -278,15 +278,15 @@ lw s5, zero, 10     // s5=10H
 
 载入存储器中的数据，并做指令操作。
 
-![[public/computer_design/jz_result1.png]]
+![](./computer_design/jz_result1.png)
 
 `jump` 指令与 `beq` 指令的跳转测试。
 
-![[public/computer_design/jz_result2.png]]
+![](./computer_design/jz_result2.png)
 
 寄存器数据循环递减，直至循环结束，利用 `sw` 指令存数。
 
-![[public/computer_design/jz_result3.png]]
+![](./computer_design/jz_result3.png)
 
 ## 5. 体会与总结
 

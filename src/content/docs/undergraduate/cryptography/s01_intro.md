@@ -32,7 +32,7 @@ title: 第 1 章 引言
 
 可以隐蔽和保护需要发送的消息，使未授权者不能提取信息。
 
-![[public/cypto/crypto01.svg]]
+![](./assets/crypto01.svg)
 
 保密系统应当满足
 

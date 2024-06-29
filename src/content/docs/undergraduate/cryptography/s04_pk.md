@@ -333,7 +333,7 @@ $$
 
 算法的特性：==已知密码算法和加密密钥，求解解密密钥在计算上是不可行的==
 
-![[public/cypto/crypto02.svg]]
+![](./assets/crypto02.svg)
 
 $$
 \begin{aligned}
@@ -344,7 +344,7 @@ $$
 
 公钥密码体制的认证、保密框图
 
-![[public/cypto/crypto03.svg]]
+![](./assets/crypto03.svg)
 
 $$
 \begin{aligned}
@@ -430,12 +430,12 @@ $$
 - 已知 $n$ 和 $P$ 求 $K$ 是简单的
 - 已知 $P$ 和 $K$ 求 $n$ 在计算上是不可行的
 
-![[public/cypto/crypto04.svg]]
+![](./assets/crypto04.svg)
 
 ##### 中间人攻击
 
 
-![[public/cypto/crypto05.svg]]
+![](./assets/crypto05.svg)
 
 
 #### 2. ElGamal 密码体制

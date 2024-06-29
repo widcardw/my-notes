@@ -16,7 +16,7 @@ title: 第 5 章 密钥管理
 - 如果有 $n$ 个用户，需要两两拥有共享密钥，一共需要 $n(n-1)/2$ 的密钥
 - 采用第 4 中方法，只需要 $n$ 个主密钥
 
-![[public/cypto/crypto06.svg]]
+![](./assets/crypto06.svg)
 
 - $K_S$ 一次性会话密钥
 - $N_1, N_2$ 随机数
@@ -62,7 +62,7 @@ Alice -- "3. E<sub>K<sub>S</sub></sub>[f(N<sub>2</sub>)]"  --> Bob
 - 每个用户知道管理机构的公开钥
 - 只有管理机构知道自己的秘密钥
 
-![[public/cypto/crypto07.svg]]
+![](./assets/crypto07.svg)
 
 #### 4. 公钥证书
 
@@ -82,7 +82,7 @@ $$
 - $SK_{CA}$ 是 CA 的秘密钥
 - $C_A$ 即为 CA 为 A 产生的证书
 
-![[public/cypto/crypto08.svg]]
+![](./assets/crypto08.svg)
 
 用户可将自己的公开钥通过公钥证书发给另一用户，接收方可用 CA 的公钥 $PK_{CA}$ 对证书加以验证，即
 
@@ -121,17 +121,17 @@ E -- "4. E<sub>PK<sub>A</sub></sub>[K<sub>S</sub>]" --> A
 
 > 前提：双方已完成公钥交换
 
-![[public/cypto/crypto10.svg]]
+![](./assets/crypto10.svg)
 
 ### 5.2.3. Diffie-Hellman 密钥交换
 
 A 和 B 共享一个素数 $p$ 以及整数 $g$，$g$ 是 $p$ 的本原根
 
-![[public/cypto/crypto11.svg]]
+![](./assets/crypto11.svg)
 
 #### 中间人攻击
 
-![[public/cypto/crypto12.svg]]
+![](./assets/crypto12.svg)
 
 ## 习题
 

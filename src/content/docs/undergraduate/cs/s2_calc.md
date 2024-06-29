@@ -185,7 +185,7 @@ $$
 
 核心是带标志的加法器，同时也能执行与或非等逻辑运算。
 
-![[public/jz/jz02dsgfre.png]]
+![](./assets/jz02dsgfre.png)
 
 ### 2.2.2. 定点数的移位运算
 
@@ -205,7 +205,7 @@ $$
 
 移出的数位又被移入数据中，而是否带进位要看是否将进位标志加入循环中。
 
-![[public/jz/jz02fdhgbsrtg.png]]
+![](./assets/jz02fdhgbsrtg.png)
 
 ### 2.2.3. 定点数的加减运算
 
@@ -220,7 +220,7 @@ $$
 
 #### 2. 补码加减运算电路
 
-![[public/jz/jz02fdhsbrtcxv.png]]
+![](./assets/jz02fdhsbrtcxv.png)
 
 - 对于无符号数， OF 无意义，  SF 无意义
 - 对于无符号数， CF 有实际意义
@@ -270,7 +270,7 @@ $$
 
 ##### 2. 无符号乘法运算电路
 
-![[public/jz/jz02bsrty.png]]
+![](./assets/jz02bsrty.png)
 
 ##### 补码一位乘法（ Booth 算法）
 
@@ -323,7 +323,7 @@ $[X]_C=x_{S}x_{1}x_{2}\cdots x_n$，$[Y]_C=y_{S}y_{1}y_{2}\cdots y_n$
 
 ##### 补码乘法运算电路
 
-![[public/jz/jz02gtrnryt9.png]]
+![](./assets/jz02gtrnryt9.png)
 
 #### 2. 定点数的除法运算
 
@@ -421,7 +421,7 @@ $[X]_C=x_{S}x_{1}x_{2}\cdots x_n$，$[Y]_C=y_{S}y_{1}y_{2}\cdots y_n$
 
 ##### 除法运算电路
 
-![[public/jz/jz02fdsghbp.png]]
+![](./assets/jz02fdsghbp.png)
 
 ### 2.2.5. C 语言中的整数类型及类型转换
 
@@ -458,7 +458,7 @@ $[X]_C=x_{S}x_{1}x_{2}\cdots x_n$，$[Y]_C=y_{S}y_{1}y_{2}\cdots y_n$
 
 如果不按照边界对齐的方式存储，可以充分利用存储空间，但是半字长或字长的指令可能会存储在两个存储字中，需要两次访存，并且需要对高低字节进行调整、连接后才能得到正确的值，影响了效率。
 
-![[public/jz/jz02zichang.png]]
+![](./assets/jz02zichang.png)
 
 ## 2.3. 浮点数的表示与计算
 
@@ -483,7 +483,7 @@ $$
 
 原码关于原点对称，故浮点数的范围也是关于原点对称的。
 
-![[public/jz/jz02float.png]]
+![](./assets/jz02float.png)
 
 数据一旦上溢出，计算机必须中断运算操作，进行溢出处理。数据下溢出时，浮点数值趋于 0 ，计算机仅将其当作机器 0 处理。
 

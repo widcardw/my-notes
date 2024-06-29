@@ -19,11 +19,11 @@ MAC 函数与加密算法类似，不同之处为 MAC 函数==不必是可逆的
 
 上述过程中，由于消息本身在发送过程中是明文形式，所以这一过程==只提供认证性而未提供保密性==。
 
-![[public/cypto/crypto17.svg]]
+![](./assets/crypto17.svg)
 
-![[public/cypto/crypto16.svg]]
+![](./assets/crypto16.svg)
 
-![[public/cypto/crypto13.svg]]
+![](./assets/crypto13.svg)
 
 ### 6.1.2. 产生 MAC 的函数应满足的要求
 
@@ -44,7 +44,7 @@ MAC 函数与加密算法类似，不同之处为 MAC 函数==不必是可逆的
 
 数据认证算法是最为广泛使用的消息认证码中的一个。==算法基于 CBC 模式的 DES 算法==，其初始向量取为零向量。需被认证的数据被分为 64 比特长的分组 $D_1, D_2, \cdots, D_N$，其中最后一个分组不够 64 比特的话，可在其右边填充一些 0，然后按以下过程计算数据认证码
 
-![[public/cypto/crypto15.svg]]
+![](./assets/crypto15.svg)
 
 数据认证码取值为下面二者选一
 
@@ -67,7 +67,7 @@ MAC 函数与加密算法类似，不同之处为 MAC 函数==不必是可逆的
 > - 数字签名
 > - 认证
 
-![[public/cypto/crypto14.svg]]
+![](./assets/crypto14.svg)
 
 ### 6.2.2. 哈希函数应满足的条件
 

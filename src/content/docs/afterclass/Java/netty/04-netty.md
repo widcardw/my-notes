@@ -115,7 +115,7 @@ class t2 thd;
     - Handler 会完成 read → 业务处理 → send 的完整业务处理流程
     - NIO 就是一个案例
 
-![[public/netty/netty-01.svg]]
+![](./assets/netty-01.svg)
 
 - 单 Reactor 多线程
     - Reactor 对象通过 select 监控客户端请求事件，收到事件后通过 dispatch 进行分发
@@ -128,7 +128,7 @@ class t2 thd;
         - [x] 可以充分利用多核 CPU 的处理能力
         - [ ] 多线程数据共享和访问比较复杂，单一 reactor 处理所有事件的监听和响应，在单线程运行在高并发场景容易出现性能瓶颈
 
-![[public/netty/netty-02.svg]]
+![](./assets/netty-02.svg)
 
 
 - 主从 Reactor 多线程
@@ -141,7 +141,7 @@ class t2 thd;
     - handler收到响应结果后，再通过 send 将结果返回 client
     - MainReactor 可以关联多个 SubReactor
 
-![[public/netty/netty-03.svg]]
+![](./assets/netty-03.svg)
 
 ## Netty 模型
 
@@ -153,15 +153,15 @@ class t2 thd;
 2. 当接收到 accept 事件，获取到对应的 SocketChannel，封装成 NIOSocketChannel 并注册到 Worker 线程（事件循环），并进行维护
 3. 当 Worker 线程监听到 selector 中通道发生自己感兴趣的事件后，就进行处理（由 handler），注意 handler 已经加入到通道中
 
-![[public/netty/netty-sim.svg]]
+![](./assets/netty-sim.svg)
 
 #### 进阶版
 
-![[public/netty/netty-pro.svg]]
+![](./assets/netty-pro.svg)
 
 #### 详细版
 
-![[public/netty/netty-pro-plus.svg]]
+![](./assets/netty-pro-plus.svg)
 
 1. Netty 抽象出两组线程池，BossGroup 专门负责接收客户端的连接，WorkerGroup 专门负责网络的读写
 2. BossGroup 和 WorkerGroup 类型都是 NioEventLoopGroup

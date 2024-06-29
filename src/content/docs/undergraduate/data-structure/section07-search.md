@@ -107,19 +107,19 @@ bool BSTInsert(BSTNode* t, int k) {
 
 ##### LL 旋转 - 右单旋转
 
-![[public/data-structure/bal-ll.png]]
+![](./assets/bal-ll.png)
 
 ##### RR 旋转 - 左单旋转
 
-![[public/data-structure/bal-rr.png]]
+![](./assets/bal-rr.png)
 
 ##### LR 平衡旋转 - 先左后右双旋转
 
-![[public/data-structure/bal-lr.png]]
+![](./assets/bal-lr.png)
 
 ##### RL 平衡旋转 - 先右后左双旋转
 
-![[public/data-structure/bal-rl.png]]
+![](./assets/bal-rl.png)
 
 #### 3. 删除
 
@@ -151,19 +151,19 @@ bool BSTInsert(BSTNode* t, int k) {
 
 可以将红黑树看作是稍微错位一些的 234 树，详情见 [BV1BB4y1X7u3](https://b23.tv/BV1BB4y1X7u3)
 
-![[public/data-structure/red-black-tree-to-234-tree.excalidraw.png]]
+![](./assets/red-black-tree-to-234-tree.excalidraw.png)
 
 父节点为黑
 
-![[public/data-structure/rbt-fujiedianweihei.excalidraw.png]]
+![](./assets/rbt-fujiedianweihei.excalidraw.png)
 
 需要旋转的情况
 
-![[public/data-structure/rbt-11131619.excalidraw.png]]
+![](./assets/rbt-11131619.excalidraw.png)
 
 上溢的情况
 
-![[public/data-structure/rbt-shangyi.excalidraw.png]]
+![](./assets/rbt-shangyi.excalidraw.png)
 
 #### 3. 删除
 
@@ -177,7 +177,7 @@ bool BSTInsert(BSTNode* t, int k) {
 			- 兄弟节点没有红色子节点（父节点向下合并）
 		- 删除节点的兄弟节点为红色（转变为黑色处理）
 
-![[public/data-structure/rbt-delete.excalidraw.png]]
+![](./assets/rbt-delete.excalidraw.png)
 
 ## 7.4. B 树 和 B+ 树
 
@@ -199,7 +199,7 @@ bool BSTInsert(BSTNode* t, int k) {
 
 B 树是所有节点的平衡因子均等于 0 的多路平衡查找树。
 
-![[public/data-structure/b-tree1.excalidraw.png]]
+![](./assets/b-tree1.excalidraw.png)
 
 
 - 节点孩子个数等于该节点中关键字个数加一
@@ -245,7 +245,7 @@ $$
 - 插入：在 B 树中，每个非失败的节点的关键字个数都在 $\left[ \lceil m/2\rceil-1,m-1 \right]$ 内，插入后的节点关键字个数小于 $m$，可以直接插入；插入后检查被插入节点内关键字的个数，当插入后的节点关键字个数大于 $m-1$ 时，必须对节点进行分裂
 	- 取 $\lceil m/2\rceil$ 位置的元素，以它为中心将左右分离，称为两个新的节点，而取出的这个节点上溢到父节点。若父节点也需要分裂，则递归处理
 
-![[public/data-structure/btree-insert-break.png]]
+![](./assets/btree-insert-break.png)
 
 #### 4. B 树的删除
 
@@ -253,18 +253,18 @@ $$
 
 当被删关键字 $k$ 不在终端节点中，可以用 $k$ 的前驱或后继 $k^{\prime}$ 来替代 $k$。然后在相应的节点中删除 $k^{\prime}$，关键字 $k^{\prime}$ 必定落在某个终端节点中，则转换成了被删关键字在终端节点的中的情形。
 
-![[public/data-structure/btree-delete1.png]]
+![](./assets/btree-delete1.png)
 
 当被删关键字在终端节点中，有 3 种情况
 
 - 直接删除：若被删除关键字所在节点的关键字个数 $\geqslant \lceil m/2\rceil-1$，则可以直接删除
 - 兄弟够借：若被删除关键字所在节点的关键字个数 $= \lceil m/2\rceil-1$，且与此节点相邻的右或左兄弟节点的关键字个数 $\geqslant \lceil m/2\rceil$，则需要调整至平衡
 
-![[public/data-structure/btree-delete2.png]]
+![](./assets/btree-delete2.png)
 
 - 兄弟不够借：若被删除关键字所在节点删除前的关键字个数 $= \lceil m/2 \rceil-1$，且此时与该结点相邻的左右兄弟节点的关键字个数均 $= \lceil m/2 \rceil-1$，则将关键字删除后与左或右兄弟节点及双亲节点中的关键字进行合并
 
-![[public/data-structure/btree-delete3.png]]
+![](./assets/btree-delete3.png)
 
 ### 7.4.2. B+ 树
 
@@ -283,7 +283,7 @@ B+ 树是应数据库所需而出现的一种 B 树的变形树
 > - B+ 树中，叶节点包含了全部关键字，即在非叶节点中出现的关键字也会出现在叶节点中；B 树中终端节点包含的关键字和其他节点包含的关键字是不重复的
 
 
-![[public/data-structure/bplustree.excalidraw.png]]
+![](./assets/bplustree.excalidraw.png)
 
 
 ## 归纳总结

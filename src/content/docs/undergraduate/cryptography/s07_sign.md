@@ -12,7 +12,7 @@ title: 第 7 章 数字签名
 
 首先将 DSS 与 RSA 的签名方式做一比较。RSA 算法既能用于加密和签名，又能用于密钥交换。与此不同，DSS 使用的算法只能提供数字签名功能。下图用于比较 RSA 签名和 DSS 签名的不同方式:
 
-![[public/cypto/crypto18.svg]]
+![](./assets/crypto18.svg)
 
 ### 7.2.2. 数字签名算法 DSA
 
@@ -73,7 +73,7 @@ $$
 > \end{aligned}
 > $$
 
-![[public/cypto/crypto19.svg]]
+![](./assets/crypto19.svg)
 
 预计算: $r$ 的模指数运算 $r= g^k \bmod p \bmod q$，这一运算与待签的消息无关。
 

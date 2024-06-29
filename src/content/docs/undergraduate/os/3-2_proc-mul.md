@@ -98,7 +98,7 @@ process consumer_j() {
 
 同步关系中前 V 后 P
 
-![[public/os/2-3-02.png]]
+![](./assets/2-3-02.png)
 
 ```c
 semaphore offer1 = 0;
@@ -483,7 +483,7 @@ B-->D
 B-->E
 ```
 
-![[public/os/2-3-01.png]]
+![](./assets/2-3-01.png)
 
 ```c
 semaphore mutex = 1;

@@ -30,7 +30,7 @@ title: 2.2. 进程调度
 > 进程的挂起态与七状态模型
 > 挂起态进一步细分为==就绪挂起态==、==阻塞挂起态==。
 > 
-> ![[public/os/tmp_2-2__image_1.png]]
+> ![](./assets/tmp_2-2__image_1.png)
 > 
 > “挂起”和“阻塞”都暂时不能获得 CPU 的服务，挂起态将进程映像调到外存中，阻塞态下进程映像还在内存中。
 
@@ -232,7 +232,7 @@ CPU 利用率 = CPU 实际工作时间 ÷ 总时间
 > - 只有==第 k 级队列为空==时，才会为 k+1 级队头的进程分配时间片
 > - 被抢占处理机的进程重新放回原队列队尾
 
-![[public/os/tmp_2-2__image_1.png]]
+![](./assets/tmp_2-2__image_1.png)
 
 $P_1(1)\rightarrow P_2(1)\rightarrow P_1(2)\rightarrow P_2(1)\rightarrow P_3(1)\rightarrow P_2(2)\rightarrow P_1(4)\rightarrow P_1(1)$
 

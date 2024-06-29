@@ -125,11 +125,13 @@ my-notes
 而在 markdown 文件中，这样引入图片、音频或视频
 
 ```md
-![[public/img/1.jpg]]
-![[public/other.jpg]]
+![](./public/img/1.jpg)
+![](./public/other.jpg)
 ```
 
 ~~终于把 plugin 的单数改成复数了~~
+
+~~然而我们都开始用 Astro 不用 VitePress 了~~
 
 #### 2. admonition 插件
 

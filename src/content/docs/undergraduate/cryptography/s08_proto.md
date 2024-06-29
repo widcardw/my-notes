@@ -137,7 +137,7 @@ Pedersen 数字承诺协议是基于离散对数困难性假设的。
 
 **例** 一个简单的迷宫，C D 之间有一道门，需要知道秘密口令才能将其打开。 $\mathcal{P}$ 向 $\mathcal{V}$ 证明自己能打开这道门，但又不愿意向 $\mathcal{V}$ 泄露秘密口令。
 
-![[public/cypto/crypto0804345.png]]
+![](./assets/crypto0804345.png)
 
 > [!example] 可采用的协议
 > 

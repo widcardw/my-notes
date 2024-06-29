@@ -148,7 +148,7 @@ $$
 \displaystyle \int x^{3}\text{e}^{2 x}{\left.\text{d} x\right.}
 $$
 
-![[public/math/table-integral.excalidraw.svg]]
+![](./../assets/table-integral.excalidraw.svg)
 
 $$
 \begin{aligned}\displaystyle \int x^{3}\text{e}^{2 x}{\left.\text{d} x\right.}&=\frac{1}{2} x^{3}\text{e}^{2 x}-\frac{3}{4} x^{2}\text{e}^{2 x}+\frac{3}{4} x\text{e}^{2 x}-\frac{3}{8}\text{e}^{2 x}+ C \\ \displaystyle &={\left(\frac{1}{2} x^{3}-\frac{3}{4} x^{2}+\frac{3}{4} x-\frac{3}{8}\right)}\text{e}^{2 x}+ C\end{aligned}
@@ -160,7 +160,7 @@ $$
 \displaystyle \int x^{2} \cos{2} x{\left.\text{d} x\right.}
 $$
 
-![[public/math/table-integral-2.excalidraw.svg]]
+![](./../assets/table-integral-2.excalidraw.svg)
 
 $$
 \displaystyle \int x^{2} \cos{2} x{\left.\text{d} x\right.}=\frac{1}{2} x \sin{2} x+\frac{1}{2} x \cos{2} x-\frac{1}{4} \sin{2} x+ C
@@ -172,7 +172,7 @@ $$
 \displaystyle \int\text{e}^{2 x} \cos{x}{\left.\text{d} x\right.}
 $$
 
-![[public/math/table-inte-3.excalidraw.svg]]
+![](./../assets/table-inte-3.excalidraw.svg)
 
 $$
 \begin{aligned}\displaystyle \int\text{e}^{2 x} \cos{x}{\left.\text{d} x\right.}&=\frac{1}{2}\text{e}^{2 x} \cos{x}+\frac{1}{4}\text{e}^{2 x} \sin{x}-\frac{1}{4}\int\text{e}^{2 x} \cos{x}{\left.\text{d} x\right.} \\ \displaystyle \int\text{e}^{2 x} \cos{x}{\left.\text{d} x\right.}&=\frac{4}{5}{\left(\frac{1}{2}\text{e}^{2 x} \cos{x}+\frac{1}{4}\text{e}^{2 x} \sin{x}\right)}+ C\end{aligned}

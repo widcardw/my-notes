@@ -16,7 +16,7 @@ socket.getOutputStream().write(buffer);  // 从 byte 数组写到网络
 ```
 内部工作流程如下
 
-![[public/netty/zero_copy_00.svg]]
+![](./assets/zero_copy_00.svg)
 
 在此过程中，总共进行了 4 次拷贝，3 次用户态与内核态的切换。
 
@@ -32,7 +32,7 @@ socket.getOutputStream().write(buffer);  // 从 byte 数组写到网络
 - `ByteBuffer.allocate(10) -> HeapByteBuffer` 使用的是 Java 内存
 - `ByteBuffer.allocateDirect(10) -> DirectByteBuffer` 使用的是操作系统内存，但是 Java 也可以访问
 
-![[public/netty/zero_copy_01.svg]]
+![](./assets/zero_copy_01.svg)
 
 Java 可以使用 DirectByteBuf 将堆外内存映射到 jvm 内存中来直接访问使用
 
@@ -46,7 +46,7 @@ Java 可以使用 DirectByteBuf 将堆外内存映射到 jvm 内存中来直接�
 
 底层采用 Linux 2.1 后提供的 sendFile 方法，Java 中对应着两个 channel 调用 transferTo/transferFrom 方法进行拷贝
 
-![[public/netty/zero_copy_02.svg]]
+![](./assets/zero_copy_02.svg)
 
 只发生了一次用户态与内核态的切换
 
@@ -56,7 +56,7 @@ Java 可以使用 DirectByteBuf 将堆外内存映射到 jvm 内存中来直接�
 
 ## 进一步优化（Linux 2.4）
 
-![[public/netty/zeor_copy_03.svg]]
+![](./assets/zeor_copy_03.svg)
 
 1. Java 调用 transferTo 方法后，要从 Java 程序的**用户态**切换至**内核态**，使用 DMA 将数据读入**内核缓冲区**，不会使用 CPU
 2. 只会将一些 offset 和 length 信息拷贝到 **Socket 缓冲区**，几乎无消耗

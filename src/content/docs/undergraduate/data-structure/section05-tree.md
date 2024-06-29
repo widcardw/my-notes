@@ -245,7 +245,7 @@ void InOrder(Thread* root) {
 
 #### 4. 先序线索二叉树与后续线索二叉树
 
-![[public/data-structure/thread.excalidraw.png]]
+![](./assets/thread.excalidraw.png)
 
 ## 5.4. 树、森林
 
@@ -281,7 +281,7 @@ F --- K((K))
 
 #### 2. 孩子表示法
 
-![[public/data-structure/child.excalidraw.png]]
+![](./assets/child.excalidraw.png)
 
 #### 3. 孩子兄弟表示法
 
@@ -294,7 +294,7 @@ struct CSNode {
 };
 ```
 
-![[public/data-structure/child-sibling.excalidraw.png]]
+![](./assets/child-sibling.excalidraw.png)
 
 ## 5.5. 树与二叉树的应用
 

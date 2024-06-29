@@ -80,7 +80,7 @@ void insertionSort(int *arr, int n) {
 - 先取一个小于 $n$ 的步长 $d_1$，把表中的全部记录分成 $d_1$ 组，所有距离为 $d_1$ 倍数的记录放在同一组，在各组内进行直接插入排序
 - 然后取第二个步长 $d_2 < d_1$，重复上述步骤，直到取到的 $d_t=1$，执行直接插入排序。由于此时已经有较好的局部有序性，很快就可以到达最终结果
 
-![[public/data-structure/datast-shell-sort.png]]
+![](./assets/datast-shell-sort.png)
 
 ```cpp
 void ShellSort(int *a, int n) {
@@ -180,7 +180,7 @@ void SelectionSort(int* a, int n) {
 
 $n$ 个节点的完全二叉树，最后一个节点是第 $\lfloor n/2\rfloor$ 个节点的孩子。对第 $\lfloor n/2\rfloor$ 个节点为根的子树筛选，使该子树称为堆，之后向前依次对各节点 $\lfloor n/2 \rfloor-1\sim 1$ 为根的子树进行筛选，看该结点值是否大于其左右子节点的值。若不大于，则将左右子节点中的较大值与之交换，交换后可能会破坏下级的堆，于是继续采用上述方法构造下一级的堆，直到该节点为根的子树构成堆为止。
 
-![[public/data-structure/datast-heap-sort.png]]
+![](./assets/datast-heap-sort.png)
 
 ```cpp
 void HeadAdjust(int *a, int k, int len) {
@@ -218,7 +218,7 @@ void HeapSort(int *a, int len) {
 
 将两个或两个以上的有序表组合成一个新的有序表。
 
-![[public/data-structure/datast-mergesort.png]]
+![](./assets/datast-mergesort.png)
 
 每个子表长度为 1，两两归并，得到 $\lceil n/2\rceil$ 个长度为 2 或 1 的有序表，继续两两归并，直至合并成一个长度为 $n$ 的有序表为止。
 

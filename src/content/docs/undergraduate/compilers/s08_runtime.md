@@ -31,7 +31,7 @@ title: 第 8 章 运行时环境
 
 名字栏是符号表的主栏，查找等操作通常是按名字进行的。由于程序中标识符的名字长短不一，因此通常对名字采取一种间接的方式：专门开辟一个存储区域存放长短不一的名字，然后用一对 $(x,y)$ 指明名字的位置和长度。
 
-![[public/compile/comp08hfghfghv.svg]]
+![](./assets/comp08hfghfghv.svg)
 
 符号表的种类多，常见有：常量表、变量表、标号表、函数名表、数组内情向量子表等。
 
@@ -79,7 +79,7 @@ void f(int x, int y, int z)  // 1
 }
 ```
 
-![[public/compile/comp08kkklljf.svg]]
+![](./assets/comp08kkklljf.svg)
 
 > 如果不知道怎么画，那就对照着程序照着画一遍
 
@@ -134,7 +134,7 @@ C 语言支持指针变量。指针变量所指的空间的大小与位置，有
 
 ### 8.6.1. C 语言的活动记录结构
 
-![[public/compile/comp08liuhb.svg]]
+![](./assets/comp08liuhb.svg)
 
 #### 1. C 语言函数调用语句的目标代码
 
@@ -185,7 +185,7 @@ add     sp, 6  ; 设 int 占 2 字节，3 个实参一共 6 字节
 
 #### 3. 访问形参 局部变量
 
-![[public/compile/comp08ldssdnf.svg]]
+![](./assets/comp08ldssdnf.svg)
 
 在上述函数 `f` 调用后，通过上表关于新 `BP` 的相对地址即可访问局部变量。要获取形参 `y` 对应的实参值，可通过 `word ptr[BP+6]` 完成。
 
@@ -210,7 +210,7 @@ void main() {
 }
 ```
 
-![[public/compile/comp08456785g.svg]]
+![](./assets/comp08456785g.svg)
 
 ### 8.6.2. 入口指令的自动生成
 

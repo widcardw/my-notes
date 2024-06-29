@@ -8,7 +8,7 @@ title: 第 3 章 词法分析与有限自动机
 
 输入源程序，输出单词符号
 
-![[public/compile/S03_01.svg]]
+![](./assets/S03_01.svg)
 
 单词符号是最小的语义单位。
 
@@ -42,7 +42,7 @@ title: 第 3 章 词法分析与有限自动机
 - $\Sigma$ 是一个有穷字母表，它的每个元素称为一个输入字符
 - $\delta$ 是一个从 $S\times\Sigma$ 到 $S$ 的单值部分映射。$\delta(s,a)=s^\prime$ 表示在目前状态 $s$ 下输入字符为 $a$ 时，将转换到下一个状态 $s^\prime$，$s^\prime$ 被称为 $s$ 的一个后继状态
 
-![[public/compile/S03_02.svg]]
+![](./assets/S03_02.svg)
 
 - $s_0\in S$ 是==唯一==的初态
 - $F\subseteq S$ 是一个终态，可空
@@ -58,11 +58,11 @@ $$
 
 可以画出状态转换矩阵，此时可以看出其定义中第三条的含义
 
-![[public/compile/S03_03.svg]]
+![](./assets/S03_03.svg)
 
 以及状态转换图
 
-![[public/compile/S03_04.svg]]
+![](./assets/S03_04.svg)
 
 ### 3.2.2. 构造单词的确定有限自动机
 
@@ -99,7 +99,7 @@ DFA 是 NFA 的特例，而 NFA 是 DFA 概念的推广
 
 **例 3.3** 将 NFA $M$ 确定化
 
-![[public/compile/S03_05.svg]]
+![](./assets/S03_05.svg)
 
 |             新生成的状态 \\ 输入              |       a       |       b       |       c       |
 |:---------------------------------------------:|:-------------:|:-------------:|:-------------:|
@@ -114,7 +114,7 @@ DFA 是 NFA 的特例，而 NFA 是 DFA 概念的推广
 - 例如上表中，line 0, line 2, line 3 的集合都包含原始 NFA 的终态 3 ，因此这 3 行生成的新状态都可以作为新的终态。
 
 
-![[public/compile/S0306.svg]]
+![](./assets/S0306.svg)
 
 ### 3.3.3. 确定有限自动机的化简
 
@@ -144,13 +144,13 @@ DFA 是 NFA 的特例，而 NFA 是 DFA 概念的推广
 
 **例** 对于有限自动机
 
-![[public/compile/compdfa_001.svg]]
+![](./assets/compdfa_001.svg)
 
 由于状态 0, 1 经过 a, b 落在同一个子集，可以发现它们无法拆分，因此 0 和 1 状态等价。可以将状态机化简为右边的形式。
 
 **例 3.6** 将图中 DFA 最小化
 
-![[public/compile/S0307.svg]]
+![](./assets/S0307.svg)
 
 1. 按照终态和非终态划分，得到两个子集 $\Pi_1=\{A,B,F\}$，$\Pi_2=\{C,D,E,G\}$
 2. 对 $\Pi_1$，状态 $A,B$ 均与 $F$ 可区别，因为 $A\xrightarrow{b}{T},B\xrightarrow{b}{T}$，而 $F\overset{b}{\nrightarrow}T$（$T$ 表示终止态），因此 $\Pi_1$ 划分为 $\Pi_{11}=\{A,B\},\Pi_{12}=\{F\}$。
@@ -164,7 +164,7 @@ $$
 \{A\},\{B\},\{F\},\{C\},\{E\},\{D,G\}
 $$
 
-![[public/compile/S0308.svg]]
+![](./assets/S0308.svg)
 
 ## 3.4. 正规文法、正规式和有限自动机之间的关系
 
@@ -337,7 +337,7 @@ $$
 \end{aligned}
 $$
 
-![[public/compile/compile_10.svg]]
+![](./assets/compile_10.svg)
 
 #### 2. 左线性文法转换为有限自动机
 
@@ -371,7 +371,7 @@ $$
 \end{aligned}
 $$
 
-![[public/compile/compile0311.svg]]
+![](./assets/compile0311.svg)
 
 #### 3. 有限自动机转换为正规文法
 
@@ -383,7 +383,7 @@ $$
 
 **例 3.16** 对以下状态图，构造文法 $G$
 
-![[public/compile/compile0312.svg]]
+![](./assets/compile0312.svg)
 
 $$
 \begin{aligned}
@@ -399,13 +399,13 @@ $$
 
 #### 1. 由正规式构造有限自动机
 
-![[public/compile/compile0313.svg]]
+![](./assets/compile0313.svg)
 
 TODO: 画个例子
 
 #### 2. 由正规式构造有限自动机
 
-![[public/compile/compile0314.svg]]
+![](./assets/compile0314.svg)
 
 TODO: 画个例子
 

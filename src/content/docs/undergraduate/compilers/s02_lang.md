@@ -163,7 +163,7 @@ $$
 
 语法分析树如下
 
-![[public/compile/S02_01.svg]]
+![](./assets/S02_01.svg)
 
 其中
 
@@ -227,7 +227,7 @@ $$
 
 关于 $i*i+i$ 有两种不同的最右推导
 
-![[public/compile/S02_02.svg]]
+![](./assets/S02_02.svg)
 
 
 

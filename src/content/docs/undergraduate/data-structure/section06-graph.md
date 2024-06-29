@@ -252,7 +252,7 @@ Dijkstra 算法设置一个集合 $S$ 记录已求得的最短路径的顶点，
 3. 修改 $v_0$ 出发到集合 $V-S$ 上任意顶点 $v_k$ 可达的最短路径长度：若 `dist[j] + arcs[j][k] < dist[k]`，则更新 `dist[k] = dist[k] = dist[j] + arcs[j][k]`
 4. 重复 (2)(3) 共 $n-1$ 次，直到所有的顶点都包含在 $S$ 中
 
-![[public/data-structure/dijkstra-example.excalidraw.png]]
+![](./assets/dijkstra-example.excalidraw.png)
 
 #### 2. Floyd 算法求各顶点之间最短路径问题
 

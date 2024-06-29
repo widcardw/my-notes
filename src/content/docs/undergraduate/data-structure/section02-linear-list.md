@@ -21,7 +21,7 @@ Node* reverse(Node* head) {
 
 #### 找到两个链表第一个公共节点
 
-![[public/data-structure/common-node.png]]
+![](./assets/common-node.png)
 
 1. 遍历两个链表，得到两个链表的长度 $l_1, l_2$
 2. 将两个链表尾端对齐，长的那个链表先走 $|l_1 - l_2|$ 步
@@ -78,7 +78,7 @@ Node* mergeOrderedList(Node* L1, Node* L2) {
 
 ### 2.3.3. 双链表
 
-![[public/data-structure/dbllinklist.excalidraw.png]]
+![](./assets/dbllinklist.excalidraw.png)
 
 ```cpp
 struct Node {
@@ -89,7 +89,7 @@ struct Node {
 
 #### 1. 插入
 
-![[public/data-structure/dbllink-insert.png]]
+![](./assets/dbllink-insert.png)
 
 ```cpp
 // 将 n 插入到 p 的后面
@@ -102,7 +102,7 @@ p->next = n;
 
 #### 2. 删除
 
-![[public/data-structure/dbllinkdelete.excalidraw.png]]
+![](./assets/dbllinkdelete.excalidraw.png)
 
 ```cpp
 // 删除 p 的后继节点 q

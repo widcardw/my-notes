@@ -4,11 +4,10 @@ import { remarkMark } from 'remark-mark-highlight';
 import { remarkCallouts } from '@widcardw/remark-callouts';
 import remarkMath from 'remark-math';
 import rehypeAsciimath from '@widcardw/rehype-asciimath'
-import { remarkWikiLink } from './src/plugins/wiki/remarkWikiLink';
+// import remarkWikiLink from '@portaljs/remark-wiki-link'
+
 import { remarkWavedrom } from './src/plugins/wavedrom/remark';
 import { remarkMermaid } from './src/plugins/mermaid/remark';
-
-import expressiveCode from "astro-expressive-code";
 import { remarkAsciimath } from './src/plugins/asciimath/am-codeblock';
 
 // https://astro.build/config
@@ -16,7 +15,6 @@ export default defineConfig({
   site: 'https://notes.widcard.win/',
   integrations: [
     // astroCodeSnippets(),
-    expressiveCode({ theme: ['github-light', 'github-dark'] }),
     starlight({
       title: 'Notes',
       customCss: ['./src/styles/global.css', './src/styles/mermaid.css'],
@@ -54,29 +52,15 @@ export default defineConfig({
       editLink: { baseUrl: 'https://github.com/widcardw/my-notes/tree/main/' },
     }),
   ],
-  publicDir: 'src/content/docs/public',
   markdown: {
     remarkPlugins: [
       (remarkMark as any),
-      remarkCallouts,
+      [remarkCallouts, { foldIcon: false, leadingIcon: false }],
       remarkAsciimath,
       remarkMath,
-      // remarkAsciiMath, 
-      [remarkWikiLink, {
-        // wikiLinkResolver: wikilinkPageResolver
-        pathFormat: 'obsidian-absolute',
-        wikiLinkResolver: (target: string) => {
-          // for [[#heading]] links
-          if (!target) return [];
-          let permalink = target.replace(/\/index$/, "");
-          // TODO what to do with [[index]] link?
-          if (permalink.length === 0) permalink = "/";
-          permalink = permalink.replace('public/', '');
-          return [permalink];
-        }
-      }],
       remarkWavedrom,
       remarkMermaid,
+      // remarkWikiLink,
     ],
     rehypePlugins: [(rehypeAsciimath as any)]
   }

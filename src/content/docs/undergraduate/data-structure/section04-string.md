@@ -73,7 +73,7 @@ Move = j - next[j]
 j = j - Move = j - (j - next[j]) = next[j]
 ```
 
-![[public/data-structure/kmp-simple.png]]
+![](./assets/kmp-simple.png)
 
 模式串与 `next` 数组
 
@@ -121,7 +121,7 @@ console.log(next, i)
 
 `next` 数组在某些情况下仍然有一些缺陷，还可以进一步优化，例如 `aaaab` 与 `aaabaaaab` 的匹配
 
-![[public/data-structure/kmp-simp-problem.excalidraw.png]]
+![](./assets/kmp-simp-problem.excalidraw.png)
 
 中间多了 3 次多余的匹配，因此我们可以考虑将它优化。
 
@@ -129,7 +129,7 @@ console.log(next, i)
 
 此时应当注意到，不应该出现 `p[j] == p[next[j]]`，因为当 `p[j] != s[j]` 时，下一次比较必然是 `p[next[j]]` 和 `s[j]`，因此需要 ==递归== 一下，将 `next[j]` 修正为 `next[next[j]]`，直至两者不相等为止。
 
-![[public/data-structure/kmp-ext.excalidraw.png]]
+![](./assets/kmp-ext.excalidraw.png)
 
 ```ts
 function getNextVal(t: string, nextVal: number[]) {

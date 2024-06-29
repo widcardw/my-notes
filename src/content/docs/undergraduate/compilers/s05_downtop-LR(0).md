@@ -23,7 +23,7 @@ LR 分析器的 4 个组成部分：
 - 一张 LR 分析表
 - LR 分析总控程序
 
-![[public/compile/compile050401.svg]]
+![](./assets/compile050401.svg)
 
 ### 5.4.2. LR(0) 分析法
 
@@ -56,7 +56,7 @@ $$
 
 现在对末尾的句子进行规范归约
 
-![[public/compile/compile05040201.svg]]
+![](./assets/compile05040201.svg)
 
 仔细观察每一次归约时栈中的内容可以发现，当发生归约时，栈中总为如下形式：$\beta\omega \bigcirc \!\!\!\!\!\! p \,\,$，其中 $\omega$ 一定是第 $p$ 条规则的右部：$A\to \omega$。如第一次归约时，$\beta=c, \omega=a, \bigcirc \!\!\!\! p\,=②$
 
@@ -172,7 +172,7 @@ $$
 
 另有项目集 $I:\{S\to \bullet cAd\}$，当终结符号 $c$ 移进栈后，项目集应变迁到它的后继项目集的闭包 $\text{CLOSURE}(\{S\to c \bullet Ad\})=\{S\to c \bullet Ad,A\to \bullet a, A\to \bullet Aa\}$
 
-![[public/compile/compile0504e3.svg]]
+![](./assets/compile0504e3.svg)
 
 为此，可定义 GO 函数表达状态之间的这种转换。
 
@@ -223,9 +223,11 @@ $$
 > 
 > 由于文法的开始符号 $S$ 满足要求，不需要进行拓广。LR(0) 项目规范族如图。
 > 
-> ![[public/compile/compile0504f1.svg]]
+> ![](./assets/compile0504f1.svg)
 > 
-> 这个 DFA 正好识别出文法 $G[S]$ 的所有活前缀。
+> 这个 DFA 正好识别出文法 $G[S]$ 的所有活前缀。
+
+
 
 **例 5.12** 已知文法 $G: A\to aA\mid \varepsilon$
 
@@ -244,9 +246,8 @@ $$
 > 
 > 其项目集规范族如图
 > 
-> ![[public/compile/compile0504g4.svg]]
-> 
-> > 按老师的讲解，心中时刻需要有一个“栈”，即需要通过弹栈、归约、压栈的一系列过程来理解
+> ![](./assets/compile0504g4.svg)
+> 按老师的讲解，心中时刻需要有一个“栈”，即需要通过弹栈、归约、压栈的一系列过程来理解
 > 
 > LR(0) 分析表
 > 
@@ -329,11 +330,9 @@ $$
 > - $I_3$ 中第三项，当识别到 $b$，进展一步，得到项目 $B\to b\bullet$，与 $I_4$ 一致
 > - $I_4,I_5,I_6$ 均为归约项目
 > 
-> ![[public/compile/compile0504t3.svg]]
+> ![](./assets/compile0504t3.svg)
 > 
-> 由此可以构造 LR(0) 分析表
-> 
-> | 状态 |     | ACTION |      | GOTO |     |
+> |  状态 |     | ACTION |      | GOTO |     |
 > |:----:|:---:|:------:|:----:|:----:|:---:|
 > |  ^^  | $a$ |  $b$   | $\#$ | $S$  | $B$ |
 > |  0   | s3  |   s4   |      |  1   |  2  |
@@ -356,9 +355,9 @@ LR(0) 项目集规范族中包含了丰富的信息，从中可以形成一张 L
 ACTION 子表有如下动作
 
 1. 移进。如果状态 0 所在行与 $a_1$ 所在列的单元格内为 s2，即有 $a_1$ 移进栈，并将状态转为 2
-    - ![[public/compile/compile0504td.svg]]
+    - ![](./assets/compile0504td.svg)
 2. 归约。如果状态 $n$ 所在行与 $a_1$ 所在列的单元格内为 r3，即有“按照第 3 条产生式规则归约”
-    - ![[public/compile/compile0504hgf.svg]]
+    - ![](./assets/compile0504hgf.svg)
 3. 接收。如果状态 1 所在行与 `#` 所在列交叉处为 acc，则成功接收，正确识别出句子。
 4. 报错。ACTION 子表的空白处为报错。
 
@@ -373,7 +372,7 @@ GOTO 子表的列均为非终结符，表示状态转移，终结符的状态由
 LR(0) 分析表的构造步骤：
 
 1. 若移进项目 $A\to \alpha \bullet a\beta$ 属于 $I_k$ 且 $\text{GO}(I_k, a)=I_j$，则令 $\text{ACTION}[k][a]=s_j$，即
-    - ![[public/compile/conpile0504fdsdf.svg]] 
+    - ![](./assets/conpile0504fdsdf.svg) 
 2. 若归约项目 $A\to \beta \bullet$ 属于 $I_k$，设 $A\to \beta \bigcirc \!\!\!\!\!\! p\,$，则令 $\text{ACTION}[k][:]=r_p$，表示不论下一个字符是什么，只要当前状态为 $k$，则一定按照第 $p$ 条产生式规则归约。
 3. 若接收项目 $S^\prime \to S \bullet$ 属于 $I_k$，则令 $\text{ACTION}[k][\#]=acc$，表示成功接收
 4. 若 $\text{GO}(I_k,A)=I_p$，则令 $\text{GOTO}[k][A]=p$，表示状态 $k$ 下若识别出非终结符 $A$，则状态变为 $p$
@@ -397,29 +396,22 @@ LR(0) 分析表的构造步骤：
 
 **例 5.14** 对例 5.11 中的文法 $G[S]$，给出 LR(0) 分析器识别串 `#caad#` 的过程
 
-> [!example] 分析
-> 
-> ![[public/compile/compile0504f1.svg]]
-> 
-> 根据 DFA，有 LR(0) 分析表
-> 
-> | 状态 | ACTION |     |     |     | GOTO |     |
-> |:----:|:------:|:---:|:---:|:---:|:----:|:---:|
-> | ^^   | c      | a   | d   | #   | S    | A   |
-> | 0    | s1     |     |     |     |      |     |
-> | 1    |        | s2  |     |     |      | 3   |
-> | 2    | r2     | r2  | r2  | r2  |      |     |
-> | 3    |        | s4  | s5  |     |      |     |
-> | 4    | r3     | r3  | r3  | r3  |      |     |
-> | 5    |        |     |     | acc    |      |     |
-> 
-> 从而给出分析过程
-> 
-> ![[public/compile/compile0504hghf.svg]]
 
-#### 总结
+![](./assets/compile0504f1.svg)
 
-LR 分析器的总控程序工作步骤：
+|态 | ACTION |     |     |     | GOTO |     |
+|:----:|:------:|:---:|:---:|:---:|:----:|:---:|
+| ^^   | c      | a   | d   | #   | S    | A   |
+| 0    | s1     |     |     |     |      |     |
+| 1    |        | s2  |     |     |      | 3   |
+| 2    | r2     | r2  | r2  | r2  |      |     |
+| 3    |        | s4  | s5  |     |      |     |
+| 4    | r3     | r3  | r3  | r3  |      |     |
+| 5    |        |     |     | acc    |      |     |
+
+从而给出分析过程
+
+![](./assets/compile0504hghf.svg)
 
 ```typescript
 type MySymbol = string;

@@ -69,7 +69,7 @@ title: 第 6 章 总线
 
 单总线结构将 CPU、主存、I/O 设备（通过 I/O 接口）都挂在一组总线上，允许 I/O 设备之间、I/O 设备与主存之间直接交换信息，无需中间设备干预。
 
-![[public/jz/jadanzongxian.png]]
+![](./assets/jadanzongxian.png)
 
 > 单总线并不是指只有一根信号线，系统总线按传送信息的不同可细分为地址总线、数据总线、控制总线
 
@@ -84,7 +84,7 @@ title: 第 6 章 总线
 - 主存总线：用于在 CPU、主存和通道之间传送数据
 - I/O 总线，用于在多个外部设备与通道之间传送数据
 
-![[public/jz/jzshuangzongxian.png]]
+![](./assets/jzshuangzongxian.png)
 
 > [!tip] 优缺点
 > - 将低速 I/O 设备总单总线上分离出来，实现了存储器总线和 I/O 总线分离
@@ -94,7 +94,7 @@ title: 第 6 章 总线
 
 在计算机系统各部件之间采用 3 条各自独立的总线来构成信息通道，分别为主存总线、I/O 总线、直接内存访问 DMA 总线
 
-![[public/jz/jzsanzongxian.png]]
+![](./assets/jzsanzongxian.png)
 
 - 主存总线：在 CPU 和内存之间传送地址、数据、控制信息
 - I/O 总线：在 CPU 和各类外设之间通信
@@ -172,7 +172,7 @@ title: 第 6 章 总线
 
 主设备发出请求信号后，必须在从设备回答后才撤销请求信号；从设备发出回答信号后，必须在获知主设备请求信号已撤销后，再撤销其回答信号。
 
-![[public/jz/jzhusuoguanxi.png]]
+![](./assets/jzhusuoguanxi.png)
 
 > [!tip] 引入总线结构的好处
 > - 简化了系统结构，便于系统设计制造

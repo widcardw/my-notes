@@ -30,7 +30,7 @@ $$
 E=\{(v_0,v_1),(v_1,v_2),(v_1,v_3),(v_2,v_3)\}
 $$
 
-![[public/algorithm/ds-graph-01.excalidraw.svg]]
+![](./assets/ds-graph-01.excalidraw.svg)
 
 ##### b. 有向边集
 
@@ -38,7 +38,7 @@ $$
 E=\{<v_0,v_1>,<v_1,v_2>,<v_2,v_1>,<v_1,v_3>,<v_2,v_3>,<v_3,v_2>\}
 $$
 
-![[public/algorithm/ds-graph-03.svg]]
+![](./assets/ds-graph-03.svg)
 
 ### 1.2. 图的连通性
 
@@ -54,7 +54,7 @@ $$
 
 #### 2.1.1. 图示
 
-![[public/algorithm/ds-graph-04.excalidraw.svg]]
+![](./assets/ds-graph-04.excalidraw.svg)
 
 下面的矩阵表示从第 $i$ 行到第 $j$ 列的路径长度
 
@@ -99,7 +99,7 @@ print(m)
 #### 2.2.1. 图示
 
 
-![[public/algorithm/ds-graph-02.svg]]
+![](./assets/ds-graph-02.svg)
 
 #### 2.2.2. 数据结构
 
@@ -145,7 +145,7 @@ public:
 
 再把上面的图拿下来。
 
-![[public/algorithm/ds-graph-04.excalidraw.svg]]
+![](./assets/ds-graph-04.excalidraw.svg)
 
 #### 2.3.1. 初步构建
 

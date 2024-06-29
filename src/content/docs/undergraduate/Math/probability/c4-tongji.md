@@ -54,7 +54,7 @@ $$
 > - $E(\chi^{2})=n,D(\chi^{2})=2n$
 > - $\chi_{1}^{2}\sim \chi^{2}(n_{1}), \chi_{2}^{2}\sim \chi^{2}(n_{2})$，且 $\chi_{1}^{2}$ 和 $\chi_{2}^{2}$ 相互独立，则 $\chi_{1}^{2}+\chi_{2}^{2}\sim \chi^{2}(n_{1}+ n_{2})$
 
-![[public/math/math-prob-chi2.png]]
+![](./../assets/math-prob-chi2.png)
 
 ### $t$ 分布
 
@@ -71,7 +71,7 @@ $$
 > - 设 $T\sim t(n)$，对给定的 $\alpha(0<\alpha < 1)$，称满足条件 $\displaystyle P\{T > t_{\alpha}(n)\}=\int_{t_{\alpha}(n)}^{+\infty}f(x) \mathrm{d}x=\alpha$ 的点 $t_{\alpha}(n)$ 为 $t$ 分布上 $\alpha$ 分位点
 > - 由于概率密度为偶函数，可知 $t$ 分布的双侧 $\alpha$ 分位点 $t_{\alpha/2}(n)$，即 $P\{|T|>t_{\alpha/2}(n) \}=\alpha$，显然 $t_{1-\alpha}(n)=-t_{\alpha}(n)$
 
-![[public/math/math-probe-t.png]]
+![](./../assets/math-probe-t.png)
 
 ### $F$ 分布
 
