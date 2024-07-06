@@ -1,7 +1,8 @@
 /* @import "@widcardw/remark-callouts/index.css"; */
-@import 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.3/katex.min.css';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css';
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Oswald&display=swap');
 @import './callouts.css';
+@import './starlight-fix.css';
 
 :root {
     --font-mono: 'IBM Plex Mono';

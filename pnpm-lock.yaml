@@ -1305,8 +1305,8 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
 
-  katex@0.16.9:
-    resolution: {integrity: sha512-fsSYjWS0EEOwvy81j3vRA8TEAhQhKiqO+FQaKWp0m39qwOzHVBgAUBIXWj1pB+O2W3fIpNa6Y9KSKCVbfPhyAQ==}
+  katex@0.16.11:
+    resolution: {integrity: sha512-RQrI8rlHY92OLf3rho/Ts8i/XvjgguEjOkO1BEXcU3N8BqPpSzBNwV/G0Ukr+P/l3ivvJUE/Fa/CwbS6HesGNQ==}
     hasBin: true
 
   kind-of@6.0.3:
@@ -2775,7 +2775,7 @@ snapshots:
       asciimath-parser: 0.6.3
       hast-util-from-html-isomorphic: 2.0.0
       hast-util-to-text: 4.0.0
-      katex: 0.16.9
+      katex: 0.16.11
       unist-util-visit-parents: 6.0.1
 
   '@widcardw/remark-callouts@0.1.7': {}
@@ -3539,7 +3539,7 @@ snapshots:
 
   json5@2.2.3: {}
 
-  katex@0.16.9:
+  katex@0.16.11:
     dependencies:
       commander: 8.3.0
 
@@ -3910,7 +3910,7 @@ snapshots:
     dependencies:
       '@types/katex': 0.16.3
       devlop: 1.1.0
-      katex: 0.16.9
+      katex: 0.16.11
       micromark-factory-space: 2.0.0
       micromark-util-character: 2.1.0
       micromark-util-symbol: 2.0.0

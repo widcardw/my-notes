@@ -1,0 +1,3 @@
+.sl-markdown-content :is(.katex svg):not(:where(.not-content *)) {
+    height: inherit;
+}
