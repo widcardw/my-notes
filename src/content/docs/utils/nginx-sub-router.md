@@ -8,7 +8,7 @@ Nginx 配置中，这样配置
 
 ```nginx
 http {
-  // ...
+  # ...
   server {
     listen 8080;
     server_name localhost;

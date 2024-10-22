@@ -76,3 +76,22 @@ Array.prototype.map.call(document.querySelectorAll('button'), (element,index) =>
     }
 })
 ```
+
+## 引出新的问题
+
+写习惯 TypeScript 之后，发现用这种方式没有自动补全，好难受啊。
+
+Selector 的类型还是比较好声明的，可以用如下的方式声明
+
+```js
+/** @type {typeof document.querySelector} */
+let $ = document.querySelector.bind(document);
+```
+
+然而，`$on` 就很难直接用 jsdoc 声明类型了，恐怕只能用 `d.ts` 来声明了。
+
+```ts
+interface Element {
+  $on(type: string, listener: (event: Event) => void, options?: boolean | AddEventListenerOptions): void;
+}
+```

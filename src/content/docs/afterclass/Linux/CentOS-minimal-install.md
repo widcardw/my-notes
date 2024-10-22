@@ -19,19 +19,9 @@ vi /etc/yum.repos.d/CentOS-Base.repo
 
 阿里源的地址为 http://mirrors.aliyun.com/repo/Centos-7.repo
 
-其关键内容如下
+之前脑抽觉得只能手敲进去，现在想来，只需要用 Windows 的 API 来模拟键盘按下的事件就可以了。如果使用美式键盘，则可以使用 [gist/typewriter.cpp](https://gist.github.com/widcardw/ea4ed0290646a441e6759a6f87db9554) 来模拟键入，拷贝到本地的 cpp 文件，编译后用 `./typewriter.exe Centos-7.repo`，迅速将光标移动到虚拟机，从而“拷贝”到 vim 里面。
 
-```
-name=CentOS-$releasever - Base - mirrors.aliyun.com
-failovermethod=priority
-baseurl=http://mirrors.aliyun.com/centos/$releasever/os/$basearch/
-        http://mirrors.aliyuncs.com/centos/$releasever/os/$basearch/
-        http://mirrors.cloud.aliyuncs.com/centos/$releasever/os/$basearch/
-gpgcheck=1
-gpgkey=http://mirrors.aliyun.com/centos/RPM-GPG-KEY-CentOS-7
-```
-
-只需手敲这一部分，其他都可以直接拷贝了。使用 vim 的 Visual Mode，将敲完的这部分选中，而后拷贝到 `[base]`, `[updates]`, `[extras]`, `[centosplus]`, `[contrib]` 下面即可。最后两个添加上 `enabled=0`
+> 该程序使用了 GitHub Gist，需要魔法才能访问。
 
 然后运行命令
 
@@ -154,3 +144,5 @@ visudo
 将本用户按照 `root` 的样式抄上去。
 
 有其他问题的话再补充。
+
+~~别用 CentOS 7 了，趁早都换 Ubuntu 吧~~

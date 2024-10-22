@@ -42,3 +42,6 @@ curl http://www.baidu.com/upimg
     -v
 ```
 
+现在出现了更好的工具 [posting](https://github.com/darrenburns/posting)，可以使用 pipx 来安装，具有终端界面，同样方便使用。
+
+或者使用 VSCode 的 REST Client 插件，可操作性更强（强推）。
