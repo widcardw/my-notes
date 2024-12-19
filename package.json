@@ -10,15 +10,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.24.4",
-    "astro": "^4.11.3",
-    "sharp": "^0.33.4"
+    "@astrojs/starlight": "^0.30.3",
+    "astro": "^5.0.9",
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "@types/mdast": "^4.0.4",
     "@widcardw/rehype-asciimath": "^0.0.1",
     "@widcardw/remark-callouts": "^0.1.7",
-    "remark-mark-highlight": "^0.1.0",
+    "remark-mark-highlight": "^0.1.1",
     "remark-math": "^6.0.0",
     "unified": "^11.0.5",
     "unist-util-visit": "^5.0.0"
